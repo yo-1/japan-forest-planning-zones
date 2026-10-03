@@ -125,6 +125,38 @@ class FindRuleTest(unittest.TestCase):
         self.assertZone(13, "北海道", "音更町", "十勝総合振興局", "河東郡")
         self.assertZone(13, "北海道", "別海町", "根室振興局", "野付郡")
 
+    def test_hokkaido_city_rules(self):
+        # 告示で名前が挙がっている市のうち、所属する振興局が全域同じ系のものは、
+        # 市のルールがなくても同じ結果になる。振興局の一部だけがその系のものは、
+        # 市のルールがないと XII系になってしまう。
+        city_subprefectures = {
+            "小樽市": ("後志総合振興局", False),
+            "函館市": ("渡島総合振興局", False),
+            "北斗市": ("渡島総合振興局", False),
+            "帯広市": ("十勝総合振興局", False),
+            "釧路市": ("釧路総合振興局", False),
+            "根室市": ("根室振興局", False),
+            "伊達市": ("胆振総合振興局", True),
+            "北見市": ("オホーツク総合振興局", True),
+            "網走市": ("オホーツク総合振興局", True),
+        }
+        for city, (subprefecture, required) in city_subprefectures.items():
+            with self.subTest(city=city):
+                attributes = {
+                    "prefecture": "北海道",
+                    "subprefecture": subprefecture,
+                    "municipality": city,
+                }
+                with_city_rule = zone_rules.find_rule(self.rules, attributes)
+                without_city_rule = zone_rules.find_rule(
+                    [r for r in self.rules if r.municipality != city], attributes
+                )
+                if required:
+                    self.assertEqual(without_city_rule.zone, 12)
+                    self.assertNotEqual(with_city_rule.zone, 12)
+                else:
+                    self.assertEqual(without_city_rule.zone, with_city_rule.zone)
+
     def test_same_city_name_in_other_prefecture(self):
         # 伊達市は北海道と福島県にある。北海道の XI系の規定が福島県に及ばないこと。
         self.assertZone(9, "福島県", "伊達市")
