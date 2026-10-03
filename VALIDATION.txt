@@ -189,3 +189,35 @@ build_zone_data.py の結果
 
 未確認
   - prefectures・municipalities の ZIP をダウンロードして中身を確かめること（大きさと SHA-256 の記録だけ）。
+    → 同じ日に確かめた（下の記録）。
+
+----------------------------------------------------------------------
+2026-10-04  リリース v2026.1 の prefectures・municipalities の中身の確認
+----------------------------------------------------------------------
+
+Claude Code の環境で、リリースから2つの ZIP をダウンロードして確かめた。
+
+  - SHA-256 は、どちらも「リリース v2026.1 の公開」の記録の値と一致した。
+  - 中身は、どちらも .gpkg と DATA_LICENSE.md の2つ。DATA_LICENSE.md はリポジトリと同じ内容（改行コードを除く）。
+
+  plane_rectangular_prefectures_2026.gpkg（194,027,520バイト）
+    - レイヤ plane_rectangular_prefectures_2026、座標系 6668。
+    - 列：fid、geom、N03_001、N03_002、ZONE、ZONE_ROMAN、EPSG、UNIT_CODE、UNIT_NAME。392行。
+  plane_rectangular_municipalities_2026.gpkg（255,340,544バイト）
+    - レイヤ plane_rectangular_municipalities_2026、座標系 6668。
+    - 列：fid、geom、N03_001〜N03_005、N03_007、ZONE、ZONE_ROMAN、EPSG。1,911行。
+
+  元データとの突き合わせ
+    - 元データ（N03-20260101.dbf）と、ユーザーの PC で書き出した coordinate_zones.csv の範囲から、
+      build_zone_data.py の処理で「あるべき行」を作り、GeoPackage の行と比べた。
+    - prefectures：(UNIT_CODE, ZONE) の組み合わせ392件が過不足なく一致。N03_001・N03_002・UNIT_NAME の値もすべて一致。
+    - municipalities：(N03_007, ZONE) の組み合わせ1,911件が過不足なく一致。N03_001〜N03_005 の値もすべて一致。
+    - どちらも ZONE と ZONE_ROMAN・EPSG の組み合わせが data/zones.csv と食い違う行は0件。
+
+  そのほか
+    - layer_styles 表に default のスタイルがあり、デフォルトとして使う設定になっている。
+    - SQLite の integrity_check は ok。
+    - 形が空の行は0件。空間インデックス（rtree）の行数は、地物の数と同じ（392・1,911）。
+
+  タグ
+    - タグ v2026.1 は c3a5611 のまま付け直さないことにした（公開した時点の状態の記録として残す）。
