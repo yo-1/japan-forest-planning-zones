@@ -13,6 +13,7 @@ Claude Code がこのリポジトリで作業するときの約束事です。�
   - `data/zone_rules.csv`：系番号の判定ルール
   - `scripts/zone_rules.py`：判定処理
   - `scripts/n03_dbf.py`：元データの属性ファイル（.dbf）の読み込み
+  - `scripts/check_coordinate_zones.py`：東京都・鹿児島県・沖縄県のポリゴンが系の境目をまたぐかの確認（.shp の範囲を読む）
   - `tests/`：テスト
 - ライセンスは、コードが MIT（`LICENSE`）、データ（`data/` フォルダのファイル）が CC BY 4.0（`DATA_LICENSE.md`）です。
 - 作成者は Yoichi Wada です。

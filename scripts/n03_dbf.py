@@ -16,8 +16,12 @@ N03_TO_RULE_ATTRIBUTES = {
 }
 
 
-def read_dbf(path, encoding="utf-8"):
-    """各行を {列名: 文字列} の dict で返す。削除フラグの付いた行は返さない。"""
+def read_dbf(path, encoding="utf-8", skip_deleted=True):
+    """各行を {列名: 文字列} の dict で返す。
+
+    skip_deleted が True なら削除フラグの付いた行は返さない。.shp と行の順番を合わせて読むときは
+    False にする（削除された行は None になる）。
+    """
     with Path(path).open("rb") as f:
         header = f.read(32)
         if len(header) < 32:
@@ -39,6 +43,8 @@ def read_dbf(path, encoding="utf-8"):
             if len(record) < record_length:
                 raise ValueError(f"レコードが途中で切れています: {path}")
             if record[:1] == b"*":
+                if not skip_deleted:
+                    rows.append(None)
                 continue
             position = 1
             row = {}

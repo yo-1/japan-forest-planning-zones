@@ -42,20 +42,8 @@ class ZoneRule:
         return any(getattr(self, name) is not None for name in BBOX_COLUMNS)
 
     def matches(self, attributes, lon=None, lat=None):
-        for name in ATTRIBUTE_COLUMNS:
-            expected = getattr(self, name)
-            if expected and (attributes.get(name) or "") != expected:
-                return False
-        if self.code:
-            actual_code = attributes.get("code") or ""
-            if not actual_code:
-                # 名前が一致したのにコードがないと、このルールを飛ばして別の系に落ちてしまう。
-                # 経緯度と同じく、呼び出し側の誤りとして例外にする。
-                raise ValueError(
-                    f"rule_id={self.rule_id} はコードの条件を持つため、全国地方公共団体コードが必要です"
-                )
-            if actual_code != self.code:
-                return False
+        if not self.matches_attributes(attributes):
+            return False
         if not self.uses_coordinates:
             return True
         if lon is None or lat is None:
@@ -72,6 +60,24 @@ class ZoneRule:
             return False
         if self.lat_max is not None and lat > self.lat_max:
             return False
+        return True
+
+    def matches_attributes(self, attributes):
+        """経緯度を見ずに、属性（名前とコード）の条件だけを確かめる。"""
+        for name in ATTRIBUTE_COLUMNS:
+            expected = getattr(self, name)
+            if expected and (attributes.get(name) or "") != expected:
+                return False
+        if self.code:
+            actual_code = attributes.get("code") or ""
+            if not actual_code:
+                # 名前が一致したのにコードがないと、このルールを飛ばして別の系に落ちてしまう。
+                # 経緯度と同じく、呼び出し側の誤りとして例外にする。
+                raise ValueError(
+                    f"rule_id={self.rule_id} はコードの条件を持つため、全国地方公共団体コードが必要です"
+                )
+            if actual_code != self.code:
+                return False
         return True
 
 
