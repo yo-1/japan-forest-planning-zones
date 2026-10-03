@@ -161,17 +161,44 @@ def summarize(results):
     return "\n".join(lines)
 
 
+def find_input_error(shp_path):
+    """入力ファイルの指定に誤りがあれば、利用者向けの説明を返す。問題がなければ None。"""
+    shp = Path(shp_path)
+    if shp.suffix.lower() == ".dbf":
+        return (f".dbf ではなく .shp を指定してください（同じフォルダの .dbf は自動で読みます）: {shp}\n"
+                f"  例: {shp.with_suffix('.shp')}")
+    if shp.suffix.lower() != ".shp":
+        return f"シェープファイル（.shp）を指定してください: {shp}"
+    if not shp.is_file():
+        return (f"ファイルが見つかりません: {shp}\n"
+                "  パスに「...」のような仮の文字が残っていないか、ZIP を展開したか確かめてください。")
+    dbf = shp.with_suffix(".dbf")
+    if not dbf.is_file():
+        return f"同じフォルダに .dbf が見つかりません: {dbf}"
+    return None
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("shp", help="N03 のシェープファイル（例：N03-20260101.shp）。同じ名前の .dbf も必要")
     parser.add_argument("output", help="書き出す CSV のパス（UTF-8、BOM なし）")
     args = parser.parse_args(argv)
 
-    results = check(args.shp, zone_rules.load_rules())
-    write_csv(results, args.output)
+    message = find_input_error(args.shp)
+    if message:
+        print(f"エラー: {message}", file=sys.stderr)
+        return 1
+    try:
+        results = check(args.shp, zone_rules.load_rules())
+        write_csv(results, args.output)
+    except (OSError, ValueError) as error:
+        # 長い Traceback ではなく、原因の1行だけを見せる。
+        print(f"エラー: {error}", file=sys.stderr)
+        return 1
     print(f"{len(results)}件を {args.output} に書き出しました")
     print(summarize(results))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

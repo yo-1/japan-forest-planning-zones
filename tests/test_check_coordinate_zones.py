@@ -121,6 +121,36 @@ class CheckCoordinateZonesTest(unittest.TestCase):
         summary = check_coordinate_zones.summarize(self.results)
         self.assertIn("境目をまたぐ候補: 2件", summary)
 
+    def test_input_errors_are_explained(self):
+        folder = Path(self.tempdir.name)
+        self.assertIsNone(check_coordinate_zones.find_input_error(self.shp))
+        self.assertIn(".shp を指定してください", check_coordinate_zones.find_input_error(self.shp.with_suffix(".dbf")))
+        self.assertIn("見つかりません", check_coordinate_zones.find_input_error(folder / "..." / "N03.shp"))
+        self.assertIn("シェープファイル（.shp）を指定してください", check_coordinate_zones.find_input_error(folder / "N03.zip"))
+        only_shp = folder / "only.shp"
+        only_shp.write_bytes(self.shp.read_bytes())
+        self.assertIn(".dbf が見つかりません", check_coordinate_zones.find_input_error(only_shp))
+
+    def test_main_prints_one_line_error_instead_of_traceback(self):
+        import contextlib
+        import io
+        stderr = io.StringIO()
+        with contextlib.redirect_stderr(stderr):
+            status = check_coordinate_zones.main([str(Path(self.tempdir.name) / "nothing.shp"), "out.csv"])
+        self.assertEqual(status, 1)
+        self.assertTrue(stderr.getvalue().startswith("エラー: ファイルが見つかりません"))
+        self.assertNotIn("Traceback", stderr.getvalue())
+
+    def test_main_returns_zero_on_success(self):
+        import contextlib
+        import io
+        output = Path(self.tempdir.name) / "ok.csv"
+        stdout = io.StringIO()
+        with contextlib.redirect_stdout(stdout):
+            status = check_coordinate_zones.main([str(self.shp), str(output)])
+        self.assertEqual(status, 0)
+        self.assertIn("境目をまたぐ候補", stdout.getvalue())
+
     def test_rejects_non_shapefile(self):
         bad = Path(self.tempdir.name) / "bad.shp"
         bad.write_bytes(b"\0" * 100)
