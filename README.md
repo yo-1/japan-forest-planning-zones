@@ -105,6 +105,7 @@ UTF-8（BOMなし）、改行はLFです。
 （1ファイル100MBまで）を超えるので、リポジトリには入れず、GitHubのReleasesに添付して配ります。
 
 - 配布場所：https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases
+  （2026年版は [v2026.1](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.1)）
 - どのZIPにも`DATA_LICENSE.md`を入れます。
 - GeoPackageには、系ごとの色分け（`ZONE_ROMAN`による分類）のスタイルを入れています。QGISで開くと、そのまま色分けされて表示されます。
   系ごと・都道府県ごとには、ローマ数字のラベルも付けています（市区町村ごとは、数が多いのでラベルなし）。

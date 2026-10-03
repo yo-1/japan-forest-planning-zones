@@ -160,3 +160,32 @@ build_zone_data.py の結果
   - zones・prefectures の .gpkg そのものの大きさ。
   - QGIS 以外のソフト（ArcGIS など）で開けるか。
   - 隣り合う系の間に、すき間や重なりがないか。
+
+----------------------------------------------------------------------
+2026-10-04  リリース v2026.1 の公開
+----------------------------------------------------------------------
+
+公開したもの
+  - https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.1
+  - タイトル：日本の平面直角座標系（全国19系）の適用区域ポリゴン 2026年版
+  - タグ v2026.1 は main の c3a5611 を指す（この記録を入れる PR より前の main）。
+
+添付ファイル（GitHub API で確認。state はどれも uploaded）
+  ファイル                                      大きさ（バイト）  SHA-256
+  plane_rectangular_municipalities_2026.zip     172,613,644      091606c6a0c84f62ee3611a01e93913c9fb343add9a5201cc5a7dff90da30b20
+  plane_rectangular_prefectures_2026.zip        128,632,421      dacab25920a5d1889c8b656915094769645798286b9bc604d10488d1da7c857b
+  plane_rectangular_zones_2026.zip              112,717,249      3bbda181bacd2b1c16287ce21c9f219d72caebd094b031799f05be64cb92aef3
+  - 大きさは、ユーザーの PC の ZIP（168,569KB・125,618KB・110,076KB）と一致する。
+  - 最初に公開したときは添付が0件だったので、公開後にリリースを編集して添付した。
+
+ダウンロードして確かめたこと（zones のみ。Claude Code の環境で実施）
+  - ダウンロードした ZIP の SHA-256 が、上の値と一致した。
+  - 中身は plane_rectangular_zones_2026.gpkg（172,027,904バイト）と DATA_LICENSE.md の2つ。
+  - GeoPackage：レイヤ plane_rectangular_zones_2026、座標系 6668、列 fid・geom・ZONE・ZONE_ROMAN・EPSG、19行。
+    ZONE と ZONE_ROMAN・EPSG の組み合わせは19系すべて data/zones.csv と同じ。
+  - layer_styles 表に default のスタイルが入っていて、デフォルトとして使う設定になっている。
+  - SQLite の integrity_check は ok。
+  - DATA_LICENSE.md は、リポジトリの DATA_LICENSE.md と同じ内容（改行コードを除く）。
+
+未確認
+  - prefectures・municipalities の ZIP をダウンロードして中身を確かめること（大きさと SHA-256 の記録だけ）。
