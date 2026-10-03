@@ -1,0 +1,39 @@
+name: tests
+
+# main への push と、すべての PR でテストを走らせる。
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # ユーザーの実行環境（Windows・QGIS 付属の Python 3.12）と、README に書いた最低版（3.9）を確かめる。
+        include:
+          - os: ubuntu-latest
+            python-version: "3.9"
+          - os: ubuntu-latest
+            python-version: "3.12"
+          - os: windows-latest
+            python-version: "3.12"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # pyproj は EPSG の定義との照合テストだけに使う（なくてもほかのテストは動く）。
+      - name: Install pyproj
+        run: python -m pip install pyproj
+      - name: Compile
+        run: python -m compileall -q scripts tests
+      - name: Run tests
+        # 元データ（N03）はリポジトリに入れていないので、N03_DBF を使うテストはスキップされる。
+        run: python -m unittest discover -s tests -v

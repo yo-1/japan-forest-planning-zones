@@ -55,7 +55,9 @@ python -m unittest discover -s tests -v
 - 標準ライブラリだけで動きます。
 - pyproj がない環境では、EPSG の定義と照合するテストがスキップされます。スキップされたテストは「成功」ではなく「未実行」として扱い、結果を報告するときは件数（成功・スキップ・失敗）を書きます。
 - `__pycache__/` はコミットしません（`.gitignore` 対象）。
-- CI（GitHub Actions）はまだ設定していません。
+- CI（GitHub Actions、`.github/workflows/tests.yml`）で、main への push と PR のたびに、Ubuntu（Python 3.9・3.12）と Windows（Python 3.12）でテストを走らせます。
+  元データはリポジトリにないので、CI では元データとの突き合わせのテストはスキップされます。
+- テキストファイルの改行は `.gitattributes` で LF に固定しています（Windows でチェックアウトしても CRLF にならないように）。
 
 ## 確かめていないこと（作業のときに気をつけること）
 

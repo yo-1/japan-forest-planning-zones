@@ -311,6 +311,9 @@ python -m unittest discover -s tests -v
 
 pyprojが入っていない環境では、EPSGの定義と照合するテストはスキップされます（未実行として扱ってください）。
 
+GitHubでは、mainへのpushとPRのたびに、GitHub Actions（`.github/workflows/tests.yml`）が
+Ubuntu（Python 3.9・3.12）とWindows（Python 3.12）でテストを走らせます。
+
 元データとの突き合わせ（`tests/test_n03_attributes.py`）は、元データをリポジトリに入れていないので、
 環境変数`N03_DBF`に`N03-20260101.dbf`のパスを指定したときだけ動きます。指定しなければスキップされます。
 
