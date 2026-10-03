@@ -5,7 +5,8 @@
         全国地方公共団体コードごとの対応表。1つの市町村の中で系が分かれる場合は、zones 列に
         「1;2」のように複数の系を書く。
     <元の名前>_zone.shp / .shx / .dbf / .prj / .cpg
-        元データのシェープファイルに ZONE 列（系番号）を足したもの。形は元のまま。
+        元データのシェープファイルに、ZONE（系番号）・ZONE_ROMAN（ローマ数字）・EPSG（その系の
+        平面直角座標系の EPSG コード、JGD2011）の3列を足したもの。形は元のまま。
         系ごとにまとめたポリゴン（ディゾルブ）は、これを QGIS や ogr2ogr でまとめて作る（README を参照）。
 
 GDAL や QGIS がなくても動くよう、標準ライブラリだけで読み書きする。
@@ -31,8 +32,13 @@ import zone_rules  # noqa: E402
 TABLE_COLUMNS = [
     "code", "prefecture", "subprefecture", "county", "municipality", "ward", "zones", "polygons",
 ]
-ZONE_FIELD = b"ZONE"
-ZONE_FIELD_LENGTH = 2
+ZONES_CSV = Path(__file__).resolve().parent.parent / "data" / "zones.csv"
+# 足す列：(名前, 型, 長さ, zones.csv の列)。ZONE は系番号そのもの。
+ADDED_FIELDS = [
+    (b"ZONE", b"N", 2, "zone"),
+    (b"ZONE_ROMAN", b"C", 5, "zone_roman"),
+    (b"EPSG", b"N", 4, "epsg_jgd2011"),
+]
 
 
 class ZoneAssignmentError(ValueError):
@@ -107,8 +113,28 @@ def write_table(table, path):
         writer.writerows(table)
 
 
-def write_dbf_with_zone(source_dbf, zones, target_dbf):
-    """元の .dbf の列と値をそのまま写し、最後に ZONE 列（数値2桁）を足す。"""
+def load_zone_definitions(path=ZONES_CSV):
+    """系番号から zones.csv の1行（dict）を引けるようにする。"""
+    with Path(path).open(encoding="utf-8-sig", newline="") as f:
+        return {int(row["zone"]): row for row in csv.DictReader(f)}
+
+
+def added_values(zone, definitions):
+    """足す列の値を、各列の長さにそろえた bytes で返す。数値は右寄せ、文字は左寄せ。"""
+    parts = []
+    for _, field_type, length, column in ADDED_FIELDS:
+        text = "" if zone is None else str(definitions[zone][column])
+        value = text.encode("ascii")
+        if len(value) > length:
+            raise ValueError(f"{column} の値 {text} が列の長さ {length} を超えます")
+        parts.append(value.rjust(length, b" ") if field_type == b"N" else value.ljust(length, b" "))
+    return b"".join(parts)
+
+
+def write_dbf_with_zone(source_dbf, zones, target_dbf, definitions=None):
+    """元の .dbf の列と値をそのまま写し、最後に ZONE・ZONE_ROMAN・EPSG の3列を足す。"""
+    if definitions is None:
+        definitions = load_zone_definitions()
     with Path(source_dbf).open("rb") as src:
         header = bytearray(src.read(32))
         record_count, header_length, record_length = struct.unpack("<4xIHH20x", header)
@@ -119,23 +145,25 @@ def write_dbf_with_zone(source_dbf, zones, target_dbf):
         fields = descriptors[:terminator]
         if len(fields) % 32:
             raise ValueError(f".dbf の列の定義が読めません: {source_dbf}")
-        zone_descriptor = struct.pack("<11sc4xBB14x", ZONE_FIELD, b"N", ZONE_FIELD_LENGTH, 0)
-        new_header_length = 32 + len(fields) + 32 + 1
-        new_record_length = record_length + ZONE_FIELD_LENGTH
+        added_descriptors = b"".join(
+            struct.pack("<11sc4xBB14x", name, field_type, length, 0)
+            for name, field_type, length, _ in ADDED_FIELDS
+        )
+        new_header_length = 32 + len(fields) + len(added_descriptors) + 1
+        new_record_length = record_length + sum(length for _, _, length, _ in ADDED_FIELDS)
         struct.pack_into("<HH", header, 8, new_header_length, new_record_length)
 
         src.seek(header_length)
         with Path(target_dbf).open("wb") as dst:
             dst.write(header)
             dst.write(fields)
-            dst.write(zone_descriptor)
+            dst.write(added_descriptors)
             dst.write(b"\r")
             for zone in zones:
                 record = src.read(record_length)
                 if len(record) < record_length:
                     raise ValueError(f"レコードが途中で切れています: {source_dbf}")
-                value = b"" if zone is None else str(zone).encode("ascii")
-                dst.write(record + value.rjust(ZONE_FIELD_LENGTH, b" "))
+                dst.write(record + added_values(zone, definitions))
             dst.write(b"\x1a")
 
 

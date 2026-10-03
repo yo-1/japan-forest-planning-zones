@@ -92,6 +92,8 @@ class BuildZoneDataTest(unittest.TestCase):
         self.assertEqual((output / "sample_zone.shp").read_bytes(), self.shp.read_bytes())
         written = n03_dbf.read_dbf(output / "sample_zone.dbf")
         self.assertEqual([r["ZONE"] for r in written], ["11", "13", "14", "19", "2"])
+        self.assertEqual([r["ZONE_ROMAN"] for r in written], ["XI", "XIII", "XIV", "XIX", "II"])
+        self.assertEqual([r["EPSG"] for r in written], ["6679", "6681", "6682", "6687", "6670"])
         self.assertEqual(written[0]["N03_004"], "泊村")
         with (output / "municipality_zones.csv").open(encoding="utf-8", newline="") as f:
             self.assertEqual(len(list(csv.DictReader(f))), 4)
