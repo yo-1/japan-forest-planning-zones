@@ -28,6 +28,7 @@ SAMPLE = [
     ({"N03_001": "東京都", "N03_004": "小笠原村", "N03_007": "13421"}, (142.1, 27.0, 142.3, 27.1)),
     ({"N03_001": "東京都", "N03_004": "小笠原村", "N03_007": "13421"}, (153.9, 24.2, 154.0, 24.3)),
     ({"N03_001": "鹿児島県", "N03_004": "鹿児島市", "N03_007": "46201"}, (130.4, 31.5, 130.6, 31.7)),
+    ({"N03_001": "福岡県", "N03_004": "福岡市", "N03_005": "東区", "N03_007": "40131"}, (130.4, 33.6, 130.5, 33.7)),
 ]
 
 
@@ -53,7 +54,7 @@ class BuildZoneDataTest(unittest.TestCase):
 
     def test_assign_zones(self):
         zones = build_zone_data.assign_zones(self.rows, self.boxes, self.rules)
-        self.assertEqual(zones, [11, 13, 14, 19, 2])
+        self.assertEqual(zones, [11, 13, 14, 19, 2, 2])
 
     def test_rows_decided_by_attributes_do_not_need_boxes(self):
         boxes = [None, None] + self.boxes[2:]
@@ -91,10 +92,28 @@ class BuildZoneDataTest(unittest.TestCase):
             self.assertTrue((output / f"sample_zone{suffix}").is_file(), suffix)
         self.assertEqual((output / "sample_zone.shp").read_bytes(), self.shp.read_bytes())
         written = n03_dbf.read_dbf(output / "sample_zone.dbf")
-        self.assertEqual([r["ZONE"] for r in written], ["11", "13", "14", "19", "2"])
+        self.assertEqual([r["ZONE"] for r in written], ["11", "13", "14", "19", "2", "2"])
+        self.assertEqual([r["ZONE_ROMAN"] for r in written], ["XI", "XIII", "XIV", "XIX", "II", "II"])
+        self.assertEqual([r["EPSG"] for r in written], ["6679", "6681", "6682", "6687", "6670", "6670"])
+        # 北海道・東京都・鹿児島県は市区町村のまま、ふつうの府県は府県（コードは府県コード＋000）。
+        self.assertEqual(
+            [r["UNIT_CODE"] for r in written], ["01403", "01696", "13421", "13421", "46201", "40000"]
+        )
+        self.assertEqual(
+            [r["UNIT_NAME"] for r in written], ["泊村", "泊村", "小笠原村", "小笠原村", "鹿児島市", "福岡県"]
+        )
         self.assertEqual(written[0]["N03_004"], "泊村")
         with (output / "municipality_zones.csv").open(encoding="utf-8", newline="") as f:
-            self.assertEqual(len(list(csv.DictReader(f))), 4)
+            self.assertEqual(len(list(csv.DictReader(f))), 5)
+        self.assertIn("系ごと 5件、都道府県ごと 6件、市区町村ごと 6件", stdout.getvalue())
+
+    def test_prefecture_unit_keeps_ward_name(self):
+        row = {"N03_001": "北海道", "N03_004": "札幌市", "N03_005": "中央区", "N03_007": "01101"}
+        self.assertEqual(build_zone_data.prefecture_unit(row), ("01101", "札幌市中央区"))
+        row = {"N03_001": "東京都", "N03_004": "所属未定地", "N03_005": "", "N03_007": "13000"}
+        self.assertEqual(build_zone_data.prefecture_unit(row), ("13000", "所属未定地"))
+        row = {"N03_001": "千葉県", "N03_004": "所属未定地", "N03_005": "", "N03_007": "12000"}
+        self.assertEqual(build_zone_data.prefecture_unit(row), ("12000", "千葉県"))
 
     def test_main_refuses_source_folder(self):
         stderr = io.StringIO()

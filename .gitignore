@@ -1,3 +1,8 @@
 __pycache__/
 *.pyc
 .venv/
+
+# 系ごとのポリゴンや作業中の出力は大きいのでリポジトリに入れない（Releases で配る）
+output/
+*.gpkg
+*.zip
