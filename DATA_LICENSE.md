@@ -27,6 +27,7 @@ CC BY 4.0
 | 元データの基準年月日 | 2026年（令和8年）1月1日時点 |
 | 加工内容 | 平面直角座標系の系番号を付与し、系ごとにポリゴンをグループ化 |
 | 適用区域の参照資料 | 国土地理院「わかりやすい平面直角座標系」 https://www.gsi.go.jp/sokuchikijun/jpc.html |
+| 適用区域の根拠 | 平成十四年国土交通省告示第九号（国土地理院 https://www.gsi.go.jp/LAW/heimencho.html ） |
 | 作成者 | Yoichi Wada |
 
 ## 免責
