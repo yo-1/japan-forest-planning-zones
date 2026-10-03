@@ -14,7 +14,7 @@ Claude Code がこのリポジトリで作業するときの約束事です。�
   - `scripts/zone_rules.py`：判定処理
   - `scripts/n03_dbf.py`：元データの属性ファイル（.dbf）の読み込み
   - `scripts/check_coordinate_zones.py`：東京都・鹿児島県・沖縄県のポリゴンが系の境目をまたぐかの確認（.shp の範囲を読む）
-  - `scripts/build_zone_data.py`：すべてのポリゴンに系番号を割り当て、対応表と ZONE・ZONE_ROMAN・EPSG 列付きのシェープファイルを書き出す
+  - `scripts/build_zone_data.py`：すべてのポリゴンに系番号を割り当て、対応表と ZONE・ZONE_ROMAN・EPSG・UNIT_CODE・UNIT_NAME 列付きのシェープファイルを書き出す
   - `data/municipality_zones.csv`：市区町村（全国地方公共団体コード）と系番号の対応表
   - `tests/`：テスト
 - ライセンスは、コードが MIT（`LICENSE`）、データ（`data/` フォルダのファイル）が CC BY 4.0（`DATA_LICENSE.md`）です。
@@ -32,7 +32,7 @@ Claude Code がこのリポジトリで作業するときの約束事です。�
 - CSV は UTF-8（BOM なし）、改行は LF にします（テストで確かめています）。
 - `data/zones.csv` は告示の書き写しです。告示が改正されたとき以外は値を変えません。
 - `data/municipality_zones.csv` は `scripts/build_zone_data.py` で作るものです。手で直さず、ルールか元データを直して作り直します。
-- 系番号付きのポリゴン（系ごとの GeoPackage は約164MB。市区町村ごとも同じくらいになる見込みで、まだ確認できていません）は GitHub の上限（1ファイル100MB）を超えるので、リポジトリに入れず Releases で配ります。
+- 系番号付きのポリゴン（系ごと・都道府県ごと・市区町村ごとの3種類の GeoPackage。系ごとは約164MB、ほかの2つの大きさはまだ確認できていません）は GitHub の上限（1ファイル100MB）を超えるので、リポジトリに入れず Releases で配ります。
   `.gpkg`・`.zip`・`output/` は `.gitignore` の対象です。Releases への添付はユーザーがブラウザで行います（Claude Code の GitHub 連携では添付できません）。
 - `data/zone_rules.csv`
   - `rule_id` の小さい順に評価し、最初に条件が合ったルールを採用します。ルールを足すときは評価の順番に気をつけてください。
