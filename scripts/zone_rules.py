@@ -2,6 +2,8 @@
 
 ルールは rule_id の昇順に評価し、最初に条件をすべて満たしたルールの系番号を採用する。
 空欄の条件は「指定なし」（どの値にも一致）として扱う。
+code（全国地方公共団体コード）が書かれたルールは、名前に加えてコードも一致したときだけ当てはまる。
+同じ名前の市町村（例：北海道の2つの泊村）の取り違えや、名前とコードの食い違いに気づけるようにするため。
 経緯度の条件（lon_min / lon_max / lat_min / lat_max）は両端を含む。境界上の点で複数のルールが
 一致する場合は、rule_id が小さいルールが優先される。
 
@@ -27,6 +29,7 @@ class ZoneRule:
     subprefecture: str
     county: str
     municipality: str
+    code: str
     lon_min: Optional[float]
     lon_max: Optional[float]
     lat_min: Optional[float]
@@ -39,10 +42,8 @@ class ZoneRule:
         return any(getattr(self, name) is not None for name in BBOX_COLUMNS)
 
     def matches(self, attributes, lon=None, lat=None):
-        for name in ATTRIBUTE_COLUMNS:
-            expected = getattr(self, name)
-            if expected and (attributes.get(name) or "") != expected:
-                return False
+        if not self.matches_attributes(attributes):
+            return False
         if not self.uses_coordinates:
             return True
         if lon is None or lat is None:
@@ -59,6 +60,24 @@ class ZoneRule:
             return False
         if self.lat_max is not None and lat > self.lat_max:
             return False
+        return True
+
+    def matches_attributes(self, attributes):
+        """経緯度を見ずに、属性（名前とコード）の条件だけを確かめる。"""
+        for name in ATTRIBUTE_COLUMNS:
+            expected = getattr(self, name)
+            if expected and (attributes.get(name) or "") != expected:
+                return False
+        if self.code:
+            actual_code = attributes.get("code") or ""
+            if not actual_code:
+                # 名前が一致したのにコードがないと、このルールを飛ばして別の系に落ちてしまう。
+                # 経緯度と同じく、呼び出し側の誤りとして例外にする。
+                raise ValueError(
+                    f"rule_id={self.rule_id} はコードの条件を持つため、全国地方公共団体コードが必要です"
+                )
+            if actual_code != self.code:
+                return False
         return True
 
 
@@ -78,6 +97,7 @@ def load_rules(path=DEFAULT_RULES_CSV):
                 subprefecture=row["subprefecture"].strip(),
                 county=row["county"].strip(),
                 municipality=row["municipality"].strip(),
+                code=row["code"].strip(),
                 lon_min=_optional_float(row["lon_min"]),
                 lon_max=_optional_float(row["lon_max"]),
                 lat_min=_optional_float(row["lat_min"]),
@@ -93,8 +113,8 @@ def load_rules(path=DEFAULT_RULES_CSV):
 def find_rule(rules, attributes, lon=None, lat=None):
     """一致した最初のルールを返す。一致するルールがなければ None。
 
-    attributes には prefecture / subprefecture / county / municipality を渡す
-    （それぞれ N03_001 / N03_002 / N03_003 / N03_004 に対応）。
+    attributes には prefecture / subprefecture / county / municipality / code を渡す
+    （それぞれ N03_001 / N03_002 / N03_003 / N03_004 / N03_007 に対応）。
     lon / lat はポリゴンの代表点（ポリゴン内部にある点）の経度・緯度（JGD2011、度）。
     """
     for rule in rules:
