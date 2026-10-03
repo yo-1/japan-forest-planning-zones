@@ -157,6 +157,16 @@ class FindRuleTest(unittest.TestCase):
                 else:
                     self.assertEqual(without_city_rule.zone, with_city_rule.zone)
 
+    def test_same_village_name_in_two_subprefectures(self):
+        # 北海道には泊村が2つある（後志総合振興局と、根室振興局の北方領土）。振興局で区別できること。
+        self.assertZone(11, "北海道", "泊村", "後志総合振興局", "古宇郡")
+        self.assertZone(13, "北海道", "泊村", "根室振興局", "国後郡")
+
+    def test_unassigned_area_follows_prefecture_rules(self):
+        # 元データには市区町村が決まっていない「所属未定地」があり、都道府県の単位のルールで判定する。
+        self.assertZone(9, "東京都", "所属未定地", lon=140.30, lat=30.48)
+        self.assertZone(2, "福岡県", "所属未定地")
+
     def test_same_city_name_in_other_prefecture(self):
         # 伊達市は北海道と福島県にある。北海道の XI系の規定が福島県に及ばないこと。
         self.assertZone(9, "福島県", "伊達市")
