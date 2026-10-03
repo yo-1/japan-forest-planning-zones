@@ -32,7 +32,7 @@ Claude Code がこのリポジトリで作業するときの約束事です。�
 - CSV は UTF-8（BOM なし）、改行は LF にします（テストで確かめています）。
 - `data/zones.csv` は告示の書き写しです。告示が改正されたとき以外は値を変えません。
 - `data/municipality_zones.csv` は `scripts/build_zone_data.py` で作るものです。手で直さず、ルールか元データを直して作り直します。
-- 系番号付きのポリゴン（系ごと・都道府県ごと・市区町村ごとの3種類の GeoPackage。系ごとは約164MB、ほかの2つの大きさはまだ確認できていません）は GitHub の上限（1ファイル100MB）を超えるので、リポジトリに入れず Releases で配ります。
+- 系番号付きのポリゴン（系ごと・都道府県ごと・市区町村ごとの3種類の GeoPackage。2026年版の ZIP はそれぞれ約108MB・約123MB・約165MB）は GitHub の上限（1ファイル100MB）を超えるので、リポジトリに入れず Releases で配ります。
   `.gpkg`・`.zip`・`output/` は `.gitignore` の対象です。Releases への添付はユーザーがブラウザで行います（Claude Code の GitHub 連携では添付できません）。
 - `data/zone_rules.csv`
   - `rule_id` の小さい順に評価し、最初に条件が合ったルールを採用します。ルールを足すときは評価の順番に気をつけてください。
