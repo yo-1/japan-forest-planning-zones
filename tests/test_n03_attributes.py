@@ -29,7 +29,7 @@ class N03AttributesTest(unittest.TestCase):
         cls.rows = n03_dbf.read_dbf(os.environ["N03_DBF"])
         cls.rules = zone_rules.load_rules()
         cls.keys = {
-            (r["N03_001"], r["N03_002"], r["N03_003"], r["N03_004"]) for r in cls.rows
+            (r["N03_001"], r["N03_002"], r["N03_003"], r["N03_004"], r["N03_007"]) for r in cls.rows
         }
 
     def test_every_rule_condition_exists_in_data(self):
@@ -41,9 +41,10 @@ class N03AttributesTest(unittest.TestCase):
                     and (not rule.subprefecture or key[1] == rule.subprefecture)
                     and (not rule.county or key[2] == rule.county)
                     and (not rule.municipality or key[3] == rule.municipality)
+                    and (not rule.code or key[4] == rule.code)
                     for key in self.keys
                 )
-                self.assertTrue(found, "元データに一致する行がない")
+                self.assertTrue(found, "元データに一致する行がない（名前かコードが違う）")
 
     def test_every_row_gets_zone_by_attributes(self):
         unmatched = []
@@ -80,7 +81,7 @@ class N03AttributesTest(unittest.TestCase):
             {"龍郷町", "大和村", "宇検村", "瀬戸内町", "喜界町", "徳之島町",
              "天城町", "伊仙町", "和泊町", "知名町", "与論町"},
         )
-        self.assertIn(("鹿児島県", "", "", "奄美市"), self.keys)
+        self.assertIn(("鹿児島県", "", "", "奄美市", "46222"), self.keys)
 
     def test_codes_are_not_empty_and_one_name_per_code(self):
         names_by_code = collections.defaultdict(set)

@@ -94,12 +94,13 @@ class FindRuleTest(unittest.TestCase):
         cls.rules = zone_rules.load_rules(RULES_CSV)
 
     def assertZone(self, expected, prefecture, municipality="", subprefecture="",
-                   county="", lon=None, lat=None):
+                   county="", lon=None, lat=None, code=""):
         attributes = {
             "prefecture": prefecture,
             "subprefecture": subprefecture,
             "county": county,
             "municipality": municipality,
+            "code": code,
         }
         rule = zone_rules.find_rule(self.rules, attributes, lon, lat)
         self.assertIsNotNone(rule, f"一致するルールがない: {attributes} ({lon}, {lat})")
@@ -113,39 +114,41 @@ class FindRuleTest(unittest.TestCase):
         self.assertZone(10, "宮城県", "仙台市")
 
     def test_hokkaido(self):
-        self.assertZone(11, "北海道", "小樽市", "後志総合振興局")
-        self.assertZone(11, "北海道", "伊達市", "胆振総合振興局")
-        self.assertZone(11, "北海道", "豊浦町", "胆振総合振興局", "虻田郡")
-        self.assertZone(12, "北海道", "室蘭市", "胆振総合振興局")
-        self.assertZone(11, "北海道", "江差町", "檜山振興局", "檜山郡")
-        self.assertZone(12, "北海道", "札幌市", "石狩振興局")
-        self.assertZone(13, "北海道", "北見市", "オホーツク総合振興局")
-        self.assertZone(13, "北海道", "美幌町", "オホーツク総合振興局", "網走郡")
-        self.assertZone(12, "北海道", "遠軽町", "オホーツク総合振興局", "紋別郡")
-        self.assertZone(13, "北海道", "音更町", "十勝総合振興局", "河東郡")
-        self.assertZone(13, "北海道", "別海町", "根室振興局", "野付郡")
+        # コードは元データ（N03 2026年版）の N03_007 の値。
+        self.assertZone(11, "北海道", "小樽市", "後志総合振興局", code="01203")
+        self.assertZone(11, "北海道", "伊達市", "胆振総合振興局", code="01233")
+        self.assertZone(11, "北海道", "豊浦町", "胆振総合振興局", "虻田郡", code="01571")
+        self.assertZone(12, "北海道", "室蘭市", "胆振総合振興局", code="01205")
+        self.assertZone(11, "北海道", "江差町", "檜山振興局", "檜山郡", code="01361")
+        self.assertZone(12, "北海道", "札幌市", "石狩振興局", code="01101")
+        self.assertZone(13, "北海道", "北見市", "オホーツク総合振興局", code="01208")
+        self.assertZone(13, "北海道", "美幌町", "オホーツク総合振興局", "網走郡", code="01543")
+        self.assertZone(12, "北海道", "遠軽町", "オホーツク総合振興局", "紋別郡", code="01555")
+        self.assertZone(13, "北海道", "音更町", "十勝総合振興局", "河東郡", code="01631")
+        self.assertZone(13, "北海道", "別海町", "根室振興局", "野付郡", code="01691")
 
     def test_hokkaido_city_rules(self):
         # 告示で名前が挙がっている市のうち、所属する振興局が全域同じ系のものは、
         # 市のルールがなくても同じ結果になる。振興局の一部だけがその系のものは、
         # 市のルールがないと XII系になってしまう。
         city_subprefectures = {
-            "小樽市": ("後志総合振興局", False),
-            "函館市": ("渡島総合振興局", False),
-            "北斗市": ("渡島総合振興局", False),
-            "帯広市": ("十勝総合振興局", False),
-            "釧路市": ("釧路総合振興局", False),
-            "根室市": ("根室振興局", False),
-            "伊達市": ("胆振総合振興局", True),
-            "北見市": ("オホーツク総合振興局", True),
-            "網走市": ("オホーツク総合振興局", True),
+            "小樽市": ("後志総合振興局", "01203", False),
+            "函館市": ("渡島総合振興局", "01202", False),
+            "北斗市": ("渡島総合振興局", "01236", False),
+            "帯広市": ("十勝総合振興局", "01207", False),
+            "釧路市": ("釧路総合振興局", "01206", False),
+            "根室市": ("根室振興局", "01223", False),
+            "伊達市": ("胆振総合振興局", "01233", True),
+            "北見市": ("オホーツク総合振興局", "01208", True),
+            "網走市": ("オホーツク総合振興局", "01211", True),
         }
-        for city, (subprefecture, required) in city_subprefectures.items():
+        for city, (subprefecture, code, required) in city_subprefectures.items():
             with self.subTest(city=city):
                 attributes = {
                     "prefecture": "北海道",
                     "subprefecture": subprefecture,
                     "municipality": city,
+                    "code": code,
                 }
                 with_city_rule = zone_rules.find_rule(self.rules, attributes)
                 without_city_rule = zone_rules.find_rule(
@@ -159,8 +162,8 @@ class FindRuleTest(unittest.TestCase):
 
     def test_same_village_name_in_two_subprefectures(self):
         # 北海道には泊村が2つある（後志総合振興局と、根室振興局の北方領土）。振興局で区別できること。
-        self.assertZone(11, "北海道", "泊村", "後志総合振興局", "古宇郡")
-        self.assertZone(13, "北海道", "泊村", "根室振興局", "国後郡")
+        self.assertZone(11, "北海道", "泊村", "後志総合振興局", "古宇郡", code="01403")
+        self.assertZone(13, "北海道", "泊村", "根室振興局", "国後郡", code="01696")
 
     def test_unassigned_area_follows_prefecture_rules(self):
         # 元データには市区町村が決まっていない「所属未定地」があり、都道府県の単位のルールで判定する。
@@ -189,7 +192,7 @@ class FindRuleTest(unittest.TestCase):
         self.assertZone(1, "鹿児島県", "十島村", county="鹿児島郡", lon=129.60, lat=29.50)
         self.assertZone(2, "鹿児島県", "屋久島町", county="熊毛郡", lon=130.50, lat=30.35)
         self.assertZone(2, "鹿児島県", "三島村", county="鹿児島郡", lon=130.22, lat=30.79)  # 硫黄島付近
-        self.assertZone(1, "鹿児島県", "奄美市", lon=129.49, lat=28.38)
+        self.assertZone(1, "鹿児島県", "奄美市", lon=129.49, lat=28.38, code="46222")
         # 東経130度より東でも、奄美群島（ここでは大島郡）は東経130度13分までI系。
         self.assertZone(1, "鹿児島県", "喜界町", county="大島郡", lon=130.03, lat=28.32)
 
@@ -199,6 +202,22 @@ class FindRuleTest(unittest.TestCase):
         # 東経143度ちょうどは XIV系（「東経143度から西」）と XIX系（「東経143度から東」）の
         # 両方に当たる。rule_id が小さい XIV系を採る。
         self.assertZone(14, "東京都", "小笠原村", lon=143.0, lat=25.0)
+
+    def test_code_must_also_match(self):
+        # 名前が合っていてもコードが違えば、そのルールには当たらない（伊達市のルールが外れて XII系になる）。
+        self.assertZone(12, "北海道", "伊達市", "胆振総合振興局", code="07213")
+
+    def test_missing_code_raises_for_code_rules(self):
+        attributes = {"prefecture": "北海道", "subprefecture": "胆振総合振興局", "municipality": "伊達市"}
+        with self.assertRaises(ValueError):
+            zone_rules.find_rule(self.rules, attributes)
+
+    def test_codes_are_five_digits(self):
+        for rule in self.rules:
+            with self.subTest(rule_id=rule.rule_id):
+                if rule.code:
+                    self.assertRegex(rule.code, r"^\d{5}$")
+                    self.assertTrue(rule.municipality, "コードは市町村単位のルールにだけ書く")
 
     def test_missing_point_raises_for_coordinate_rules(self):
         attributes = {"prefecture": "東京都", "municipality": "小笠原村"}

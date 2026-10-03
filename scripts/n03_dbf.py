@@ -12,6 +12,7 @@ N03_TO_RULE_ATTRIBUTES = {
     "N03_002": "subprefecture",
     "N03_003": "county",
     "N03_004": "municipality",
+    "N03_007": "code",
 }
 
 
