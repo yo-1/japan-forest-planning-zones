@@ -74,7 +74,7 @@ class N03AttributesTest(unittest.TestCase):
                 self.assertEqual(actual, {subprefecture})
 
     def test_amami_is_oshima_county_and_amami_city(self):
-        # 奄美群島を「大島郡と奄美市」とみなす仮定で、取りこぼしや余計な町村がないことを確かめる。
+        # 奄美群島（奄美市と大島郡。奄美群島振興開発特別措置法第1条）に、取りこぼしや余計な町村がないことを確かめる。
         oshima = {k[3] for k in self.keys if k[0] == "鹿児島県" and k[2] == "大島郡"}
         self.assertEqual(
             oshima,
