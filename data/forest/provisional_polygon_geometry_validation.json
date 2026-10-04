@@ -1,0 +1,33 @@
+{
+  "forest_plan_districts_provisional": {
+    "count": 158,
+    "invalid_or_empty": 0,
+    "srids": [
+      6668
+    ],
+    "geometry_types": [
+      "MultiPolygon"
+    ]
+  },
+  "forest_wide_basins_provisional": {
+    "count": 44,
+    "invalid_or_empty": 0,
+    "srids": [
+      6668
+    ],
+    "geometry_types": [
+      "MultiPolygon"
+    ]
+  },
+  "forest_unassigned_review": {
+    "count": 20,
+    "invalid_or_empty": 0,
+    "srids": [
+      6668
+    ],
+    "geometry_types": [
+      "MultiPolygon"
+    ]
+  },
+  "integrity": "ok"
+}
