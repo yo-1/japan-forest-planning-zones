@@ -11,4 +11,4 @@
 
 4ファイルを同じフォルダに置き、`cat forest_planning_zones_2026_provisional.gpkg.part0* > forest_planning_zones_2026_provisional.gpkg`で結合する。Windowsでは `copy /b part00+part01+part02+part03 forest_planning_zones_2026_provisional.gpkg` の `part00` 等を実際の完全なファイル名に置き換える。結合後のSHA-256は `6607b8af46ba319702debbab2c3d19b2fd5ff55c0ed71d61d097eecde8bf615b`。分割ファイルの連結結果と元ファイルが同じハッシュであることを確認済み。
 
-生成コードは [build_provisional_aggregates.py](../scripts/build_provisional_aggregates.py)。集約結果はEPSG:6668のGeoPackageとして技術検査したが、QGIS実機での描画と現行区域との一致は未確認。境界・所属の照会事項は [BOUNDARY_SOURCE_REVIEW.md](BOUNDARY_SOURCE_REVIEW.md) を参照。
+生成コードは [build_provisional_aggregates.py](../scripts/build_provisional_aggregates.py)。[独立したShapely形状検査結果](../data/forest/provisional_polygon_geometry_validation.json)では全222地物に無効・空形状0件、EPSG:6668、SQLite整合性`ok`。QGIS実機での描画と現行区域との一致は未確認。境界・所属の照会事項は [BOUNDARY_SOURCE_REVIEW.md](BOUNDARY_SOURCE_REVIEW.md) を参照。
