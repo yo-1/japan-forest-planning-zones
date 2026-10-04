@@ -1,0 +1,17 @@
+{
+  "source_date": "2010-02-01",
+  "n03_date": "2026-01-01",
+  "districts": 158,
+  "basins": 44,
+  "n03_records": 125130,
+  "n03_unique_attribute_groups": 1905,
+  "n03_codes": 1905,
+  "csv_rows": 1905,
+  "statuses": {
+    "要現行資料照合": 1789,
+    "未対応・要調査": 20,
+    "所属計画区を県資料で照合・境界未確認": 96
+  },
+  "blank_code_polygon_records": 0,
+  "final_polygon_ready_rows": 0
+}
