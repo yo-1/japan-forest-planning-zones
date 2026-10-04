@@ -12,7 +12,7 @@
 
 ## 4道県の森林所在データとの照合
 
-提供された北海道・東京都・鹿児島県・沖縄県のGeoPackageは計54,493森林地物で、森林がある292市町村コードを確認できた。[443行の市町村別照合表](../data/forest/forest_target_four_pref_comparison.csv)、[集計結果](../data/forest/forest_target_four_pref_comparison.json)、[未割当20コードの個別確認](../data/forest/unassigned_official_four_pref_review.csv)を保存した。元の1,905コードの全国検証は未完了。
+提供された北海道・東京都・鹿児島県・沖縄県のGeoPackageは計54,493森林地物で、森林がある292市町村コードを確認できた。このうち291コードが候補表にあり、札幌市01100は候補表が区単位のため直接対応しない。候補表の残り1,614コードはこの4道県の森林側地物で照合できていない。[443行の市町村別照合表](../data/forest/forest_target_four_pref_comparison.csv)、[集計結果](../data/forest/forest_target_four_pref_comparison.json)、[未割当20コードの個別確認](../data/forest/unassigned_official_four_pref_review.csv)を保存した。元の1,905コードの全国検証は未完了。
 
 | 道県 | 森林地物 | 市町村コード数 | 森林側のデータ時点 | 主な結果 |
 | --- | ---: | ---: | --- | --- |
