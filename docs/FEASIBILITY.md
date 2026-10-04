@@ -27,3 +27,9 @@ QGISでの表示と幾何学的妥当性は今回まだ確認できていませ�
 
 番号は公式コード候補を文字列として保持し、市町村コード・計画区コード・広域流域コードの名前空間を分けます。
 区域改定による再利用に備えて、基準日と出典を併記します。
+
+## 独立した形状検査（2026-10-05）
+
+候補GeoPackage（`municipality_forest_zones_2026_candidate.gpkg`）を、Shapely 2.1.2でGeoPackageのgeometry blobから読み込み、1,911地物すべてのWKB、SRID、空形状、`is_valid`、座標範囲を検査しました。結果はMultiPolygon 1,911、WKB読込エラー0、SRID不一致0、空形状0、無効形状0、経緯度範囲外0です。全体の外接矩形は経度122.932606368～153.986675123、緯度20.422746414～45.557243414でした。検査コードは [scripts/check_forest_gpkg_geometry.py](../scripts/check_forest_gpkg_geometry.py) です（Shapelyの別途導入が必要）。
+
+この結果は、候補ファイルの技術的な形状妥当性を示すものです。森林計画区の現行境界、島しょ部の所属、市町村内の分割、QGISでの描画は確認していません。未割当20コードの現行資料候補は [UNASSIGNED_REVIEW.md](UNASSIGNED_REVIEW.md) に記録し、主CSVと候補GeoPackageは変更していません。
