@@ -1,0 +1,43 @@
+{
+  "source_layers": [
+    {
+      "layer": "北海道",
+      "features": 43650,
+      "municipality_codes": 184,
+      "date_min": "2019/4/1",
+      "date_max": "2024/4/1"
+    },
+    {
+      "layer": "東京都",
+      "features": 1349,
+      "municipality_codes": 24,
+      "date_min": "2021/4/1",
+      "date_max": "2022/4/1"
+    },
+    {
+      "layer": "鹿児島県",
+      "features": 8308,
+      "municipality_codes": 43,
+      "date_min": "2019/4/1",
+      "date_max": "2025/4/1"
+    },
+    {
+      "layer": "沖縄県",
+      "features": 1186,
+      "municipality_codes": 41,
+      "date_min": "2019/4/1",
+      "date_max": "2023/4/1"
+    }
+  ],
+  "observed_codes": 292,
+  "comparison_rows": 443,
+  "status_rows": {
+    "対応表にコードなし": 2,
+    "名称一致・計画区コード体系相違": 325,
+    "森林側属性空欄": 6,
+    "名称または広域流域の不一致・要照会": 2,
+    "所属とコード一致・森林存在地点のみ": 107,
+    "候補未割当・森林側に所属あり": 1
+  },
+  "warning": "Forest-target polygons do not establish administrative whole-area boundaries."
+}
