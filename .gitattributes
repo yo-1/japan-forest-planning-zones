@@ -1,0 +1,3 @@
+# テキストファイルの改行は、どの OS でチェックアウトしても LF にする。
+# data/ の CSV は「改行は LF」をテストで確かめているため、Windows で CRLF に変わると失敗する。
+* text=auto eol=lf
