@@ -49,6 +49,7 @@ python build_forest_mapping.py --source-pdf sources/forest_districts_20100201.pd
 - `coverage`：市町村全域／一部の確認結果。本版は全件未確認。
 - `match_method`,`matched_rule`：名称条件の照合方法と一致した条件。
 - `verification_status`：所属計画区の照合状況。境界の確定を意味しません。
+- 広域流域専用の確認状態列はv0.1にはありません。`verification_status`が県資料との照合を示す行でも、`basin_code`・`basin_name`の現行所属と島しょ部の境界は未確認です。
 - `source_date`,`source_url`,`source_page`：市町村と計画区の所属に使った資料の時点・URL・PDFページ。
 - `basin_source_date`,`basin_source_url`：計画区と広域流域の対応に使った資料。
 - `n03_date`：行政区域データの基準日。`checked_date`：今回の照合日。
