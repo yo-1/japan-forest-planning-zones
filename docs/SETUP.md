@@ -1,12 +1,12 @@
 # 新規リポジトリを公開する手順
 
 1. GitHubの空のリポジトリ `yo-1/japan-forest-planning-zones` を使用します（2026-10-05時点で作成済み、mainはまだありません）。
-2. 同梱のGit bundleを展開して、新規リポジトリへ履歴を送ります。
+2. GitHubに認証済みの端末で同梱のGit bundleを展開し、新規リポジトリへ履歴を送ります。
 
 ```bash
 git clone japan-forest-planning-zones.bundle japan-forest-planning-zones
 cd japan-forest-planning-zones
-git switch main
+git switch -c main --track origin/main
 git remote rename origin bundle-source
 git remote add upstream https://github.com/yo-1/japan-plane-rectangular-cs-zones.git
 git remote add origin https://github.com/yo-1/japan-forest-planning-zones.git
