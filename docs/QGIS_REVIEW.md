@@ -1,6 +1,23 @@
-# 確認用流域ポリゴンのQGIS点検（2026-10-05）
+# 色・ラベル・座標系区域の重ね合わせ（確認用v0.1、2026-10-05）
 
-[4分割GeoPackageを結合](PROVISIONAL_GPKG.md)してQGIS 3.44に読み込む。作成された3レイヤーは次のとおり。
+[Release](https://github.com/yo-1/japan-forest-planning-zones/releases)の確認用ZIPを展開してください。まだReleaseが表示されない場合は[公開処理](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)の完了状況を確認します。
+
+| 上からの順序 | レイヤー | 表示設定 |
+| --- | --- | --- |
+| 1 | `plane_rectangular_zones_2026` | ユーザー指定19系区域。透明な面・系別の境界・赤いローマ数字。内蔵`layer`スタイル |
+| 2 | `forest_unassigned_review` | 未割当20地物を赤色 |
+| 3 | `forest_plan_districts_provisional` | 158計画区の色分け・`district_code || '_' || district_name`ラベル |
+| 4 | `forest_wide_basins_provisional` | 44広域流域の色分け・`basin_code || '_' || basin_name`ラベル |
+
+計画区図では3を表示し4を非表示、広域流域図では4を表示し3を非表示にします。1は両方の図の最上位に置きます。以前読み込んだレイヤは新しいファイルから追加し直すか、[styles](../styles)の対応QMLを読み込んでください。座標系の元の暗色ローマ数字スタイルは`default`として保存しています。
+
+座標系区域はユーザー提供GeoPackageの形状を採用します。公開処理では派生元Releaseから得た区域と提供ファイルのgeometry blobの順序付きSHA-256を比較し、`5f457b27277bb0cb67cab6658a557229eb542c340418b0c798234ef467d07869`に一致しない場合は公開を停止します。座標系区域を森林計画区と同じ意味の境界として扱いません。
+
+QMLのXML、158・44の分類数、ラベル式、GeoPackage内部整合、スタイル付与前後の形状一致を検査しています。**QGIS実画面での描画と現行区域との一致は未確認です。**
+
+## 境界・所属の点検
+
+確認用の森林GeoPackageをQGIS 3.44に読み込む。作成された3レイヤーは次のとおり。
 
 | レイヤー | 件数 | 点検する属性 |
 | --- | ---: | --- |
@@ -14,3 +31,4 @@
 4. 地図上で疑義がある箇所について、スクリーンショット、計画区・広域流域コード、自治体コード、地名、緯度経度、参照資料と適用日を記録する。公式境界と判断できない箇所は「要照会」に留める。
 
 技術的検査は[形状検査結果](../data/forest/provisional_polygon_geometry_validation.json)のとおり。QGIS実機の描画確認はまだ実施していない。市町村全域が計画区域と一致するか、島・河川沿いの一部指定があるかは林野庁または県の資料で別途確定する。
+

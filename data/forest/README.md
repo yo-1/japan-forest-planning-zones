@@ -80,3 +80,10 @@ python build_forest_mapping.py --source-pdf sources/forest_districts_20100201.pd
 未対応20件の所属を確認し、全国の現行計画区と広域流域の関係を点検します。2010年から市域が拡張・変更された市町村は名称一致だけでは不十分です。各都道府県の現行計画書・告示・境界データで市町村全域／一部を確認し、必要な分割境界を取得します。
 
 GitHubへの実装対象は、data/内の対応CSV、scripts/内の付与・分割・集約処理、READMEと出典・利用条件の記載です。今回、既存リポジトリや元ポリゴンは変更していません。
+
+## 確認用集約・表示設定の追補（2026-10-05）
+
+主対応表の暫定値を保持したまま、確認用の158計画区・44広域流域を集約しました。[現物確認の入口](../../docs/AGENCY_REVIEW.md)と[回答欄付き確認事項CSV](agency_review_questions.csv)を追加しています。確認事項CSVはUTF-8 BOM付き・LF改行、30行、24列です。コードは文字列で、回答欄は空欄です。`agency_review_questions.csv`は問い合わせの記録様式で、主対応表の確定値ではありません。
+
+4都道県の森林計画対象森林の属性照合は[forest_target_four_pref_comparison.csv](forest_target_four_pref_comparison.csv)、分割された5自治体の地物ごとの森林重なりは[split_municipality_forest_evidence.csv](split_municipality_forest_evidence.csv)を参照してください。森林がある位置の所属属性を確認したことは、市町村全域の所属や正確な行政上の境界を確認したことにはなりません。暫定図はすぐに点検できます。確定版の集約には、所属・区域・必要な分割境界の確認が必要です。
+

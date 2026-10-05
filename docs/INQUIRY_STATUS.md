@@ -29,3 +29,8 @@
 
 回答を受けた後、根拠資料・適用日・島又は市町村内の分割の有無を記録し、必要なら広域流域専用の確認状態を主CSVと結合済みレイヤーに追加します。
 確認が済むまで`usable_for_final_polygon=false`を維持します。
+
+## 現物確認の準備（2026-10-05）
+
+[現物確認の入口](AGENCY_REVIEW.md)、[回答欄付き30件の確認事項CSV](../data/forest/agency_review_questions.csv)、[QGIS表示手順](QGIS_REVIEW.md)を追加しました。確認用Releaseの公開処理を準備しています。依頼送信・回答受領は未実施です。公開処理の完了はActionsとReleasesで確認してください。主CSVの所属・最終利用可否はこの準備作業で変更していません。
+

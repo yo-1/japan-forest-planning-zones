@@ -1,0 +1,49 @@
+name: Publish provisional forest review data
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-review.yml'
+permissions:
+  contents: read
+concurrency:
+  group: provisional-forest-review-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install geometry library
+        run: python -m pip install shapely==2.1.2
+      - name: Check Python syntax
+        run: python -m compileall -q scripts
+      - name: Build and validate review packages
+        run: python scripts/build_review_release.py
+      - name: Retain checked download artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: provisional-forest-review-20261005
+          path: |
+            release_output/*.zip
+            release_output/review_manifest.json
+            release_output/SHA256SUMS.txt
+          retention-days: 30
+      - name: Publish review-only prerelease
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          REVIEW_TAG: review-v0.1-20261005
+        run: |
+          gh release create "$REVIEW_TAG" \
+            release_output/*.zip release_output/review_manifest.json release_output/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" --prerelease \
+            --title "森林計画区・広域流域 確認用 v0.1（2026-10-05）" \
+            --notes-file docs/REVIEW_RELEASE_NOTES.md

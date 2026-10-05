@@ -13,6 +13,20 @@
 元コミット: d6781a3b0fbc2a9ddd4b8606d0960d567495b53d
 入力ポリゴン: 派生元Release v2026.1の市町村版。元のGit履歴を保持しています。
 
+
+## 林野庁・都道府県への現物確認
+
+[**現物確認の入口・確認事項**](docs/AGENCY_REVIEW.md)を参照してください。色・番号・名称ラベル付きの候補図、市町村の対応表、回答欄付き30件の確認事項を用意しました。問い合わせの送信と回答受領は未実施です。
+
+- [確認用データのReleases](https://github.com/yo-1/japan-forest-planning-zones/releases)
+- [公開処理の実行状況](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)
+- [QGISでの重ね合わせ・点検手順](docs/QGIS_REVIEW.md)
+- [回答欄付き確認事項CSV](data/forest/agency_review_questions.csv)
+
+平面直角座標系はユーザー提供の`plane_rectangular_zones_2026.gpkg`を指定しています。公開処理では派生元Releaseの19系区域と提供ファイルの形状ハッシュを照合し、一致した形状だけを使います。提供された赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での最終表示は未確認です。
+
+4都道県の森林計画対象森林との照合結果は[出典・境界資料の調査](docs/BOUNDARY_SOURCE_REVIEW.md)に記録しました。291コードの森林側属性を照合しましたが、市町村全域の所属又は公式境界を確定したものではありません。主対応表の暫定値と最終利用可否falseは維持しています。
+
 ## 作成
 
 ```bash
@@ -31,11 +45,12 @@ Python標準ライブラリで動きます。入力ファイルとは別のパ�
 市町村の一部が別計画区に属する場合は、市町村単位の結合では表せません。
 その場合は公式の区画を取得し、分割例外データを作ってから処理します。
 政令指定都市の区、所属未定地、市町村合併、区域変更も確認します。
-計画区・広域流域の集約ポリゴンは、対応を確定してから作ります。
+確認用の集約ポリゴンを作成しました（158計画区・44広域流域・未割当20地物）。公式境界としての確定には現行所属・全域／一部指定の確認が必要です。
 
 ## 公開
 
 コードはMIT、座標系データはCC BY 4.0です。DATA_LICENSE.mdの出典表記を保持します。
 森林対応表の出典と制約はdata/forest/README.mdに記録しています。
-大きなGeoPackageとZIPはGitに入れず、Releasesで配ります。
+大きなGeoPackageとZIPはGitに入れず、確認用Releasesで配布する構成です。公開処理の完了状況は下記のActionsを参照してください。
 新規公開手順はdocs/SETUP.md、検証結果はdocs/FEASIBILITY.mdを参照してください。
+
