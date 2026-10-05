@@ -10,6 +10,7 @@ import json
 import re
 import shutil
 import sqlite3
+import sys
 import tempfile
 import zipfile
 from pathlib import Path
@@ -169,6 +170,9 @@ def audit(root, release_dir=None):
 
 
 def main():
+    # Windows console encoding may not support Japanese result values.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=ROOT)
     parser.add_argument('--release-dir', type=Path)
