@@ -1,0 +1,137 @@
+{
+  "status": "pass",
+  "scope": "internal consistency; official membership and boundaries unverified",
+  "municipality_codes": 1905,
+  "municipality_features_expected_from_zones": 1911,
+  "districts": 158,
+  "basins": 44,
+  "unassigned_codes": [
+    "01699",
+    "03216",
+    "12000",
+    "12239",
+    "13000",
+    "13363",
+    "17212",
+    "17461",
+    "17463",
+    "21221",
+    "23000",
+    "23237",
+    "23238",
+    "28221",
+    "30000",
+    "39212",
+    "40000",
+    "40231",
+    "46000",
+    "47000"
+  ],
+  "split_municipalities": [
+    {
+      "code": "13421",
+      "zones": "14;18;19",
+      "expected_features": 3
+    },
+    {
+      "code": "46215",
+      "zones": "1;2",
+      "expected_features": 2
+    },
+    {
+      "code": "46220",
+      "zones": "1;2",
+      "expected_features": 2
+    },
+    {
+      "code": "46303",
+      "zones": "1;2",
+      "expected_features": 2
+    },
+    {
+      "code": "46304",
+      "zones": "1;2",
+      "expected_features": 2
+    }
+  ],
+  "verification_status_counts": {
+    "要現行資料照合": 1789,
+    "未対応・要調査": 20,
+    "所属計画区を県資料で照合・境界未確認": 96
+  },
+  "styles": {
+    "forest_plan_districts_provisional": {
+      "categories": 158,
+      "labels_enabled": true,
+      "label_expression": "\"district_code\" || '_' || \"district_name\""
+    },
+    "forest_wide_basins_provisional": {
+      "categories": 44,
+      "labels_enabled": true,
+      "label_expression": "\"basin_code\" || '_' || \"basin_name\""
+    }
+  },
+  "release": {
+    "checked": true,
+    "packages": [
+      {
+        "name": "forest_planning_zones_2026_review.zip",
+        "bytes": 358462659,
+        "sha256": "3e90a44c0960e3262c065374c7be07039b0e8a10f3eb0f28fade3cffd0e75754",
+        "entries": 11,
+        "geopackages": [
+          {
+            "name": "forest_planning_zones_2026_provisional_labeled.gpkg",
+            "tables": [
+              {
+                "table": "forest_plan_districts_provisional",
+                "features": 158,
+                "epsg": 6668
+              },
+              {
+                "table": "forest_wide_basins_provisional",
+                "features": 44,
+                "epsg": 6668
+              },
+              {
+                "table": "forest_unassigned_review",
+                "features": 20,
+                "epsg": 6668
+              }
+            ]
+          },
+          {
+            "name": "plane_rectangular_zones_2026.gpkg",
+            "tables": [
+              {
+                "table": "plane_rectangular_zones_2026",
+                "features": 19,
+                "epsg": 6668
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "municipality_forest_zones_2026_candidate.zip",
+        "bytes": 173158811,
+        "sha256": "2f1120abd0d9a2d9ba79b7c0ad5098b1f52b1cece41cabedffc59dcbc87ac7a3",
+        "entries": 2,
+        "geopackages": [
+          {
+            "name": "municipality_forest_zones_2026_candidate.gpkg",
+            "tables": [
+              {
+                "table": "plane_rectangular_municipalities_2026",
+                "features": 1911,
+                "epsg": 6668
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "qgis_gui_verified": false,
+  "errors": []
+}
