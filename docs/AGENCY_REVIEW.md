@@ -1,12 +1,12 @@
 # 林野庁・都道府県向け 現物確認の入口
 
-作成日：2026-10-05／対象：確認用v0.1。依頼送信・回答受領は未実施です。
+作成日：2026-10-05／対象：確認用v0.1。[確認用Releaseを公開済み](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.1-20261005)です。再生成・形状検査・公開処理とWindows/Linux CIは成功。公開された4添付ファイルの一覧と検査記録JSONを認証なしで取得できることを確認しました。依頼送信・回答受領は未実施です。
 
 本プロジェクトは、全国森林計画の44広域流域と地域森林計画の158森林計画区について、市町村界を基礎とした候補ポリゴンと対応表を作成したものです。自然河川流域の解析による区画ではなく、森林計画の行政上の区画の候補です。**公式の所属・境界は未確定です。**
 
 ## 現物の入手
 
-1. [ダウンロード用Releases](https://github.com/yo-1/japan-forest-planning-zones/releases)の確認用`review-v0.1-20261005`を開きます。
+1. [ダウンロード用Release](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.1-20261005)を開きます。
 2. `forest_planning_zones_2026_review.zip`を取得・展開します。158計画区・44広域流域・未割当20地物のGeoPackage、19座標系のGeoPackage、対応CSV、QGISスタイルが入ります。
 3. 市町村単位で追跡する場合は、`municipality_forest_zones_2026_candidate.zip`も取得します。1,911地物・1,905コードで、座標系ごとの元分割を保持しています。
 4. `SHA256SUMS.txt`でZIPの同一性を確認します。[QGIS表示手順](QGIS_REVIEW.md)に従い、座標系境界を上に置いて計画区図・広域流域図を切り替えます。
