@@ -51,6 +51,6 @@ Python標準ライブラリで動きます。入力ファイルとは別のパ�
 
 コードはMIT、座標系データはCC BY 4.0です。DATA_LICENSE.mdの出典表記を保持します。
 森林対応表の出典と制約はdata/forest/README.mdに記録しています。
-大きなGeoPackageとZIPはGitに入れず、確認用Releasesで配布する構成です。公開処理の完了状況は下記のActionsを参照してください。
+大きなGeoPackageとZIPはGitに入れず、[確認用Release review-v0.1-20261005](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.1-20261005)で配布しています。再生成・形状検査・公開処理とWindows/Linux CIは成功しました。QGIS実画面での表示は未確認です。
 新規公開手順はdocs/SETUP.md、検証結果はdocs/FEASIBILITY.mdを参照してください。
 
