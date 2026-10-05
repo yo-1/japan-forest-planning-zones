@@ -6,7 +6,7 @@
 
 色・番号・名称ラベル付き158計画区・44広域流域・未割当20地物と、ユーザー指定の19座標系区域、対応CSV、QGISスタイルをまとめたZIPを[確認用Release](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.1-20261005)で公開しました。GitHub上の再生成・形状検査・公開処理とWindows/Linux CIは成功しました。[Releases](https://github.com/yo-1/japan-forest-planning-zones/releases)と[公開処理の完了状況](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)を確認してください。公開前のリンクをダウンロード済みとして扱いません。
 
-[林野庁・都道府県向け現物確認の入口](AGENCY_REVIEW.md)、[表示・重ね合わせ手順](QGIS_REVIEW.md)を参照してください。Releaseに添付する`review_manifest.json`と`SHA256SUMS.txt`は、その実行で生成したファイルの件数・検査結果・ハッシュを記録します。スタイルやZIPの生成日時によってファイル全体のハッシュは変わるため、下記の旧版ハッシュを新パッケージに使わないでください。
+[表示・重ね合わせ手順](QGIS_REVIEW.md)を参照してください。Releaseに添付する`review_manifest.json`と`SHA256SUMS.txt`は、その実行で生成したファイルの件数・検査結果・ハッシュを記録します。スタイルやZIPの生成日時によってファイル全体のハッシュは変わるため、下記の旧版ハッシュを新パッケージに使わないでください。
 
 ## 従来の分割版（スタイル追加前）
 
@@ -19,5 +19,5 @@
 
 4ファイルを同じフォルダに置き、`cat forest_planning_zones_2026_provisional.gpkg.part0* > forest_planning_zones_2026_provisional.gpkg`で結合する。Windowsでは `copy /b part00+part01+part02+part03 forest_planning_zones_2026_provisional.gpkg` の `part00` 等を実際の完全なファイル名に置き換える。結合後のSHA-256は `6607b8af46ba319702debbab2c3d19b2fd5ff55c0ed71d61d097eecde8bf615b`。分割ファイルの連結結果と元ファイルが同じハッシュであることを確認済み。
 
-生成コードは [build_provisional_aggregates.py](../scripts/build_provisional_aggregates.py)。[独立したShapely形状検査結果](../data/forest/provisional_polygon_geometry_validation.json)では全222地物に無効・空形状0件、EPSG:6668、SQLite整合性`ok`。QGIS実機での描画と現行区域との一致は未確認。境界・所属の照会事項は [BOUNDARY_SOURCE_REVIEW.md](BOUNDARY_SOURCE_REVIEW.md) を参照。
+生成コードは [build_provisional_aggregates.py](../scripts/build_provisional_aggregates.py)。[独立したShapely形状検査結果](../data/forest/provisional_polygon_geometry_validation.json)では全222地物に無効・空形状0件、EPSG:6668、SQLite整合性`ok`。QGIS実機での描画と現行区域との一致は未確認。境界・所属の検証結果は [BOUNDARY_SOURCE_REVIEW.md](BOUNDARY_SOURCE_REVIEW.md) を参照。
 

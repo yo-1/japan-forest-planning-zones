@@ -132,7 +132,7 @@ def main():
         raise ValueError('Styling changed user coordinate-zone geometry')
     readme = ROOT / 'docs/REVIEW_PACKAGE_README.txt'
     files = [(aggregate, aggregate.name),(zones,zones.name),(readme,'README.txt')]
-    for name in ('municipality_forest_districts.csv','forest_plan_districts.csv','forest_wide_basins.csv','agency_review_questions.csv'):
+    for name in ('municipality_forest_districts.csv','forest_plan_districts.csv','forest_wide_basins.csv'):
         files.append((ROOT / 'data/forest' / name,'tables/' + name))
     for qml in sorted((ROOT / 'styles').glob('*.qml')):
         files.append((qml,'styles/' + qml.name))

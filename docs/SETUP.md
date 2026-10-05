@@ -23,6 +23,6 @@ git remote add upstream https://github.com/yo-1/japan-plane-rectangular-cs-zones
 
 ## 公開範囲と残作業
 
-このリポジトリの森林計画区・広域流域の対応表は確認用v0.1です。現行の公式境界ではありません。未割当20コードと島しょ部などの広域流域を確認し、必要なら市町村内の境界分割を行います。照会事項は [INQUIRY_STATUS.md](INQUIRY_STATUS.md) を参照してください。
+このリポジトリの森林計画区・広域流域の対応表は確認用v0.1です。現行の公式境界ではありません。未割当20コードと島しょ部などの広域流域を確認し、必要なら市町村内の境界分割を行います。
 
 結合済みの候補GeoPackageとZIPは、GitHub Releaseにはまだ掲載していません。公開する場合は暫定値であること、基準日、出典、未確認事項を同梱し、QGIS表示と形状を確認してください。未確認情報の `forest_final_usable` を `true` に変更しません。

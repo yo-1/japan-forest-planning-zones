@@ -6,22 +6,20 @@
 
 島しょ部を含め、広域流域名は現行の所属・境界を確定した値ではありません。
 平面直角座標系の系ごとに地物が分かれていても、同じ市町村コードには同じ暫定値を付けています。
-系の分割は広域流域の分割を意味しません。林野庁への照会事項は
-[docs/INQUIRY_STATUS.md](docs/INQUIRY_STATUS.md)を参照してください。
+系の分割は広域流域の分割を意味しません。
 
 派生元: https://github.com/yo-1/japan-plane-rectangular-cs-zones
 元コミット: d6781a3b0fbc2a9ddd4b8606d0960d567495b53d
 入力ポリゴン: 派生元Release v2026.1の市町村版。元のGit履歴を保持しています。
 
 
-## 林野庁・都道府県への現物確認
+## 確認用データのダウンロード
 
-[**現物確認の入口・確認事項**](docs/AGENCY_REVIEW.md)を参照してください。色・番号・名称ラベル付きの候補図、市町村の対応表、回答欄付き30件の確認事項を用意しました。問い合わせの送信と回答受領は未実施です。
+色・番号・名称ラベル付きの候補図と市町村の対応表を公開しています。
 
 - [確認用データのReleases](https://github.com/yo-1/japan-forest-planning-zones/releases)
 - [公開処理の実行状況](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)
 - [QGISでの重ね合わせ・点検手順](docs/QGIS_REVIEW.md)
-- [回答欄付き確認事項CSV](data/forest/agency_review_questions.csv)
 
 平面直角座標系はユーザー提供の`plane_rectangular_zones_2026.gpkg`を指定しています。公開処理では派生元Releaseの19系区域と提供ファイルの形状ハッシュを照合し、一致した形状だけを使います。提供された赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での最終表示は未確認です。
 

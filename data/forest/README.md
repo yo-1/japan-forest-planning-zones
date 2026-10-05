@@ -83,7 +83,7 @@ GitHubへの実装対象は、data/内の対応CSV、scripts/内の付与・分�
 
 ## 確認用集約・表示設定の追補（2026-10-05）
 
-主対応表の暫定値を保持したまま、確認用の158計画区・44広域流域を集約しました。[現物確認の入口](../../docs/AGENCY_REVIEW.md)と[回答欄付き確認事項CSV](agency_review_questions.csv)を追加しています。確認事項CSVはUTF-8 BOM付き・LF改行、30行、24列です。コードは文字列で、回答欄は空欄です。`agency_review_questions.csv`は問い合わせの記録様式で、主対応表の確定値ではありません。
+主対応表の暫定値を保持したまま、確認用の158計画区・44広域流域を集約しました。色・番号・名称ラベル付きの候補図と対応CSVを公開しています。
 
 4都道県の森林計画対象森林の属性照合は[forest_target_four_pref_comparison.csv](forest_target_four_pref_comparison.csv)、分割された5自治体の地物ごとの森林重なりは[split_municipality_forest_evidence.csv](split_municipality_forest_evidence.csv)を参照してください。森林がある位置の所属属性を確認したことは、市町村全域の所属や正確な行政上の境界を確認したことにはなりません。暫定図はすぐに点検できます。確定版の集約には、所属・区域・必要な分割境界の確認が必要です。
 
