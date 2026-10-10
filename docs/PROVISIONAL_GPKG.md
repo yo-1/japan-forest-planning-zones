@@ -4,7 +4,7 @@
 
 ## 新しい確認用パッケージ
 
-色・番号・名称ラベル付き158計画区・44広域流域・未割当20地物と、ユーザー指定の19座標系区域、対応CSV、QGISスタイルをまとめたZIPを[確認用Release](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.1-20261005)で公開しました。GitHub上の再生成・形状検査・公開処理とWindows/Linux CIは成功しました。[Releases](https://github.com/yo-1/japan-forest-planning-zones/releases)と[公開処理の完了状況](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)を確認してください。公開前のリンクをダウンロード済みとして扱いません。
+色・番号・名称ラベル付き158計画区・44広域流域・未割当20地物と、19座標系区域（v2026.2）、対応CSV、QGISスタイルをまとめたZIPを[確認用Release](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.2-20261010)で公開しました。GitHub上の再生成・形状検査・公開処理とWindows/Linux CIは成功しました。[Releases](https://github.com/yo-1/japan-forest-planning-zones/releases)と[公開処理の完了状況](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)を確認してください。公開前のリンクをダウンロード済みとして扱いません。
 
 [表示・重ね合わせ手順](QGIS_REVIEW.md)を参照してください。Releaseに添付する`review_manifest.json`と`SHA256SUMS.txt`は、その実行で生成したファイルの件数・検査結果・ハッシュを記録します。スタイルやZIPの生成日時によってファイル全体のハッシュは変わるため、下記の旧版ハッシュを新パッケージに使わないでください。
 

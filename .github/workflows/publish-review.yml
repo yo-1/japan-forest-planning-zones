@@ -30,7 +30,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          REVIEW_TAG: review-v0.1-20261005
+          REVIEW_TAG: review-v0.2-20261010
         run: |
           if gh release view "$REVIEW_TAG" >/dev/null 2>&1; then
             gh release edit "$REVIEW_TAG" --notes-file docs/REVIEW_RELEASE_NOTES.md
@@ -39,7 +39,7 @@ jobs:
               gh release delete-asset "$REVIEW_TAG" "$asset" --yes
             done
           fi
-          gh api --paginate "repos/$GH_REPO/actions/artifacts?per_page=100" --jq '.artifacts[] | select(.name == "provisional-forest-review-20261005") | .id' > /tmp/retained-artifact-ids
+          gh api --paginate "repos/$GH_REPO/actions/artifacts?per_page=100" --jq '.artifacts[] | select(.name == "provisional-forest-review-20261010") | .id' > /tmp/retained-artifact-ids
           while read -r artifact_id; do
             gh api --method DELETE "repos/$GH_REPO/actions/artifacts/$artifact_id"
           done < /tmp/retained-artifact-ids
@@ -48,7 +48,7 @@ jobs:
       - name: Retain checked download artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: provisional-forest-review-20261005
+          name: provisional-forest-review-20261010
           path: |
             release_output/*.zip
             release_output/review_manifest.json
@@ -58,7 +58,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-          REVIEW_TAG: review-v0.1-20261005
+          REVIEW_TAG: review-v0.2-20261010
         run: |
           if gh release view "$REVIEW_TAG" >/dev/null 2>&1; then
             gh release upload "$REVIEW_TAG" release_output/*.zip release_output/review_manifest.json release_output/SHA256SUMS.txt --clobber
@@ -67,6 +67,19 @@ jobs:
             gh release create "$REVIEW_TAG" \
               release_output/*.zip release_output/review_manifest.json release_output/SHA256SUMS.txt \
               --target "$GITHUB_SHA" --prerelease \
-              --title "森林計画区・広域流域 確認用 v0.1（2026-10-05）" \
+              --title "森林計画区・広域流域 確認用 v0.2（2026-10-10）" \
               --notes-file docs/REVIEW_RELEASE_NOTES.md
+          fi
+      - name: Add notice to the older v0.1 release (notes only)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          OLD_TAG: review-v0.1-20261005
+        run: |
+          if gh release view "$OLD_TAG" >/dev/null 2>&1; then
+            gh release view "$OLD_TAG" --json body --jq .body > /tmp/old_notes.md
+            if ! grep -q 'review-v0.2-20261010' /tmp/old_notes.md; then
+              { cat docs/REVIEW_OLD_RELEASE_NOTICE.md; echo; cat /tmp/old_notes.md; } > /tmp/new_notes.md
+              gh release edit "$OLD_TAG" --notes-file /tmp/new_notes.md
+            fi
           fi

@@ -5,9 +5,9 @@
 
 forest_planning_zones_2026_review.zip
 ・forest_planning_zones_2026_provisional_labeled.gpkg：158森林計画区、44広域流域、未割当20地物
-・plane_rectangular_zones_2026.gpkg：19座標系。ユーザー提供ファイルとgeometry blobの順序付きSHA-256が同じ原形状
+・plane_rectangular_zones_2026.gpkg：19座標系。japan-plane-rectangular-cs-zones v2026.2 の原形状（geometry blobの順序付きSHA-256が一致したもの）
 ・tables：1,905コードの市区町村対応表、158計画区表、44流域表
-・styles：QGIS用の色分け・番号_名称ラベル、ユーザー提供の座標系表示スタイル
+・styles：QGIS用の色分け・番号_名称ラベル、座標系の表示スタイル
 
 municipality_forest_zones_2026_candidate.zip
 ・municipality_forest_zones_2026_candidate.gpkg：1,911地物、1,905コード。元市町村の座標系分割を保持

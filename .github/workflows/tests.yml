@@ -29,9 +29,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      # pyproj は EPSG の定義との照合テストだけに使う（なくてもほかのテストは動く）。
-      - name: Install pyproj
-        run: python -m pip install pyproj
+      # pyproj は EPSG の定義との照合テスト、numpy は小さい穴を取り除くスクリプトのテストだけに使う（なくてもほかのテストは動く）。
+      - name: Install pyproj and numpy
+        run: python -m pip install pyproj numpy
       - name: Compile
         run: python -m compileall -q scripts tests
       - name: Audit forest tables and display styles

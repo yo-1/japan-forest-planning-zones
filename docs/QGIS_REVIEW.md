@@ -4,14 +4,14 @@
 
 | 上からの順序 | レイヤー | 表示設定 |
 | --- | --- | --- |
-| 1 | `plane_rectangular_zones_2026` | ユーザー指定19系区域。透明な面・系別の境界・赤いローマ数字。内蔵`layer`スタイル |
+| 1 | `plane_rectangular_zones_2026` | 19系区域（v2026.2）。透明な面・系別の境界・赤いローマ数字。内蔵`layer`スタイル |
 | 2 | `forest_unassigned_review` | 未割当20地物を赤色 |
 | 3 | `forest_plan_districts_provisional` | 158計画区の色分け・`district_code || '_' || district_name`ラベル |
 | 4 | `forest_wide_basins_provisional` | 44広域流域の色分け・`basin_code || '_' || basin_name`ラベル |
 
 計画区図では3を表示し4を非表示、広域流域図では4を表示し3を非表示にします。1は両方の図の最上位に置きます。以前読み込んだレイヤは新しいファイルから追加し直すか、[styles](../styles)の対応QMLを読み込んでください。座標系の元の暗色ローマ数字スタイルは`default`として保存しています。
 
-座標系区域はユーザー提供GeoPackageの形状を採用します。公開処理では派生元Releaseから得た区域と提供ファイルのgeometry blobの順序付きSHA-256を比較し、`5f457b27277bb0cb67cab6658a557229eb542c340418b0c798234ef467d07869`に一致しない場合は公開を停止します。座標系区域を森林計画区と同じ意味の境界として扱いません。
+座標系区域は japan-plane-rectangular-cs-zones v2026.2 の形状を使います。公開処理ではZIPのSHA-256と、geometry blobの順序付きSHA-256を比べ、`23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b`に一致しない場合は公開を止めます。座標系区域を森林計画区と同じ意味の境界として扱いません。
 
 QMLのXML、158・44の分類数、ラベル式、GeoPackage内部整合、スタイル付与前後の形状一致を検査しています。**QGIS実画面での描画と現行区域との一致は未確認です。**
 
