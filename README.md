@@ -22,7 +22,7 @@
 - [QGISでの重ね合わせ・点検手順](docs/QGIS_REVIEW.md)
 - [公開ZIP・対応表・表示設定の技術点検](docs/TECHNICAL_AUDIT_20261005.md)
 
-平面直角座標系はユーザー提供の`plane_rectangular_zones_2026.gpkg`を指定しています。公開処理では派生元Releaseの19系区域と提供ファイルの形状ハッシュを照合し、一致した形状だけを使います。提供された赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での最終表示は未確認です。
+平面直角座標系の区域は、[japan-plane-rectangular-cs-zones v2026.2](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.2)のものを使います。公開処理ではZIPのSHA-256と形状ハッシュを照合し、一致した形状だけを使います。赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での最終表示は未確認です。
 
 4都道県の森林計画対象森林との照合結果は[出典・境界資料の調査](docs/BOUNDARY_SOURCE_REVIEW.md)に記録しました。291コードの森林側属性を照合しましたが、市町村全域の所属又は公式境界を確定したものではありません。主対応表の暫定値と最終利用可否falseは維持しています。
 
@@ -50,5 +50,5 @@ Python標準ライブラリで動きます。入力ファイルとは別のパ�
 
 コードはMIT、座標系データはCC BY 4.0です。DATA_LICENSE.mdの出典表記を保持します。
 森林対応表の出典と制約はdata/forest/README.mdに記録しています。
-大きなGeoPackageとZIPはGitに入れず、[確認用Release review-v0.1-20261005](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.1-20261005)で配布しています。再生成・形状検査・公開処理とWindows/Linux CIは成功しました。QGIS実画面での表示は未確認です。
+大きなGeoPackageとZIPはGitに入れず、[確認用Release review-v0.2-20261010](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.2-20261010)で配布しています（旧版 review-v0.1-20261005 は、比べるために残しています）。再生成・形状検査・公開処理とWindows/Linux CIは成功しました。QGIS実画面での表示は未確認です。
 新規公開手順はdocs/SETUP.md、検証結果はdocs/FEASIBILITY.mdを参照してください。

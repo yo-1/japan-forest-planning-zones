@@ -1,0 +1,36 @@
+name: review build check
+
+# 確認用データの作り方を変える PR で、公開はせずに作り直しだけを試す。
+# マージすると publish-review.yml が公開するので、マージ前にこの確認が成功していることを見る。
+on:
+  pull_request:
+    paths:
+      - 'scripts/build_review_release.py'
+      - 'scripts/build_provisional_aggregates.py'
+      - 'scripts/drop_tiny_rings.py'
+      - 'scripts/build_forest_layer.py'
+      - 'styles/**'
+      - 'docs/REVIEW_*'
+      - '.github/workflows/publish-review.yml'
+      - '.github/workflows/review-build-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install libraries
+        run: python -m pip install shapely==2.1.2 numpy
+      - name: Build and validate (no publishing)
+        run: python scripts/build_review_release.py --output "$RUNNER_TEMP/review_check"
+      - name: Show manifest and checksums
+        run: |
+          cat "$RUNNER_TEMP/review_check/SHA256SUMS.txt"
+          python -c "import json,sys;m=json.load(open(sys.argv[1]));print(json.dumps(m.get('tiny_interior_rings_removed'),ensure_ascii=False,indent=1))" "$RUNNER_TEMP/review_check/review_manifest.json"
