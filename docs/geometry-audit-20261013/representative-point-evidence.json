@@ -1,0 +1,530 @@
+{
+  "retained_holes": [
+    {
+      "kind": "district",
+      "key": "019",
+      "hole": 0,
+      "area_m2": 1808.445158675866,
+      "longitude": 142.0012719588023,
+      "latitude": 39.447312919,
+      "exact_matches_individual_municipality_hole": [
+        "03482"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "019",
+      "hole": 1,
+      "area_m2": 3705.602811485529,
+      "longitude": 141.75612312883163,
+      "latitude": 40.3677857795,
+      "exact_matches_individual_municipality_hole": [
+        "03507"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "019",
+      "hole": 2,
+      "area_m2": 64.55677117730556,
+      "longitude": 141.80065992308596,
+      "latitude": 40.289235581499995,
+      "exact_matches_individual_municipality_hole": [
+        "03207"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "020",
+      "hole": 0,
+      "area_m2": 11.067358817905188,
+      "longitude": 141.88915954944576,
+      "latitude": 39.27312577500001,
+      "exact_matches_individual_municipality_hole": [
+        "03211"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "023",
+      "hole": 0,
+      "area_m2": 166.38834859901908,
+      "longitude": 141.49947443497302,
+      "latitude": 38.5917244955001,
+      "exact_matches_individual_municipality_hole": [
+        "04202"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "040",
+      "hole": 0,
+      "area_m2": 64278.18452657806,
+      "longitude": 139.85907821144457,
+      "latitude": 36.412714666499994,
+      "exact_matches_individual_municipality_hole": [
+        "09216"
+      ],
+      "representative_point_covered_by_municipality_codes": [
+        "09301"
+      ]
+    },
+    {
+      "kind": "district",
+      "key": "043",
+      "hole": 0,
+      "area_m2": 16710.580968974158,
+      "longitude": 139.26243088729842,
+      "latitude": 36.244655725499996,
+      "exact_matches_individual_municipality_hole": [
+        "10204"
+      ],
+      "representative_point_covered_by_municipality_codes": [
+        "11218"
+      ]
+    },
+    {
+      "kind": "district",
+      "key": "048",
+      "hole": 0,
+      "area_m2": 486.25930511951447,
+      "longitude": 139.38093694405586,
+      "latitude": 35.5904119775,
+      "exact_matches_individual_municipality_hole": [
+        "13209"
+      ],
+      "representative_point_covered_by_municipality_codes": [
+        "14152"
+      ]
+    },
+    {
+      "kind": "district",
+      "key": "050",
+      "hole": 0,
+      "area_m2": 5365.3868973254575,
+      "longitude": 139.51768584064823,
+      "latitude": 35.629547946,
+      "exact_matches_individual_municipality_hole": [
+        "14135"
+      ],
+      "representative_point_covered_by_municipality_codes": [
+        "13225"
+      ]
+    },
+    {
+      "kind": "district",
+      "key": "058",
+      "hole": 0,
+      "area_m2": 13556572.898852495,
+      "longitude": 136.6054021825,
+      "latitude": 36.525254694,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "17212"
+      ]
+    },
+    {
+      "kind": "district",
+      "key": "078",
+      "hole": 0,
+      "area_m2": 21564756.22605275,
+      "longitude": 137.0607558972119,
+      "latitude": 35.175303608,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "23238"
+      ]
+    },
+    {
+      "kind": "district",
+      "key": "078",
+      "hole": 1,
+      "area_m2": 27489834.930409003,
+      "longitude": 136.79372221151397,
+      "latitude": 35.182610225,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "23237"
+      ]
+    },
+    {
+      "kind": "district",
+      "key": "113",
+      "hole": 0,
+      "area_m2": 60150.360958099365,
+      "longitude": 131.737371530399,
+      "latitude": 34.04748692800004,
+      "exact_matches_individual_municipality_hole": [
+        "35215"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "113",
+      "hole": 1,
+      "area_m2": 199963.069193827,
+      "longitude": 131.73827777060038,
+      "latitude": 34.050753432500045,
+      "exact_matches_individual_municipality_hole": [
+        "35215"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "113",
+      "hole": 2,
+      "area_m2": 38710.23422437399,
+      "longitude": 131.73908307488915,
+      "latitude": 34.048788220500086,
+      "exact_matches_individual_municipality_hole": [
+        "35215"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "district",
+      "key": "158",
+      "hole": 0,
+      "area_m2": 195225.5017907041,
+      "longitude": 124.15134296907772,
+      "latitude": 24.329856374000002,
+      "exact_matches_individual_municipality_hole": [
+        "47207"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "09",
+      "hole": 0,
+      "area_m2": 11.067358817905188,
+      "longitude": 141.88915954944576,
+      "latitude": 39.27312577500001,
+      "exact_matches_individual_municipality_hole": [
+        "03211"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "09",
+      "hole": 1,
+      "area_m2": 1808.445158675866,
+      "longitude": 142.0012719588023,
+      "latitude": 39.447312919,
+      "exact_matches_individual_municipality_hole": [
+        "03482"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "09",
+      "hole": 2,
+      "area_m2": 3705.602811485529,
+      "longitude": 141.75612312883163,
+      "latitude": 40.3677857795,
+      "exact_matches_individual_municipality_hole": [
+        "03507"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "09",
+      "hole": 3,
+      "area_m2": 64.55677117730556,
+      "longitude": 141.80065992308596,
+      "latitude": 40.289235581499995,
+      "exact_matches_individual_municipality_hole": [
+        "03207"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "10",
+      "hole": 0,
+      "area_m2": 166.38834859901908,
+      "longitude": 141.49947443497302,
+      "latitude": 38.5917244955001,
+      "exact_matches_individual_municipality_hole": [
+        "04202"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "17",
+      "hole": 0,
+      "area_m2": 486.25930511951447,
+      "longitude": 139.38093694405586,
+      "latitude": 35.5904119775,
+      "exact_matches_individual_municipality_hole": [
+        "13209"
+      ],
+      "representative_point_covered_by_municipality_codes": [
+        "14152"
+      ]
+    },
+    {
+      "kind": "basin",
+      "key": "18",
+      "hole": 0,
+      "area_m2": 5365.3868973254575,
+      "longitude": 139.51768584064823,
+      "latitude": 35.629547946,
+      "exact_matches_individual_municipality_hole": [
+        "14135"
+      ],
+      "representative_point_covered_by_municipality_codes": [
+        "13225"
+      ]
+    },
+    {
+      "kind": "basin",
+      "key": "22",
+      "hole": 0,
+      "area_m2": 13556572.898852495,
+      "longitude": 136.6054021825,
+      "latitude": 36.525254694,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "17212"
+      ]
+    },
+    {
+      "kind": "basin",
+      "key": "23",
+      "hole": 0,
+      "area_m2": 21564756.22605275,
+      "longitude": 137.0607558972119,
+      "latitude": 35.175303608,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "23238"
+      ]
+    },
+    {
+      "kind": "basin",
+      "key": "23",
+      "hole": 1,
+      "area_m2": 27489834.930409003,
+      "longitude": 136.79372221151397,
+      "latitude": 35.182610225,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "23237"
+      ]
+    },
+    {
+      "kind": "basin",
+      "key": "33",
+      "hole": 0,
+      "area_m2": 60150.360958099365,
+      "longitude": 131.737371530399,
+      "latitude": 34.04748692800004,
+      "exact_matches_individual_municipality_hole": [
+        "35215"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "33",
+      "hole": 1,
+      "area_m2": 199963.069193827,
+      "longitude": 131.73827777060038,
+      "latitude": 34.050753432500045,
+      "exact_matches_individual_municipality_hole": [
+        "35215"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "33",
+      "hole": 2,
+      "area_m2": 38710.23422437399,
+      "longitude": 131.73908307488915,
+      "latitude": 34.048788220500086,
+      "exact_matches_individual_municipality_hole": [
+        "35215"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    },
+    {
+      "kind": "basin",
+      "key": "36",
+      "hole": 0,
+      "area_m2": 537858071.3207208,
+      "longitude": 133.86555748775726,
+      "latitude": 33.710268473,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "39212"
+      ]
+    },
+    {
+      "kind": "basin",
+      "key": "39",
+      "hole": 0,
+      "area_m2": 74945750.6795134,
+      "longitude": 130.42515936641485,
+      "latitude": 33.462753333500004,
+      "exact_matches_individual_municipality_hole": [],
+      "representative_point_covered_by_municipality_codes": [
+        "40231"
+      ]
+    },
+    {
+      "kind": "basin",
+      "key": "44",
+      "hole": 0,
+      "area_m2": 195225.5017907041,
+      "longitude": 124.15134296907772,
+      "latitude": 24.329856374000002,
+      "exact_matches_individual_municipality_hole": [
+        "47207"
+      ],
+      "representative_point_covered_by_municipality_codes": []
+    }
+  ],
+  "retained_hole_counts": {
+    "district": {
+      "total": 16,
+      "matching_individual_municipality_hole": 13,
+      "point_covered_by_municipality": 7
+    },
+    "basin": {
+      "total": 16,
+      "matching_individual_municipality_hole": 11,
+      "point_covered_by_municipality": 7
+    }
+  },
+  "samples": [
+    {
+      "stage": "v01_to_v02_district",
+      "key": "066",
+      "direction": "added",
+      "area_m2": 0.0037451763564604335,
+      "component_area_m2": 0.003605604542826768,
+      "longitude": 138.37194504265244,
+      "latitude": 36.333355063000084,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": false,
+      "v0.2_target_covers_point": true
+    },
+    {
+      "stage": "v01_to_v02_district",
+      "key": "052",
+      "direction": "added",
+      "area_m2": 0.0020836249022977427,
+      "component_area_m2": 0.001813328082789667,
+      "longitude": 139.07755576678025,
+      "latitude": 37.08346666425004,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": false,
+      "v0.2_target_covers_point": true
+    },
+    {
+      "stage": "v01_to_v02_district",
+      "key": "050",
+      "direction": "added",
+      "area_m2": 0.0016235940943529412,
+      "component_area_m2": 8.425582200288773e-05,
+      "longitude": 139.63060946800005,
+      "latitude": 35.275998887499995,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": false,
+      "v0.2_target_covers_point": true
+    },
+    {
+      "stage": "v01_to_v02_basin",
+      "key": "15",
+      "direction": "added",
+      "area_m2": 0.007292497832254221,
+      "component_area_m2": 0.003605604542826768,
+      "longitude": 138.37194504265244,
+      "latitude": 36.333355063000084,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": false,
+      "v0.2_target_covers_point": true
+    },
+    {
+      "stage": "v01_to_v02_basin",
+      "key": "23",
+      "direction": "added",
+      "area_m2": 0.0038904810269095626,
+      "component_area_m2": 7.02676479704678e-05,
+      "longitude": 136.92783041500007,
+      "latitude": 34.86726596850004,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": false,
+      "v0.2_target_covers_point": true
+    },
+    {
+      "stage": "v01_to_v02_basin",
+      "key": "13",
+      "direction": "added",
+      "area_m2": 0.0019868150749086985,
+      "component_area_m2": 8.849240839481354e-05,
+      "longitude": 140.9024838585001,
+      "latitude": 37.84179977950002,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": false,
+      "v0.2_target_covers_point": true
+    },
+    {
+      "stage": "v02_districts_to_basin",
+      "key": "33",
+      "direction": "lost",
+      "area_m2": 0.06074941158294678,
+      "component_area_m2": 0.06074941158294678,
+      "longitude": 132.22197187128256,
+      "latitude": 33.8742180945,
+      "point_covered_by_original_municipality_codes": [
+        "35305"
+      ],
+      "v0.1_target_covers_point": true,
+      "v0.2_target_covers_point": true,
+      "v02_child_district_codes_covering_point": [
+        "113"
+      ]
+    },
+    {
+      "stage": "v02_districts_to_basin",
+      "key": "39",
+      "direction": "added",
+      "area_m2": 0.001017233154588966,
+      "component_area_m2": 6.184913218021393e-05,
+      "longitude": 130.89587319050003,
+      "latitude": 33.445049603500024,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": true,
+      "v0.2_target_covers_point": true,
+      "v02_child_district_codes_covering_point": []
+    },
+    {
+      "stage": "v02_districts_to_basin",
+      "key": "21",
+      "direction": "added",
+      "area_m2": 0.0007015770194581904,
+      "component_area_m2": 0.00027701398357748985,
+      "longitude": 137.12035007826663,
+      "latitude": 36.41670612935579,
+      "point_covered_by_original_municipality_codes": [],
+      "v0.1_target_covers_point": false,
+      "v0.2_target_covers_point": true,
+      "v02_child_district_codes_covering_point": []
+    }
+  ],
+  "limits": "Representative points do not establish whole polygon equality or source N03 coverage; no source N03 geometry was loaded. Boundary rounding can affect points in extremely narrow differences."
+}

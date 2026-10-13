@@ -1,0 +1,41 @@
+[
+  {
+    "version": "v0.1",
+    "url": "https://github.com/yo-1/japan-forest-planning-zones/releases/download/review-v0.1-20261005/forest_planning_zones_2026_review.zip",
+    "sha256": "3e90a44c0960e3262c065374c7be07039b0e8a10f3eb0f28fade3cffd0e75754",
+    "bytes": 358462659
+  },
+  {
+    "version": "v0.1",
+    "url": "https://github.com/yo-1/japan-forest-planning-zones/releases/download/review-v0.1-20261005/municipality_forest_zones_2026_candidate.zip",
+    "sha256": "2f1120abd0d9a2d9ba79b7c0ad5098b1f52b1cece41cabedffc59dcbc87ac7a3",
+    "bytes": 173158811
+  },
+  {
+    "version": "v0.2",
+    "url": "https://github.com/yo-1/japan-forest-planning-zones/releases/download/review-v0.2-20261010/forest_planning_zones_2026_review.zip",
+    "sha256": "61411ba087d26c97aad346d4363e8470e7168b47e4c95e15da66307d61b6b17b",
+    "bytes": 358220950
+  },
+  {
+    "version": "v0.2",
+    "url": "https://github.com/yo-1/japan-forest-planning-zones/releases/download/review-v0.2-20261010/municipality_forest_zones_2026_candidate.zip",
+    "sha256": "d7a73fd144c3de2e3402b27860217e2a5e79048c74a31a40c584aab3cb8e0e08",
+    "bytes": 173158817
+  },
+  {
+    "name": "shp.zip",
+    "sha256": "9bce75f61bcc921fc7b0b1d28ae81a96cf275fcd4413a370abee42df9edd7a3e",
+    "bytes": 174381642
+  },
+  {
+    "name": "N03-20260101_prefecture.zip",
+    "sha256": "e5859d001ac5f0f379c4391d707b0f72b88d061ccb767ce8bd1d0af7ad0b2f8c",
+    "bytes": 119025191
+  },
+  {
+    "name": "forest_planning_zones_2026_review (1).zip",
+    "sha256": "61411ba087d26c97aad346d4363e8470e7168b47e4c95e15da66307d61b6b17b",
+    "bytes": 358220950
+  }
+]
