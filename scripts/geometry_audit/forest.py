@@ -3,6 +3,7 @@ import argparse,collections,json,time
 from pathlib import Path
 import numpy as np
 import shapely,pyproj
+from shapely.geometry import Polygon
 from .common import Audit,load,parts,area,holes,ring_area,exteriors,hole_signature,LAYERS,hashfile
 
 def main():

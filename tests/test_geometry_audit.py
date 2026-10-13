@@ -10,6 +10,35 @@ if AVAILABLE:
 
 @unittest.skipUnless(AVAILABLE, "Optional geometry-audit libraries are not installed")
 class GeometryAuditTests(unittest.TestCase):
+    def test_forest_cli_inventories_retained_holes(self):
+        from unittest.mock import patch
+        from geometry_audit import forest
+        geometry = Polygon([(139,35),(139.01,35),(139.01,35.01),(139,35.01)],
+                           [[(139.002,35.002),(139.003,35.002),(139.003,35.003),(139.002,35.003)]])
+        city = dict(fid=1, N03_007='00001', forest_district_code='d',
+                    wide_basin_code='b', geometry=geometry)
+        municipality = {'plane_rectangular_municipalities_2026': [city]}
+        release = {
+            v.LAYERS['district'][0]: [dict(district_code='d', basin_code='b', geometry=geometry)],
+            v.LAYERS['basin'][0]: [dict(basin_code='b', geometry=geometry)],
+            v.LAYERS['unassigned'][0]: [],
+        }
+        def load(path):
+            return release if path.name.startswith('forest') else municipality
+        with tempfile.TemporaryDirectory() as directory:
+            argv = ['audit', '--output', str(Path(directory)/'result'),
+                    '--municipalities', 'municipalities.gpkg',
+                    '--candidate-v01', 'candidate1.gpkg', '--candidate-v02', 'candidate2.gpkg',
+                    '--forest-v01', 'forest1.gpkg', '--forest-v02', 'forest2.gpkg']
+            with patch.object(sys, 'argv', argv), patch.object(forest, 'load', side_effect=load), \
+                 patch.object(forest, 'hashfile', return_value='synthetic'), \
+                 patch.object(v.Audit, 'write') as write:
+                forest.main()
+            summary = write.call_args.args[0]
+            self.assertEqual(summary['holes']['v0.2']['district']['count'], 1)
+            self.assertGreater(summary['holes']['v0.2']['district']['ellipsoidal_area_m2'], 0)
+            self.assertEqual(summary['stages']['v02_districts_to_basin']['nonempty'], 0)
+
     def test_hole_fill_is_addition_with_unchanged_exterior(self):
         outer=[(139,35),(139.01,35),(139.01,35.01),(139,35.01),(139,35)]
         hole=[(139.002,35.002),(139.003,35.002),(139.003,35.003),(139.002,35.003),(139.002,35.002)]
