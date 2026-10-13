@@ -52,3 +52,7 @@ Python標準ライブラリで動きます。入力ファイルとは別のパ�
 森林対応表の出典と制約はdata/forest/README.mdに記録しています。
 大きなGeoPackageとZIPはGitに入れず、[確認用Release review-v0.2-20261010](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.2-20261010)で配布しています（旧版 review-v0.1-20261005 は、比べるために残しています）。再生成・形状検査・公開処理とWindows/Linux CIは成功しました。QGIS実画面での表示は未確認です。
 新規公開手順はdocs/SETUP.md、検証結果はdocs/FEASIBILITY.mdを参照してください。
+
+## 形状の検証記録
+
+原典・公開物の比較結果と未確認事項は[2026-10-13の形状検証](docs/geometry-audit-20261013/README.md)に記録しています。
