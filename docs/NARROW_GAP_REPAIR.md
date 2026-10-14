@@ -28,6 +28,9 @@ N03原典は変更しません。市町村の所属を確認できる箇所だ�
 このレイヤは検出できた候補の台帳です。幅の基準を超えて検出できなかった全隙間の一覧ではありません。
 `review_boundary`、`review_broad`、`review_other_area` は要確認として補修しません。
 数値変換で候補が不正形状になった場合は `review_invalid` とし、自動補修しません。
+合成で元形状が減る箇所は `review_result_loss`、合成結果が不正なら
+`review_result_invalid`、既存パーツに接しない候補は `review_detached` として残します。
+隙間に接するパーツだけを合成し、離れた小島等のパーツは元の座標のまま保持します。
 `gap_residual_review` には、補修後に残る閉じた穴を記録します。実在の水域も含むため、
 すべてを不具合とは扱いません。外側へ開いた未検出の隙間は、この穴一覧には含まれません。
 
@@ -54,6 +57,8 @@ python scripts/build_review_release.py --output output/review_gap_repair --gap-w
 ```
 
 元の区域所属・地物数（計画区158、広域流域44、未割当20）は変えません。
+補修スクリプトはPython 3.10以上とShapely 2.1.2が必要です。Python 3.9のCIでは
+対応表等を検査し、Shapelyを使う補修検査は未実行として扱います。
 計画区と広域流域を別々に面積基準で穴埋めする従来の公開処理は呼び出しません。
 旧 `drop_tiny_rings.py` は既存成果の再現用に保持します。
 

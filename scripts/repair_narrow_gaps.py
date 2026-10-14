@@ -7,7 +7,7 @@ local metre frame (latitude-dependent equirectangular approximation).
 import math
 
 from shapely import affinity, make_valid
-from shapely.geometry import Polygon, LineString
+from shapely.geometry import Polygon, MultiPolygon, LineString
 from shapely.ops import unary_union
 from shapely.strtree import STRtree
 
@@ -99,9 +99,72 @@ def accept_patches(original, candidates, blockers=(), metric=True):
         audit.append((patch, measurements, decision))
         if decision == 'accepted':
             accepted.append(patch)
-    repaired = unary_union([original, *accepted]) if accepted else original
+    if not accepted:
+        return original, audit
+    # Merge only parts connected by a patch. A global union can collapse tiny
+    # offshore parts at double precision even though no patch touches them.
+    source_parts = list(polygons(original))
+    tree = STRtree(source_parts)
+    parent = list(range(len(source_parts)))
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    connected = []
+    for patch in accepted:
+        touched = list(tree.query(patch, predicate='intersects'))
+        if not touched:
+            connected.append(None)
+            continue
+        root = find(touched[0])
+        for i in touched[1:]:
+            parent[find(i)] = root
+        connected.append(touched[0])
+    components = {}
+    for patch, i in zip(accepted, connected):
+        if i is not None:
+            components.setdefault(find(i), []).append(patch)
+    members = {root: [] for root in components}
+    unchanged = []
+    for i, part in enumerate(source_parts):
+        root = find(i)
+        if root in members:
+            members[root].append(part)
+        else:
+            unchanged.append(part)
+    rejected = {}
+    changed = []
+    for root, patches in components.items():
+        before = unary_union(members[root])
+        after = unary_union([*members[root], *patches])
+        loss = before.difference(after)
+        if metric and not loss.is_empty:
+            forward, _ = metre_frame(before)
+            loss_area = forward(loss).area
+        else:
+            loss_area = loss.area
+        if not after.is_valid or loss_area > 1e-4:
+            rejected[root] = 'review_result_invalid' if not after.is_valid else 'review_result_loss'
+            changed.extend(members[root])
+        else:
+            changed.extend(polygons(after))
+    result_parts = unchanged + changed
+    repaired = result_parts[0] if len(result_parts) == 1 else MultiPolygon(result_parts)
+    accepted_index = 0
+    revised_audit = []
+    for patch, measurements, decision in audit:
+        if decision == 'accepted':
+            component = connected[accepted_index]
+            accepted_index += 1
+            if component is None:
+                decision = 'review_detached'
+            else:
+                decision = rejected.get(find(component), decision)
+        revised_audit.append((patch, measurements, decision))
+    audit = revised_audit
     if not repaired.is_valid or repaired.is_empty:
-        raise ValueError('Gap repair produced invalid geometry')
+        return original, [(p, m, 'review_result_invalid' if d == 'accepted' else d) for p, m, d in audit]
     # An additive repair must not lose any original area.
     loss = original.difference(repaired)
     if metric and not loss.is_empty:
@@ -110,7 +173,7 @@ def accept_patches(original, candidates, blockers=(), metric=True):
     else:
         loss_m2 = loss.area
     if loss_m2 > 1e-4:
-        raise ValueError(f'Gap repair removed source area: {loss_m2:.12g} m2')
+        return original, [(p, m, 'review_result_loss' if d == 'accepted' else d) for p, m, d in audit]
     return repaired, audit
 
 

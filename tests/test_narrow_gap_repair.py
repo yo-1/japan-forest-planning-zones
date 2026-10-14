@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 try:
-    from shapely.geometry import box, Polygon
+    from shapely.geometry import box, Polygon, MultiPolygon
     from shapely.ops import unary_union
     from repair_narrow_gaps import repair_geometry
 except ImportError:
@@ -58,6 +58,13 @@ class NarrowGapTests(unittest.TestCase):
         for width in (0, -1, math.inf, math.nan):
             with self.assertRaises(ValueError):
                 repair_geometry(box(0, 0, 1, 1), width, metric=False)
+
+    def test_disconnected_island_coordinates_preserved(self):
+        mainland = box(140, 36, 140.01, 36.01).difference(box(140.004, 36, 140.004000001, 36.009))
+        island = box(140.02, 36, 140.02000001, 36.00000001)
+        g = MultiPolygon([mainland, island])
+        r, _ = repair_geometry(g, .001)
+        self.assertTrue(any(p.equals_exact(island, 0) for p in r.geoms))
 
     def test_geographic_frame_preserves_original_area(self):
         g = box(140, 36, 140.01, 36.01).difference(box(140.004, 36, 140.004000001, 36.009))
