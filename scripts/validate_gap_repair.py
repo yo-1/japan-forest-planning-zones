@@ -67,8 +67,11 @@ def validate(source, output):
         added = geom.difference(raw[code])
         lost = raw[code].difference(geom)
         ledger = unary_union(patches[code])
-        expected = unary_union([raw[code], ledger])
-        discrepancy = area_m2(expected.symmetric_difference(geom), raw[code])
+        # Rebuilding a global union would repeat the collapse of untouched
+        # tiny parts that the repair deliberately avoids. Check additions and
+        # ledger coverage independently of source preservation instead.
+        discrepancy = (area_m2(added.difference(ledger), raw[code])
+                       + area_m2(ledger.difference(geom), raw[code]))
         lost_m2 = area_m2(lost, raw[code])
         report.append(dict(district_code=code, added_m2=area_m2(added, raw[code]),
                            lost_m2=lost_m2, ledger_discrepancy_m2=discrepancy))
