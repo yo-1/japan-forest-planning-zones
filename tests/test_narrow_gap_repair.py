@@ -66,6 +66,24 @@ class NarrowGapTests(unittest.TestCase):
         r, _ = repair_geometry(g, .001)
         self.assertTrue(any(p.equals_exact(island, 0) for p in r.geoms))
 
+    def test_nanometre_closed_ring_is_not_lost_by_overlay(self):
+        hole = box(140.002, 36.001, 140.00200000000004, 36.009)
+        g = Polygon(box(140, 36, 140.01, 36.01).exterior.coords, [hole.exterior.coords])
+        r, audit = repair_geometry(g, .001)
+        self.assertEqual(len(r.interiors), 0)
+        self.assertEqual(list(g.exterior.coords), list(r.exterior.coords))
+        self.assertTrue(any(m['method'] == 'closed_ring' and d == 'accepted' for _, m, d in audit))
+
+    def test_part_inside_filled_hole_is_retained_as_covered_area(self):
+        hole = box(49.9998, 1, 50.0002, 99)
+        mainland = Polygon(box(0, 0, 100, 100).exterior.coords, [hole.exterior.coords])
+        fragment = box(49.9999, 10, 50.0001, 90)
+        g = MultiPolygon([mainland, fragment])
+        r, _ = self.repair(g)
+        self.assertTrue(r.is_valid)
+        self.assertTrue(r.covers(fragment))
+        self.assertAlmostEqual(r.area, 10000)
+
     def test_geographic_frame_preserves_original_area(self):
         g = box(140, 36, 140.01, 36.01).difference(box(140.004, 36, 140.004000001, 36.009))
         r, audit = repair_geometry(g, .001)

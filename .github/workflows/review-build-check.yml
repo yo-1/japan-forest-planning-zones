@@ -11,6 +11,7 @@ on:
       - 'scripts/repair_narrow_gaps.py'
       - 'scripts/repair_municipality_gaps.py'
       - 'scripts/validate_gap_repair.py'
+      - 'scripts/finalize_closed_gap_repairs.py'
       - 'scripts/build_forest_layer.py'
       - 'styles/**'
       - 'docs/REVIEW_*'

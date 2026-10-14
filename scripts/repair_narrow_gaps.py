@@ -76,6 +76,7 @@ def discover_patches(original, width, metric=True):
             'area_m2': patch.area, 'perimeter_m': patch.length,
             'mean_width_proxy_m': 2 * patch.area / patch.length,
             'boundary_support': support,
+            'method': 'closing',
         }, decision
 
 
@@ -177,5 +178,47 @@ def accept_patches(original, candidates, blockers=(), metric=True):
     return repaired, audit
 
 
+def repair_closed_holes(original, width, blockers=(), metric=True):
+    """Delete narrow interior rings directly, avoiding overlay precision loss."""
+    if not math.isfinite(width) or width <= 0:
+        raise ValueError('Gap width must be finite and positive')
+    forward, _ = metre_frame(original) if metric else (lambda g: g, lambda g: g)
+    rebuilt, audit = [], []
+    for part in polygons(original):
+        kept = []
+        for ring in part.interiors:
+            hole = Polygon(ring)
+            hm = forward(hole)
+            if not hm.buffer(-width / 2 * 1.01).is_empty:
+                kept.append(ring.coords)
+                continue
+            decision = 'review_other_area' if any(hole.intersection(b).area > 0 for b in blockers) else 'accepted'
+            if decision != 'accepted':
+                kept.append(ring.coords)
+            audit.append((hole, dict(area_m2=hm.area, perimeter_m=hm.length,
+                                    mean_width_proxy_m=2 * hm.area / hm.length,
+                                    boundary_support=1.0, method='closed_ring'), decision))
+        rebuilt.append(Polygon(part.exterior.coords, kept))
+    repaired = rebuilt[0] if len(rebuilt) == 1 else MultiPolygon(rebuilt)
+    if not repaired.is_valid and len(rebuilt) > 1:
+        # Filling a hole may fully enclose a separate part of the same area.
+        # That part is now redundant, not lost; remove contained shells only.
+        tree = STRtree(rebuilt)
+        covered = set()
+        for i, part in enumerate(rebuilt):
+            for j in tree.query(part, predicate='covers'):
+                if i != j and (part.area > rebuilt[j].area or i < j):
+                    covered.add(j)
+        retained = [p for i, p in enumerate(rebuilt) if i not in covered]
+        repaired = retained[0] if len(retained) == 1 else MultiPolygon(retained)
+    if not repaired.is_valid:
+        return original, [(p, m, 'review_result_invalid' if d == 'accepted' else d) for p, m, d in audit]
+    return repaired, audit
+
+
 def repair_geometry(original, width, blockers=(), metric=True):
-    return accept_patches(original, discover_patches(original, width, metric), blockers, metric)
+    if not original.is_valid or original.is_empty:
+        raise ValueError('Invalid source polygon')
+    closed, ring_audit = repair_closed_holes(original, width, blockers, metric)
+    repaired, audit = accept_patches(closed, discover_patches(closed, width, metric), blockers, metric)
+    return repaired, ring_audit + audit

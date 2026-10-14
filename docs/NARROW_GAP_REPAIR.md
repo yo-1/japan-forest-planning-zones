@@ -7,6 +7,9 @@ N03原典は変更しません。市町村の所属を確認できる箇所だ�
 ## 検出と補修
 
 `scripts/repair_narrow_gaps.py` は、幅を基準にした膨張・収縮で追加候補を検出します。
+閉じた穴は内部リングを直接検査し、幅の条件を満たしたリングだけを取り除きます。
+極端に細い穴は差分演算で消失することがあるため、閉じた穴の検出を差分演算に依存させません。
+リングの削除では外環と残す内部リングの座標をそのまま保持します。
 この処理結果で全体を置き換えず、採用した追加部分だけを原形状に合成します。
 面積1㎡を超える細長い穴、パーツ間の隙間、海岸へ抜ける隙間も対象です。
 
@@ -54,7 +57,10 @@ N03原典は変更しません。市町村の所属を確認できる箇所だ�
 ```bash
 python scripts/build_provisional_aggregates.py INPUT.gpkg OUTPUT.gpkg --gap-width-m 0.001
 python scripts/build_review_release.py --output output/review_gap_repair --gap-width-m 0.001
+python scripts/finalize_closed_gap_repairs.py PREVIOUS_REVIEW.gpkg FINISHED_REVIEW.gpkg --gap-width-m 0.001
 ```
+
+最後のコマンドは、膨張・収縮だけで生成済みの確認用データに、内部リングの直接検査を追加するものです。
 
 元の区域所属・地物数（計画区158、広域流域44、未割当20）は変えません。
 補修スクリプトはPython 3.10以上とShapely 2.1.2が必要です。Python 3.9のCIでは

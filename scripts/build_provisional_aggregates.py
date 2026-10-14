@@ -93,7 +93,7 @@ def main(src, dst, gap_width_m=None):
         if srid != 6668:
             raise ValueError('Narrow-gap repair requires EPSG:6668')
         layer(db, 'gap_repair_audit',
-              'district_code TEXT,decision TEXT,area_m2 REAL,perimeter_m REAL,mean_width_proxy_m REAL,boundary_support REAL', srid)
+              'district_code TEXT,decision TEXT,area_m2 REAL,perimeter_m REAL,mean_width_proxy_m REAL,boundary_support REAL,method TEXT', srid)
         layer(db, 'gap_residual_review',
               'district_code TEXT,status TEXT,area_m2 REAL,mean_width_proxy_m REAL', srid)
     districts = {}
@@ -117,9 +117,9 @@ def main(src, dst, gap_width_m=None):
                 audit_counts[decision] += 1
                 patch = MultiPolygon(list(polygons(patch)))
                 audit_bounds.append(patch.bounds)
-                db.execute('INSERT INTO gap_repair_audit VALUES(NULL,?,?,?,?,?,?,?)',
+                db.execute('INSERT INTO gap_repair_audit VALUES(NULL,?,?,?,?,?,?,?,?)',
                            (encode(patch, srid), key, decision, measurements['area_m2'],
-                            measurements['perimeter_m'], measurements['mean_width_proxy_m'], measurements['boundary_support']))
+                            measurements['perimeter_m'], measurements['mean_width_proxy_m'], measurements['boundary_support'], measurements['method']))
         districts[key] = geom
         if gap_width_m is not None:
             forward, _ = metre_frame(geom)
