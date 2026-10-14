@@ -13,6 +13,8 @@ from xml.etree import ElementTree as ET
 
 from build_provisional_aggregates import decode
 from drop_tiny_rings import drop_tiny_rings, rewrite_geometry
+from repair_municipality_gaps import apply_reviewed_patches
+from validate_gap_repair import validate as validate_gap_repair
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_BASE = 'https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/download/v2026.1/'
@@ -120,6 +122,9 @@ def main():
     p.add_argument('--output', type=Path, default=ROOT / 'release_output')
     p.add_argument('--candidate', type=Path, help='Local already-joined candidate, for independent packaging check')
     p.add_argument('--zones', type=Path, help='Local user-provided plane coordinate zones')
+    p.add_argument('--gap-width-m', type=float, default=0.001,
+                   help='Local metre width limit for narrow-gap candidates (default 0.001m; audit required)')
+    p.add_argument('--municipality-patches', type=Path, help='Approved EPSG:6668 GeoJSON patches with municipality evidence')
     a = p.parse_args()
     a.output.mkdir(parents=True, exist_ok=False)
     work = a.output / 'work'
@@ -130,6 +135,11 @@ def main():
     else:
         municipality = download_gpkg('plane_rectangular_municipalities_2026.zip', work, MUNICIPALITY_ZIP_SHA256)
         subprocess.run([sys.executable, str(ROOT / 'scripts/build_forest_layer.py'), str(municipality), str(candidate)], check=True)
+    municipality_patch_report = []
+    if a.municipality_patches:
+        repaired_candidate = work / 'municipality_forest_zones_2026_repaired.gpkg'
+        municipality_patch_report = apply_reviewed_patches(candidate, repaired_candidate, a.municipality_patches)
+        candidate = repaired_candidate
     candidate_db = sqlite3.connect(candidate)
     t = candidate_db.execute('SELECT table_name FROM gpkg_geometry_columns').fetchone()[0]
     counts = candidate_db.execute(f'SELECT count(*),count(DISTINCT N03_007),sum(forest_district_code IS NULL),sum(forest_final_usable="true") FROM "{t}"').fetchone()
@@ -139,8 +149,16 @@ def main():
     candidate_info = inspect_gpkg(candidate, {t: 1911})
     aggregate_raw = work / 'forest_planning_zones_2026_provisional_raw.gpkg'
     aggregate = work / 'forest_planning_zones_2026_provisional_labeled.gpkg'
-    subprocess.run([sys.executable, str(ROOT / 'scripts/build_provisional_aggregates.py'), str(candidate), str(aggregate_raw)], check=True)
-    tiny_ring_report = remove_tiny_interior_rings(aggregate_raw, aggregate, AGGREGATE_COUNTS)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/build_provisional_aggregates.py'), str(candidate), str(aggregate_raw),
+                    '--gap-width-m', str(a.gap_width_m)], check=True)
+    # Area-only deletion after basin aggregation would make district/basin
+    # coverage diverge again. Narrow gaps are now repaired at district stage.
+    shutil.copyfile(aggregate_raw, aggregate)
+    gap_report = json.loads(aggregate_raw.with_suffix('.validation.json').read_text())
+    gap_validation = validate_gap_repair(candidate, aggregate)
+    if not gap_validation['passed']:
+        raise ValueError('Independent gap validation failed: ' + str(gap_validation['errors']))
+    (a.output / 'gap_validation.json').write_text(json.dumps(gap_validation, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     before = inspect_gpkg(aggregate, AGGREGATE_COUNTS)
     add_styles(aggregate, [(table, table + '.qml', '確認用色分け・ラベル', 1) for table in AGGREGATE_COUNTS])
     after = inspect_gpkg(aggregate, AGGREGATE_COUNTS)
@@ -161,6 +179,7 @@ def main():
         raise ValueError('Styling changed coordinate-zone geometry')
     readme = ROOT / 'docs/REVIEW_PACKAGE_README.txt'
     files = [(aggregate, aggregate.name),(zones,zones.name),(readme,'README.txt')]
+    files.append((a.output / 'gap_validation.json', 'gap_validation.json'))
     for name in ('municipality_forest_districts.csv','forest_plan_districts.csv','forest_wide_basins.csv'):
         files.append((ROOT / 'data/forest' / name,'tables/' + name))
     for qml in sorted((ROOT / 'styles').glob('*.qml')):
@@ -169,7 +188,7 @@ def main():
     zip_files(overview_zip, files)
     municipality_zip = a.output / 'municipality_forest_zones_2026_candidate.zip'
     zip_files(municipality_zip, [(candidate,candidate.name),(readme,'README.txt')])
-    manifest = {'status':'provisional; official membership and boundaries not certified','source_municipality_zip_sha256':MUNICIPALITY_ZIP_SHA256,'coordinate_zones_source':'japan-plane-rectangular-cs-zones v2026.2','coordinate_zones_zip_sha256':ZONES_ZIP_SHA256,'coordinate_zones_geometry_sha256':ZONE_GEOMETRY_SHA256,'tiny_interior_rings_removed':{'threshold_m2':TINY_RING_AREA_M2,'layers':tiny_ring_report},'candidate':candidate_info,'aggregates':after,'coordinate_zones':zone_info,'qgis_gui_verified':False,'review_files':[{ 'name': f.name,'bytes':f.stat().st_size,'sha256':sha256(f)} for f in (overview_zip,municipality_zip)]}
+    manifest = {'status':'provisional; official membership and boundaries not certified','source_municipality_zip_sha256':MUNICIPALITY_ZIP_SHA256,'coordinate_zones_source':'japan-plane-rectangular-cs-zones v2026.2','coordinate_zones_zip_sha256':ZONES_ZIP_SHA256,'coordinate_zones_geometry_sha256':ZONE_GEOMETRY_SHA256,'narrow_gap_repair':gap_report,'municipality_reviewed_patches':municipality_patch_report,'candidate':candidate_info,'aggregates':after,'coordinate_zones':zone_info,'qgis_gui_verified':False,'review_files':[{ 'name': f.name,'bytes':f.stat().st_size,'sha256':sha256(f)} for f in (overview_zip,municipality_zip)]}
     (a.output/'review_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     (a.output/'SHA256SUMS.txt').write_text(''.join(f"{entry['sha256']}  {entry['name']}\n" for entry in manifest['review_files']),encoding='utf-8')
     print(json.dumps(manifest,ensure_ascii=False),flush=True)

@@ -31,7 +31,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       # pyproj は EPSG の定義との照合テスト、numpy は小さい穴を取り除くスクリプトのテストだけに使う（なくてもほかのテストは動く）。
       - name: Install pyproj and numpy
-        run: python -m pip install pyproj numpy
+        run: python -m pip install pyproj numpy shapely==2.1.2
       - name: Compile
         run: python -m compileall -q scripts tests
       - name: Audit forest tables and display styles

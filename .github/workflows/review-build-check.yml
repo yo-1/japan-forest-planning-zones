@@ -8,6 +8,9 @@ on:
       - 'scripts/build_review_release.py'
       - 'scripts/build_provisional_aggregates.py'
       - 'scripts/drop_tiny_rings.py'
+      - 'scripts/repair_narrow_gaps.py'
+      - 'scripts/repair_municipality_gaps.py'
+      - 'scripts/validate_gap_repair.py'
       - 'scripts/build_forest_layer.py'
       - 'styles/**'
       - 'docs/REVIEW_*'
@@ -33,4 +36,14 @@ jobs:
       - name: Show manifest and checksums
         run: |
           cat "$RUNNER_TEMP/review_check/SHA256SUMS.txt"
-          python -c "import json,sys;m=json.load(open(sys.argv[1]));print(json.dumps(m.get('tiny_interior_rings_removed'),ensure_ascii=False,indent=1))" "$RUNNER_TEMP/review_check/review_manifest.json"
+          python -c "import json,sys;m=json.load(open(sys.argv[1]));print(json.dumps(m.get('narrow_gap_repair'),ensure_ascii=False,indent=1))" "$RUNNER_TEMP/review_check/review_manifest.json"
+      - name: Retain repaired data for QGIS review
+        uses: actions/upload-artifact@v4
+        with:
+          name: narrow-gap-review-data
+          path: |
+            ${{ runner.temp }}/review_check/*.zip
+            ${{ runner.temp }}/review_check/gap_validation.json
+            ${{ runner.temp }}/review_check/review_manifest.json
+            ${{ runner.temp }}/review_check/SHA256SUMS.txt
+          retention-days: 14
