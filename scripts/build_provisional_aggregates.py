@@ -36,7 +36,7 @@ def encode(geom, srid):
 
 
 def layer(db, name, fields, srid):
-    db.execute(f'CREATE TABLE "{name}" (fid INTEGER PRIMARY KEY, geom BLOB NOT NULL, {fields})')
+    db.execute(f'CREATE TABLE "{name}" (fid INTEGER PRIMARY KEY, geom MULTIPOLYGON NOT NULL, {fields})')
     db.execute('INSERT INTO gpkg_contents(table_name,data_type,identifier,description,last_change,srs_id) VALUES (?,?,?,?,?,?)',
                (name, 'features', name, '市町村界の集約による確認用。公式境界ではない。',
                 datetime.datetime.now(datetime.timezone.utc).isoformat(), srid))

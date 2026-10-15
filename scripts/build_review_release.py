@@ -56,7 +56,12 @@ def inspect_gpkg(path, counts):
         raise ValueError('SQLite integrity check failed')
     info = {}
     for table, expected in counts.items():
-        col, srid = conn.execute('SELECT column_name,srs_id FROM gpkg_geometry_columns WHERE table_name=?', (table,)).fetchone()
+        col, srid, geometry_type = conn.execute('SELECT column_name,srs_id,geometry_type_name FROM gpkg_geometry_columns WHERE table_name=?', (table,)).fetchone()
+        quoted_table = '"' + table.replace('"', '""') + '"'
+        declared_type = {row[1]: row[2].upper() for row in conn.execute('PRAGMA table_info(' + quoted_table + ')')}.get(col)
+        if declared_type != geometry_type.upper():
+            conn.close()
+            raise ValueError(f'Geometry SQL type differs from GeoPackage registration: {table}.{col}: {declared_type} != {geometry_type}')
         h = hashlib.sha256()
         n = 0
         for blob, in conn.execute(f'SELECT "{col}" FROM "{table}" ORDER BY fid'):
