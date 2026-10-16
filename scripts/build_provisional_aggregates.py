@@ -177,7 +177,7 @@ def main(src, dst, gap_width_m=None):
               'unassigned': len(unassigned), 'epsg': srid, 'sqlite_integrity': db.execute('PRAGMA integrity_check').fetchone()[0],
               'gap_width_m': gap_width_m, 'gap_audit_counts': dict(audit_counts),
               'remaining_closed_holes': residual_count,
-              'basins_derived_from_repaired_districts': True}
+              'basins_derived_from_repaired_districts': gap_width_m is not None}
     db.close()
     Path(temporary_name).replace(dst)
     dst.with_suffix('.validation.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')

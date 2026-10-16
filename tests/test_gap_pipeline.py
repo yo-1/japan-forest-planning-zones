@@ -1,3 +1,4 @@
+from contextlib import closing
 import contextlib
 import io
 import sqlite3
@@ -80,7 +81,7 @@ class GapPipelineTests(unittest.TestCase):
         self.assertTrue(any('unlogged' in error for error in result['errors']))
 
     def test_independent_validation_detects_unassigned_geometry_change(self):
-        with sqlite3.connect(self.out) as db:
+        with closing(sqlite3.connect(self.out)) as db, db:
             db.execute('UPDATE forest_unassigned_review SET geom=? WHERE source_fid=1892',
                        (encode(box(139, 34, 139.1, 34.1), 6668),))
         result = validate(self.src, self.out)
@@ -88,7 +89,7 @@ class GapPipelineTests(unittest.TestCase):
         self.assertTrue(any('Unassigned source feature changed' in e for e in result['errors']))
 
     def test_independent_validation_detects_membership_and_status_change(self):
-        with sqlite3.connect(self.out) as db:
+        with closing(sqlite3.connect(self.out)) as db, db:
             db.execute("UPDATE forest_plan_districts_provisional SET basin_code='02',final_usable='true' WHERE district_code='001'")
         result = validate(self.src, self.out)
         self.assertFalse(result['passed'])
@@ -101,7 +102,7 @@ class GapPipelineTests(unittest.TestCase):
         destination = self.root / 'unopted.gpkg'
         with contextlib.redirect_stdout(io.StringIO()):
             main(self.src, destination)
-        with sqlite3.connect(destination) as db, sqlite3.connect(self.src) as source:
+        with closing(sqlite3.connect(destination)) as db, closing(sqlite3.connect(self.src)) as source:
             self.assertEqual(db.execute('SELECT count(*) FROM gpkg_geometry_columns').fetchone()[0], 3)
             for code, blob in db.execute('SELECT basin_code,geom FROM forest_wide_basins_provisional'):
                 expected = unary_union([decode(r[0])[1] for r in source.execute(
