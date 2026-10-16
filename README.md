@@ -2,7 +2,7 @@
 
 市区町村の座標系ポリゴンに、森林計画区と広域流域の情報を追加する派生プロジェクトです。
 
-**現在は確認用v0.1です。現行の公式境界データとして使うことはできません。**
+**現在は確認用v0.3です。現行の公式境界データとして使うことはできません。**
 
 島しょ部を含め、広域流域名は現行の所属・境界を確定した値ではありません。
 平面直角座標系の系ごとに地物が分かれていても、同じ市町村コードには同じ暫定値を付けています。
@@ -50,9 +50,11 @@ Python標準ライブラリで動きます。入力ファイルとは別のパ�
 
 コードはMIT、座標系データはCC BY 4.0です。DATA_LICENSE.mdの出典表記を保持します。
 森林対応表の出典と制約はdata/forest/README.mdに記録しています。
-大きなGeoPackageとZIPはGitに入れず、[確認用Release review-v0.2-20261010](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.2-20261010)で配布しています（旧版 review-v0.1-20261005 は、比べるために残しています）。再生成・形状検査・公開処理とWindows/Linux CIは成功しました。QGIS実画面での表示は未確認です。
+大きなGeoPackageとZIPはGitに入れず、[確認用Release review-v0.3-20261015](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.3-20261015)で配布しています（旧版 review-v0.1-20261005 は、比べるために残しています）。再生成・形状検査・公開処理とWindows/Linux CIは成功しました。QGIS実画面での表示は未確認です。
 新規公開手順はdocs/SETUP.md、検証結果はdocs/FEASIBILITY.mdを参照してください。
 
 ## 形状の検証記録
 
 原典・公開物の比較結果と未確認事項は[2026-10-13の形状検証](docs/geometry-audit-20261013/README.md)に記録しています。
+
+原典近くでの精度処理は試験中で、全国版への採用は保留しています。公開試験データを使う独立再現結果と残作業は[2026-10-16の精度検証](docs/precision-audit-20261016/README.md)を参照してください。
