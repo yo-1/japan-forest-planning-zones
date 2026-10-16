@@ -1,0 +1,63 @@
+{
+  "gdal": "3.12.4",
+  "pyogrio": "0.13.0",
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "features": 158,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "forest_unassigned_review": {
+      "features": 20,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "forest_wide_basins_provisional": {
+      "features": 44,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "gap_repair_audit": {
+      "features": 6895,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "gap_residual_review": {
+      "features": 16,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    }
+  },
+  "regional_checks": {
+    "020": {
+      "name": "大槌・気仙川",
+      "accepted_patches": 28,
+      "closed_holes_remaining": 1
+    },
+    "024": {
+      "name": "宮城南部",
+      "accepted_patches": 81,
+      "closed_holes_remaining": 0
+    },
+    "025": {
+      "name": "米代川",
+      "accepted_patches": 28,
+      "closed_holes_remaining": 0
+    },
+    "036": {
+      "name": "水戸那珂",
+      "accepted_patches": 71,
+      "closed_holes_remaining": 0
+    },
+    "048": {
+      "name": "多摩",
+      "accepted_patches": 7,
+      "closed_holes_remaining": 1
+    },
+    "051": {
+      "name": "下越",
+      "accepted_patches": 15,
+      "closed_holes_remaining": 0
+    }
+  }
+}

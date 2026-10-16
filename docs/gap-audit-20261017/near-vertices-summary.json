@@ -1,0 +1,604 @@
+{
+  "input_sha256": "038f013999f492443373ad98814641f9466f90a7ecaf4fa39a388fd7a0448dfa",
+  "input_unchanged": true,
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "threshold_degree": 9e-09,
+  "scope": "Euclidean degree distance; not an Esri Check Geometry substitute",
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "features": 158,
+      "valid": 158,
+      "zero_pairs": 4,
+      "numerical_pairs": 41,
+      "positive_pairs": 12
+    },
+    "forest_unassigned_review": {
+      "features": 20,
+      "valid": 20,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": 0
+    },
+    "forest_wide_basins_provisional": {
+      "features": 44,
+      "valid": 44,
+      "zero_pairs": 16,
+      "numerical_pairs": 569,
+      "positive_pairs": 15
+    }
+  },
+  "positive_pairs": [
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 22,
+        "district_code": "022",
+        "district_name": "北上川中流",
+        "basin_code": "10",
+        "basin_name": "北上川"
+      },
+      "pairs": [
+        {
+          "ring_a": 0,
+          "vertex_a": 2707,
+          "ring_b": 0,
+          "vertex_b": 2709,
+          "distance_degree": 1.7186470448108707e-12,
+          "coordinate_a": [
+            140.733333333,
+            39.521631973
+          ],
+          "coordinate_b": [
+            140.7333333329983,
+            39.521631973000375
+          ]
+        },
+        {
+          "ring_a": 0,
+          "vertex_a": 2710,
+          "ring_b": 0,
+          "vertex_b": 2712,
+          "distance_degree": 2.299744862194341e-12,
+          "coordinate_a": [
+            140.73334994799777,
+            39.5216283330005
+          ],
+          "coordinate_b": [
+            140.733349948,
+            39.521628333
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 23,
+        "district_code": "023",
+        "district_name": "宮城北部",
+        "basin_code": "10",
+        "basin_name": "北上川"
+      },
+      "pairs": [
+        {
+          "ring_a": 7795,
+          "vertex_a": 179,
+          "ring_b": 7795,
+          "vertex_b": 181,
+          "distance_degree": 1.4779972102188067e-12,
+          "coordinate_a": [
+            141.535634994,
+            38.705906955
+          ],
+          "coordinate_b": [
+            141.5356349939985,
+            38.70590695500002
+          ]
+        },
+        {
+          "ring_a": 7798,
+          "vertex_a": 0,
+          "ring_b": 7798,
+          "vertex_b": 80,
+          "distance_degree": 1.6230886513692569e-12,
+          "coordinate_a": [
+            141.503473839,
+            38.594151252
+          ],
+          "coordinate_b": [
+            141.50347383900163,
+            38.594151251999904
+          ]
+        },
+        {
+          "ring_a": 7798,
+          "vertex_a": 0,
+          "ring_b": 7798,
+          "vertex_b": 81,
+          "distance_degree": 2.591991338004915e-12,
+          "coordinate_a": [
+            141.503473839,
+            38.594151252
+          ],
+          "coordinate_b": [
+            141.5034738390026,
+            38.59415125199983
+          ]
+        },
+        {
+          "ring_a": 7805,
+          "vertex_a": 28507,
+          "ring_b": 7805,
+          "vertex_b": 28509,
+          "distance_degree": 1.0200434310973183e-12,
+          "coordinate_a": [
+            141.133333333,
+            38.333450613
+          ],
+          "coordinate_b": [
+            141.1333333330007,
+            38.333450612999265
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 25,
+        "district_code": "025",
+        "district_name": "米代川",
+        "basin_code": "11",
+        "basin_name": "米代・雄物川"
+      },
+      "pairs": [
+        {
+          "ring_a": 2383,
+          "vertex_a": 54179,
+          "ring_b": 2383,
+          "vertex_b": 54183,
+          "distance_degree": 7.905606953224134e-09,
+          "coordinate_a": [
+            139.967886278,
+            39.879999685
+          ],
+          "coordinate_b": [
+            139.96788627150022,
+            39.87999968950015
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 89,
+        "district_code": "089",
+        "district_name": "加古川",
+        "basin_code": "29",
+        "basin_name": "加古川"
+      },
+      "pairs": [
+        {
+          "ring_a": 411,
+          "vertex_a": 4587,
+          "ring_b": 411,
+          "vertex_b": 4589,
+          "distance_degree": 1.202896598545606e-12,
+          "coordinate_a": [
+            134.88481345,
+            34.693028135
+          ],
+          "coordinate_b": [
+            134.88481345000093,
+            34.693028134999246
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 91,
+        "district_code": "091",
+        "district_name": "円山川",
+        "basin_code": "31",
+        "basin_name": "円山・千代川"
+      },
+      "pairs": [
+        {
+          "ring_a": 1419,
+          "vertex_a": 1,
+          "ring_b": 1419,
+          "vertex_b": 520,
+          "distance_degree": 3.1542976023320587e-12,
+          "coordinate_a": [
+            134.815411025,
+            35.662834054
+          ],
+          "coordinate_b": [
+            134.81541102499833,
+            35.66283405399733
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 150,
+        "district_code": "150",
+        "district_name": "北薩",
+        "basin_code": "43",
+        "basin_name": "川内・肝属川"
+      },
+      "pairs": [
+        {
+          "ring_a": 1275,
+          "vertex_a": 4823,
+          "ring_b": 1275,
+          "vertex_b": 4825,
+          "distance_degree": 2.2350381245061613e-12,
+          "coordinate_a": [
+            130.212336719,
+            32.275
+          ],
+          "coordinate_b": [
+            130.21233671899972,
+            32.27499999999778
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 153,
+        "district_code": "153",
+        "district_name": "大隅",
+        "basin_code": "43",
+        "basin_name": "川内・肝属川"
+      },
+      "pairs": [
+        {
+          "ring_a": 570,
+          "vertex_a": 15149,
+          "ring_b": 570,
+          "vertex_b": 15151,
+          "distance_degree": 2.1213984909555015e-12,
+          "coordinate_a": [
+            130.697542698,
+            31.517341514
+          ],
+          "coordinate_b": [
+            130.6975426979994,
+            31.517341513997966
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_plan_districts_provisional",
+      "attributes": {
+        "fid": 155,
+        "district_code": "155",
+        "district_name": "奄美大島",
+        "basin_code": "43",
+        "basin_name": "川内・肝属川"
+      },
+      "pairs": [
+        {
+          "ring_a": 1899,
+          "vertex_a": 6822,
+          "ring_b": 1899,
+          "vertex_b": 6824,
+          "distance_degree": 2.1437205047201446e-12,
+          "coordinate_a": [
+            128.691666667,
+            27.418855054
+          ],
+          "coordinate_b": [
+            128.69166666700212,
+            27.41885505400023
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "attributes": {
+        "fid": 1,
+        "basin_code": "01",
+        "basin_name": "天塩川"
+      },
+      "pairs": [
+        {
+          "ring_a": 887,
+          "vertex_a": 1,
+          "ring_b": 887,
+          "vertex_b": 3,
+          "distance_degree": 1.1632953937099622e-12,
+          "coordinate_a": [
+            141.99407824899896,
+            44.6889667749995
+          ],
+          "coordinate_b": [
+            141.994078249,
+            44.688966775
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "attributes": {
+        "fid": 10,
+        "basin_code": "10",
+        "basin_name": "北上川"
+      },
+      "pairs": [
+        {
+          "ring_a": 158,
+          "vertex_a": 28494,
+          "ring_b": 158,
+          "vertex_b": 28496,
+          "distance_degree": 1.0200434310973183e-12,
+          "coordinate_a": [
+            141.133333333,
+            38.333450613
+          ],
+          "coordinate_b": [
+            141.1333333330007,
+            38.333450612999265
+          ]
+        },
+        {
+          "ring_a": 276,
+          "vertex_a": 33270,
+          "ring_b": 276,
+          "vertex_b": 33272,
+          "distance_degree": 1.7186470448108707e-12,
+          "coordinate_a": [
+            140.733333333,
+            39.521631973
+          ],
+          "coordinate_b": [
+            140.7333333329983,
+            39.521631973000375
+          ]
+        },
+        {
+          "ring_a": 276,
+          "vertex_a": 33273,
+          "ring_b": 276,
+          "vertex_b": 33275,
+          "distance_degree": 2.299744862194341e-12,
+          "coordinate_a": [
+            140.73334994799777,
+            39.5216283330005
+          ],
+          "coordinate_b": [
+            140.733349948,
+            39.521628333
+          ]
+        },
+        {
+          "ring_a": 2131,
+          "vertex_a": 67,
+          "ring_b": 2131,
+          "vertex_b": 71,
+          "distance_degree": 1.6230886513692569e-12,
+          "coordinate_a": [
+            141.50347383900163,
+            38.594151251999904
+          ],
+          "coordinate_b": [
+            141.503473839,
+            38.594151252
+          ]
+        },
+        {
+          "ring_a": 2131,
+          "vertex_a": 68,
+          "ring_b": 2131,
+          "vertex_b": 71,
+          "distance_degree": 2.591991338004915e-12,
+          "coordinate_a": [
+            141.5034738390026,
+            38.59415125199983
+          ],
+          "coordinate_b": [
+            141.503473839,
+            38.594151252
+          ]
+        },
+        {
+          "ring_a": 4693,
+          "vertex_a": 166,
+          "ring_b": 4693,
+          "vertex_b": 168,
+          "distance_degree": 1.4779972102188067e-12,
+          "coordinate_a": [
+            141.535634994,
+            38.705906955
+          ],
+          "coordinate_b": [
+            141.5356349939985,
+            38.70590695500002
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "attributes": {
+        "fid": 11,
+        "basin_code": "11",
+        "basin_name": "米代・雄物川"
+      },
+      "pairs": [
+        {
+          "ring_a": 2295,
+          "vertex_a": 8822,
+          "ring_b": 2295,
+          "vertex_b": 8826,
+          "distance_degree": 7.905606953224134e-09,
+          "coordinate_a": [
+            139.967886278,
+            39.879999685
+          ],
+          "coordinate_b": [
+            139.96788627150022,
+            39.87999968950015
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "attributes": {
+        "fid": 21,
+        "basin_code": "21",
+        "basin_name": "神通・庄川"
+      },
+      "pairs": [
+        {
+          "ring_a": 2,
+          "vertex_a": 0,
+          "ring_b": 2,
+          "vertex_b": 2,
+          "distance_degree": 2.16670059690383e-09,
+          "coordinate_a": [
+            137.11641336983337,
+            36.4166666655
+          ],
+          "coordinate_b": [
+            137.11641336766667,
+            36.41666666550003
+          ]
+        },
+        {
+          "ring_a": 9,
+          "vertex_a": 0,
+          "ring_b": 9,
+          "vertex_b": 2,
+          "distance_degree": 7.759322474108478e-09,
+          "coordinate_a": [
+            137.12040626232127,
+            36.41666666571431
+          ],
+          "coordinate_b": [
+            137.12040626890007,
+            36.41666666160013
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "attributes": {
+        "fid": 29,
+        "basin_code": "29",
+        "basin_name": "加古川"
+      },
+      "pairs": [
+        {
+          "ring_a": 311,
+          "vertex_a": 30101,
+          "ring_b": 311,
+          "vertex_b": 30103,
+          "distance_degree": 1.202896598545606e-12,
+          "coordinate_a": [
+            134.88481345,
+            34.693028135
+          ],
+          "coordinate_b": [
+            134.88481345000093,
+            34.693028134999246
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "attributes": {
+        "fid": 31,
+        "basin_code": "31",
+        "basin_name": "円山・千代川"
+      },
+      "pairs": [
+        {
+          "ring_a": 2092,
+          "vertex_a": 508,
+          "ring_b": 2092,
+          "vertex_b": 510,
+          "distance_degree": 3.1542976023320587e-12,
+          "coordinate_a": [
+            134.81541102499833,
+            35.66283405399733
+          ],
+          "coordinate_b": [
+            134.815411025,
+            35.662834054
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "attributes": {
+        "fid": 43,
+        "basin_code": "43",
+        "basin_name": "川内・肝属川"
+      },
+      "pairs": [
+        {
+          "ring_a": 25,
+          "vertex_a": 6808,
+          "ring_b": 25,
+          "vertex_b": 6810,
+          "distance_degree": 2.1437205047201446e-12,
+          "coordinate_a": [
+            128.691666667,
+            27.418855054
+          ],
+          "coordinate_b": [
+            128.69166666700212,
+            27.41885505400023
+          ]
+        },
+        {
+          "ring_a": 5292,
+          "vertex_a": 100925,
+          "ring_b": 5292,
+          "vertex_b": 100927,
+          "distance_degree": 2.1213984909555015e-12,
+          "coordinate_a": [
+            130.697542698,
+            31.517341514
+          ],
+          "coordinate_b": [
+            130.6975426979994,
+            31.517341513997966
+          ]
+        },
+        {
+          "ring_a": 5292,
+          "vertex_a": 126725,
+          "ring_b": 5292,
+          "vertex_b": 126727,
+          "distance_degree": 4.500087414175812e-09,
+          "coordinate_a": [
+            130.61137328100006,
+            31.672872049500086
+          ],
+          "coordinate_b": [
+            130.611373281,
+            31.672872045
+          ]
+        }
+      ]
+    }
+  ]
+}

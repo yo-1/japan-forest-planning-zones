@@ -1,0 +1,159 @@
+{
+  "scope": "Source coordinate trace only; no municipal assignment or geometry repair",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "source_components_sha256": {
+    "N03-20260101.shp": "6325d7f08c9374198e27b2cffd01bd420411be8b3cf3528da0587c6cea35538d",
+    "N03-20260101.shx": "62e0a234588c44eec98778808602e94af90af2d3f85d18ab8bcabd38c5d36751",
+    "N03-20260101.prj": "1761bb7f37f73fd0eb043175a78403ba37ff1066299987c116fd43bbd0057eae",
+    "N03-20260101.dbf": "2d2692800f8261243b281708dc99b89e7a7bd9ba8d8674bec14e7dcf47575911",
+    "N03-20260101.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+  },
+  "source_unchanged": true,
+  "exact_trial_shp_match": true,
+  "crs": "EPSG:6668",
+  "mapping_csv_sha256": "f2f9af3169a03f97db217c7e49e49f8b150cb9db5ab8861206c23c38fc050716",
+  "source_features": [
+    {
+      "ogr_fid": 30167,
+      "attributes": {
+        "N03_001": "秋田県",
+        "N03_002": null,
+        "N03_003": null,
+        "N03_004": "男鹿市",
+        "N03_005": null,
+        "N03_007": "05206"
+      },
+      "valid": true,
+      "matching_rings": [
+        {
+          "part": 0,
+          "ring": 0,
+          "nearest": [
+            {
+              "target": 0,
+              "vertex": 38939,
+              "distance_degree": 7.905606953224134e-09,
+              "coordinate": [
+                139.96788627150022,
+                39.87999968950015
+              ]
+            },
+            {
+              "target": 1,
+              "vertex": 38938,
+              "distance_degree": 2.842170943040401e-14,
+              "coordinate": [
+                139.96817980499998,
+                39.880223054
+              ]
+            },
+            {
+              "target": 2,
+              "vertex": 38939,
+              "distance_degree": 7.06833017728703e-10,
+              "coordinate": [
+                139.96788627150022,
+                39.87999968950015
+              ]
+            }
+          ]
+        }
+      ],
+      "existing_mapping": {
+        "district_code": "025",
+        "district_name": "米代川",
+        "basin_code": "11",
+        "verification_status": "要現行資料照合",
+        "usable_for_final_polygon": "false"
+      }
+    },
+    {
+      "ogr_fid": 30468,
+      "attributes": {
+        "N03_001": "秋田県",
+        "N03_002": null,
+        "N03_003": null,
+        "N03_004": "潟上市",
+        "N03_005": null,
+        "N03_007": "05211"
+      },
+      "valid": true,
+      "matching_rings": [
+        {
+          "part": 0,
+          "ring": 0,
+          "nearest": [
+            {
+              "target": 0,
+              "vertex": 221,
+              "distance_degree": 0.0,
+              "coordinate": [
+                139.967886278,
+                39.879999685
+              ]
+            },
+            {
+              "target": 1,
+              "vertex": 222,
+              "distance_degree": 0.0,
+              "coordinate": [
+                139.968179805,
+                39.880223054
+              ]
+            },
+            {
+              "target": 2,
+              "vertex": 221,
+              "distance_degree": 7.810264423376394e-09,
+              "coordinate": [
+                139.967886278,
+                39.879999685
+              ]
+            }
+          ]
+        }
+      ],
+      "existing_mapping": {
+        "district_code": "025",
+        "district_name": "米代川",
+        "basin_code": "11",
+        "verification_status": "要現行資料照合",
+        "usable_for_final_polygon": "false"
+      }
+    }
+  ],
+  "diagnostic_envelope": {
+    "valid": true,
+    "area_m2": 0.013167956676605218,
+    "outside_source_union_m2": 0.013167956676625181,
+    "overlap_source_union_m2": 0.0,
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.967886278,
+            39.879999685
+          ],
+          [
+            139.968179805,
+            39.880223054
+          ],
+          [
+            139.96817980499998,
+            39.880223054
+          ],
+          [
+            139.96788627150022,
+            39.87999968950015
+          ],
+          [
+            139.967886278,
+            39.879999685
+          ]
+        ]
+      ]
+    }
+  }
+}
