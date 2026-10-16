@@ -1,0 +1,61 @@
+{
+  "scope": "Diagnostic only; not an Esri test or a production repair",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "input_sha256": {
+    "expanded_precision_trial.gpkg": "e463fc7544bf3f37387d8d9da7afa0f8dc9220ccf64dd85ad15e4aba27846358",
+    "forest_planning_zones_2026_provisional_labeled.gpkg": "ed4df025f6b078a7b1378adddee1eac86f277894d9dd755318963ac34acf2da7"
+  },
+  "district": "025",
+  "removed_vertices": [
+    54179,
+    54180
+  ],
+  "ring": 2023,
+  "valid": true,
+  "vertices_before": 119257,
+  "vertices_after": 119255,
+  "added_m2": 0.013654461702820697,
+  "lost_m2": 0.0,
+  "added_geojson": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          139.967847756,
+          39.880020559
+        ],
+        [
+          139.967886272,
+          39.87999969
+        ],
+        [
+          139.968179805,
+          39.880223054
+        ],
+        [
+          139.967886278,
+          39.879999685
+        ],
+        [
+          139.967847756,
+          39.880020559
+        ]
+      ]
+    ]
+  },
+  "intersections": [
+    {
+      "layer": "forest_plan_districts_provisional",
+      "code": "025",
+      "area_m2": 0.0003075479952448247,
+      "geometry_type": "GeometryCollection"
+    },
+    {
+      "layer": "forest_wide_basins_provisional",
+      "code": "11",
+      "area_m2": 0.0003075479952448247,
+      "geometry_type": "GeometryCollection"
+    }
+  ]
+}
