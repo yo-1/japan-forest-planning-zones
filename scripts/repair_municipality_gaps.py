@@ -42,9 +42,10 @@ def apply_reviewed_patches(src, dst, patch_file):
     for feature in data['features']:
         props = feature['properties']
         fid = props.get('source_fid')
-        if props.get('approved') is not True or not str(props.get('evidence', '')).strip():
+        evidence = props.get('evidence')
+        if props.get('approved') is not True or not isinstance(evidence, str) or not evidence.strip():
             raise ValueError('Patch lacks explicit approval or evidence')
-        if fid not in original or props.get('municipality_code') != codes[fid]:
+        if type(fid) is not int or fid not in original or props.get('municipality_code') != codes[fid]:
             raise ValueError('Patch source_fid / municipality_code mismatch')
         patch = shape(feature['geometry'])
         if patch.geom_type not in ('Polygon', 'MultiPolygon') or not patch.is_valid or patch.is_empty:

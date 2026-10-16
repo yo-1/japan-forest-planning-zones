@@ -1,0 +1,961 @@
+{
+  "source_sha256": "5af6f5981b61e34f1c9e8487dcf78ad44c3013b40582ab339da0439210e28c46",
+  "districts": [
+    {
+      "district_code": "001",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "002",
+      "added_m2": 3.831958001633778e-09,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "003",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "004",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "005",
+      "added_m2": 1.8225660351162077e-08,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 6.4735414355421295e-09
+    },
+    {
+      "district_code": "006",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "007",
+      "added_m2": 0.0,
+      "lost_m2": 4.074720581651589e-08,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "008",
+      "added_m2": 1.5220036597598741e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "009",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "010",
+      "added_m2": 9.768720097504152e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "011",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "012",
+      "added_m2": 1.5610008185501025e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "013",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "014",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "015",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "016",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "017",
+      "added_m2": 2.508809955004132e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "018",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "019",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "020",
+      "added_m2": 2.1685490940069447e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "021",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "022",
+      "added_m2": 0.0,
+      "lost_m2": 6.322979900080794e-11,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "023",
+      "added_m2": 5.050983067653315e-08,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "024",
+      "added_m2": 7.409512459780335e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "025",
+      "added_m2": 7.64038777252145e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "026",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "027",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "028",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "029",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "030",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "031",
+      "added_m2": 4.7608603367847895e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "032",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "033",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "034",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "035",
+      "added_m2": 1.1998539140692393e-08,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "036",
+      "added_m2": 8.198042550703337e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "037",
+      "added_m2": 2.4771835770377275e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "038",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "039",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "040",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "041",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "042",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "043",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "044",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "045",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "046",
+      "added_m2": 1.2139886873541172e-09,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 4.16296756444846e-08
+    },
+    {
+      "district_code": "047",
+      "added_m2": 2.3239293342469658e-07,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "048",
+      "added_m2": 4.546531685467592e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "049",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "050",
+      "added_m2": 2.746813600718087e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "051",
+      "added_m2": 5.441040633812887e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "052",
+      "added_m2": 0.0020673517248533772,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "053",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "054",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "055",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "056",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "057",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "058",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "059",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "060",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "061",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "062",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "063",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "064",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "065",
+      "added_m2": 4.889091437555403e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "066",
+      "added_m2": 0.0037182105998690134,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "067",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "068",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "069",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "070",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "071",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "072",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "073",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "074",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "075",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "076",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "077",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "078",
+      "added_m2": 1.1271749809960468e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "079",
+      "added_m2": 3.869433905502499e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "080",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "081",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "082",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "083",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "084",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "085",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "086",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "087",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "088",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "089",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "090",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "091",
+      "added_m2": 3.363660469736564e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "092",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "093",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "094",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "095",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "096",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "097",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "098",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "099",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "100",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "101",
+      "added_m2": 0.0,
+      "lost_m2": 3.6649594210153014e-10,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "102",
+      "added_m2": 7.906044832139969e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "103",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "104",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "105",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "106",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "107",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "108",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "109",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "110",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "111",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "112",
+      "added_m2": 1.594161349335804e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "113",
+      "added_m2": 1.1291023478873721e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "114",
+      "added_m2": 4.429486789469639e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "115",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "116",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "117",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "118",
+      "added_m2": 1.5628414183036651e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "119",
+      "added_m2": 1.924108932911221e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "120",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "121",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "122",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "123",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "124",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "125",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "126",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "127",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "128",
+      "added_m2": 4.824380206436274e-08,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 8.637832671354317e-10
+    },
+    {
+      "district_code": "129",
+      "added_m2": 4.5698808028649364e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "130",
+      "added_m2": 8.509022314270657e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "131",
+      "added_m2": 6.087839935923071e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "132",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "133",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "134",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "135",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "136",
+      "added_m2": 0.00012574127113373755,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "137",
+      "added_m2": 2.4965506328098886e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "138",
+      "added_m2": 1.266040119355027e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "139",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "140",
+      "added_m2": 1.1823155065202405e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "141",
+      "added_m2": 8.445034089424394e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "142",
+      "added_m2": 1.7900032632262575e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "143",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "144",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "145",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "146",
+      "added_m2": 8.769426254833561e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "147",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "148",
+      "added_m2": 2.4560281277317246e-06,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "149",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "150",
+      "added_m2": 1.2505341172848355e-05,
+      "lost_m2": 1.1084192418076011e-10,
+      "ledger_discrepancy_m2": 1.2966853805087e-08
+    },
+    {
+      "district_code": "151",
+      "added_m2": 0.00010631239515932428,
+      "lost_m2": 8.378092664074188e-11,
+      "ledger_discrepancy_m2": 3.8087735427267905e-13
+    },
+    {
+      "district_code": "152",
+      "added_m2": 2.4615630029833253e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "153",
+      "added_m2": 5.48482355147496e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "154",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "155",
+      "added_m2": 1.9897485571161837e-05,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "156",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "157",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    },
+    {
+      "district_code": "158",
+      "added_m2": 0.0,
+      "lost_m2": 0.0,
+      "ledger_discrepancy_m2": 0.0
+    }
+  ],
+  "added_m2_total": 0.007064381383446811,
+  "lost_m2_total": 4.137155440843973e-08,
+  "basin_exact_matches": 44,
+  "basin_total": 44,
+  "unassigned_preserved": true,
+  "invalid": [],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,857 @@
+{
+  "file_sha256": "038f013999f492443373ad98814641f9466f90a7ecaf4fa39a388fd7a0448dfa",
+  "gdal": "3.12.4",
+  "pyogrio": "0.13.0",
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "features": 158,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "forest_unassigned_review": {
+      "features": 20,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "forest_wide_basins_provisional": {
+      "features": 44,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "gap_repair_audit": {
+      "features": 6895,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    },
+    "gap_residual_review": {
+      "features": 16,
+      "crs": "EPSG:6668",
+      "geometry_type": "MultiPolygon"
+    }
+  },
+  "regional_checks": {
+    "020": {
+      "name": "大槌・気仙川",
+      "accepted_patches": 28,
+      "closed_holes_remaining": 1
+    },
+    "024": {
+      "name": "宮城南部",
+      "accepted_patches": 81,
+      "closed_holes_remaining": 0
+    },
+    "025": {
+      "name": "米代川",
+      "accepted_patches": 27,
+      "closed_holes_remaining": 0
+    },
+    "036": {
+      "name": "水戸那珂",
+      "accepted_patches": 71,
+      "closed_holes_remaining": 0
+    },
+    "048": {
+      "name": "多摩",
+      "accepted_patches": 7,
+      "closed_holes_remaining": 1
+    },
+    "051": {
+      "name": "下越",
+      "accepted_patches": 15,
+      "closed_holes_remaining": 0
+    }
+  },
+  "districts_with_increased_parts": 0,
+  "component_changes": [
+    {
+      "district_code": "001",
+      "before": 2790,
+      "after": 2790
+    },
+    {
+      "district_code": "002",
+      "before": 824,
+      "after": 824
+    },
+    {
+      "district_code": "003",
+      "before": 17,
+      "after": 17
+    },
+    {
+      "district_code": "004",
+      "before": 218,
+      "after": 218
+    },
+    {
+      "district_code": "005",
+      "before": 1879,
+      "after": 1879
+    },
+    {
+      "district_code": "006",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "007",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "008",
+      "before": 215,
+      "after": 215
+    },
+    {
+      "district_code": "009",
+      "before": 745,
+      "after": 745
+    },
+    {
+      "district_code": "010",
+      "before": 62,
+      "after": 62
+    },
+    {
+      "district_code": "011",
+      "before": 96,
+      "after": 96
+    },
+    {
+      "district_code": "012",
+      "before": 2280,
+      "after": 2280
+    },
+    {
+      "district_code": "013",
+      "before": 130,
+      "after": 130
+    },
+    {
+      "district_code": "014",
+      "before": 939,
+      "after": 939
+    },
+    {
+      "district_code": "015",
+      "before": 269,
+      "after": 269
+    },
+    {
+      "district_code": "016",
+      "before": 714,
+      "after": 714
+    },
+    {
+      "district_code": "017",
+      "before": 340,
+      "after": 340
+    },
+    {
+      "district_code": "018",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "019",
+      "before": 4685,
+      "after": 4685
+    },
+    {
+      "district_code": "020",
+      "before": 3506,
+      "after": 3506
+    },
+    {
+      "district_code": "021",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "022",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "023",
+      "before": 7805,
+      "after": 7805
+    },
+    {
+      "district_code": "024",
+      "before": 493,
+      "after": 493
+    },
+    {
+      "district_code": "025",
+      "before": 2384,
+      "after": 2384
+    },
+    {
+      "district_code": "026",
+      "before": 10,
+      "after": 10
+    },
+    {
+      "district_code": "027",
+      "before": 42,
+      "after": 42
+    },
+    {
+      "district_code": "028",
+      "before": 645,
+      "after": 645
+    },
+    {
+      "district_code": "029",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "030",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "031",
+      "before": 163,
+      "after": 163
+    },
+    {
+      "district_code": "032",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "033",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "034",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "035",
+      "before": 62,
+      "after": 62
+    },
+    {
+      "district_code": "036",
+      "before": 104,
+      "after": 104
+    },
+    {
+      "district_code": "037",
+      "before": 4,
+      "after": 4
+    },
+    {
+      "district_code": "038",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "039",
+      "before": 2,
+      "after": 2
+    },
+    {
+      "district_code": "040",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "041",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "042",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "043",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "044",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "045",
+      "before": 2,
+      "after": 2
+    },
+    {
+      "district_code": "046",
+      "before": 255,
+      "after": 255
+    },
+    {
+      "district_code": "047",
+      "before": 1965,
+      "after": 1965
+    },
+    {
+      "district_code": "048",
+      "before": 92,
+      "after": 92
+    },
+    {
+      "district_code": "049",
+      "before": 5916,
+      "after": 5916
+    },
+    {
+      "district_code": "050",
+      "before": 1182,
+      "after": 1182
+    },
+    {
+      "district_code": "051",
+      "before": 1226,
+      "after": 1226
+    },
+    {
+      "district_code": "052",
+      "before": 185,
+      "after": 185
+    },
+    {
+      "district_code": "053",
+      "before": 98,
+      "after": 98
+    },
+    {
+      "district_code": "054",
+      "before": 1152,
+      "after": 1152
+    },
+    {
+      "district_code": "055",
+      "before": 18,
+      "after": 18
+    },
+    {
+      "district_code": "056",
+      "before": 24,
+      "after": 24
+    },
+    {
+      "district_code": "057",
+      "before": 2540,
+      "after": 2540
+    },
+    {
+      "district_code": "058",
+      "before": 30,
+      "after": 30
+    },
+    {
+      "district_code": "059",
+      "before": 1255,
+      "after": 1255
+    },
+    {
+      "district_code": "060",
+      "before": 1745,
+      "after": 1745
+    },
+    {
+      "district_code": "061",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "062",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "063",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "064",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "065",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "066",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "067",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "068",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "069",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "070",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "071",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "072",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "073",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "074",
+      "before": 89,
+      "after": 89
+    },
+    {
+      "district_code": "075",
+      "before": 19,
+      "after": 19
+    },
+    {
+      "district_code": "076",
+      "before": 1665,
+      "after": 1665
+    },
+    {
+      "district_code": "077",
+      "before": 12,
+      "after": 12
+    },
+    {
+      "district_code": "078",
+      "before": 282,
+      "after": 282
+    },
+    {
+      "district_code": "079",
+      "before": 682,
+      "after": 682
+    },
+    {
+      "district_code": "080",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "081",
+      "before": 20,
+      "after": 20
+    },
+    {
+      "district_code": "082",
+      "before": 5374,
+      "after": 5374
+    },
+    {
+      "district_code": "083",
+      "before": 2111,
+      "after": 2111
+    },
+    {
+      "district_code": "084",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "085",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "086",
+      "before": 955,
+      "after": 955
+    },
+    {
+      "district_code": "087",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "088",
+      "before": 66,
+      "after": 66
+    },
+    {
+      "district_code": "089",
+      "before": 414,
+      "after": 414
+    },
+    {
+      "district_code": "090",
+      "before": 280,
+      "after": 280
+    },
+    {
+      "district_code": "091",
+      "before": 1422,
+      "after": 1422
+    },
+    {
+      "district_code": "092",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "093",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "094",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "095",
+      "before": 2770,
+      "after": 2770
+    },
+    {
+      "district_code": "096",
+      "before": 468,
+      "after": 468
+    },
+    {
+      "district_code": "097",
+      "before": 834,
+      "after": 834
+    },
+    {
+      "district_code": "098",
+      "before": 13,
+      "after": 13
+    },
+    {
+      "district_code": "099",
+      "before": 131,
+      "after": 131
+    },
+    {
+      "district_code": "100",
+      "before": 564,
+      "after": 564
+    },
+    {
+      "district_code": "101",
+      "before": 1625,
+      "after": 1625
+    },
+    {
+      "district_code": "102",
+      "before": 892,
+      "after": 892
+    },
+    {
+      "district_code": "103",
+      "before": 996,
+      "after": 996
+    },
+    {
+      "district_code": "104",
+      "before": 140,
+      "after": 140
+    },
+    {
+      "district_code": "105",
+      "before": 182,
+      "after": 182
+    },
+    {
+      "district_code": "106",
+      "before": 98,
+      "after": 98
+    },
+    {
+      "district_code": "107",
+      "before": 99,
+      "after": 99
+    },
+    {
+      "district_code": "108",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "109",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "110",
+      "before": 90,
+      "after": 90
+    },
+    {
+      "district_code": "111",
+      "before": 573,
+      "after": 573
+    },
+    {
+      "district_code": "112",
+      "before": 256,
+      "after": 256
+    },
+    {
+      "district_code": "113",
+      "before": 1114,
+      "after": 1114
+    },
+    {
+      "district_code": "114",
+      "before": 1011,
+      "after": 1011
+    },
+    {
+      "district_code": "115",
+      "before": 572,
+      "after": 572
+    },
+    {
+      "district_code": "116",
+      "before": 238,
+      "after": 238
+    },
+    {
+      "district_code": "117",
+      "before": 3243,
+      "after": 3243
+    },
+    {
+      "district_code": "118",
+      "before": 721,
+      "after": 721
+    },
+    {
+      "district_code": "119",
+      "before": 621,
+      "after": 621
+    },
+    {
+      "district_code": "120",
+      "before": 33,
+      "after": 33
+    },
+    {
+      "district_code": "121",
+      "before": 761,
+      "after": 761
+    },
+    {
+      "district_code": "122",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "123",
+      "before": 3348,
+      "after": 3348
+    },
+    {
+      "district_code": "124",
+      "before": 27,
+      "after": 27
+    },
+    {
+      "district_code": "125",
+      "before": 3366,
+      "after": 3366
+    },
+    {
+      "district_code": "126",
+      "before": 68,
+      "after": 68
+    },
+    {
+      "district_code": "127",
+      "before": 942,
+      "after": 942
+    },
+    {
+      "district_code": "128",
+      "before": 217,
+      "after": 217
+    },
+    {
+      "district_code": "129",
+      "before": 2072,
+      "after": 2072
+    },
+    {
+      "district_code": "130",
+      "before": 3,
+      "after": 3
+    },
+    {
+      "district_code": "131",
+      "before": 12,
+      "after": 12
+    },
+    {
+      "district_code": "132",
+      "before": 285,
+      "after": 285
+    },
+    {
+      "district_code": "133",
+      "before": 1979,
+      "after": 1979
+    },
+    {
+      "district_code": "134",
+      "before": 2982,
+      "after": 2982
+    },
+    {
+      "district_code": "135",
+      "before": 3714,
+      "after": 3714
+    },
+    {
+      "district_code": "136",
+      "before": 519,
+      "after": 519
+    },
+    {
+      "district_code": "137",
+      "before": 13,
+      "after": 13
+    },
+    {
+      "district_code": "138",
+      "before": 30,
+      "after": 30
+    },
+    {
+      "district_code": "139",
+      "before": 88,
+      "after": 88
+    },
+    {
+      "district_code": "140",
+      "before": 1866,
+      "after": 1866
+    },
+    {
+      "district_code": "141",
+      "before": 112,
+      "after": 112
+    },
+    {
+      "district_code": "142",
+      "before": 1269,
+      "after": 1269
+    },
+    {
+      "district_code": "143",
+      "before": 967,
+      "after": 967
+    },
+    {
+      "district_code": "144",
+      "before": 1,
+      "after": 1
+    },
+    {
+      "district_code": "145",
+      "before": 1045,
+      "after": 1045
+    },
+    {
+      "district_code": "146",
+      "before": 859,
+      "after": 859
+    },
+    {
+      "district_code": "147",
+      "before": 3,
+      "after": 3
+    },
+    {
+      "district_code": "148",
+      "before": 14,
+      "after": 14
+    },
+    {
+      "district_code": "149",
+      "before": 876,
+      "after": 876
+    },
+    {
+      "district_code": "150",
+      "before": 1278,
+      "after": 1278
+    },
+    {
+      "district_code": "151",
+      "before": 9,
+      "after": 9
+    },
+    {
+      "district_code": "152",
+      "before": 2161,
+      "after": 2161
+    },
+    {
+      "district_code": "153",
+      "before": 571,
+      "after": 571
+    },
+    {
+      "district_code": "154",
+      "before": 3048,
+      "after": 3048
+    },
+    {
+      "district_code": "155",
+      "before": 1900,
+      "after": 1900
+    },
+    {
+      "district_code": "156",
+      "before": 1358,
+      "after": 1358
+    },
+    {
+      "district_code": "157",
+      "before": 1904,
+      "after": 1904
+    },
+    {
+      "district_code": "158",
+      "before": 2568,
+      "after": 2568
+    }
+  ]
+}

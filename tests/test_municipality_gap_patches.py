@@ -54,7 +54,9 @@ class ReviewedMunicipalityTests(unittest.TestCase):
         self.assertEqual(report[0]['municipality_code'], '00001')
 
     def test_no_evidence_no_guess(self):
-        for props in ({'approved': False}, {'evidence': ''}, {'municipality_code': '00002'}):
+        for props in ({'approved': False}, {'evidence': ''}, {'evidence': None}, {'evidence': 0},
+                      {'evidence': True}, {'source_fid': True}, {'source_fid': 1.0},
+                      {'municipality_code': '00002'}):
             with self.assertRaises(ValueError):
                 apply_reviewed_patches(self.src, self.dst, self.patch(**props))
             self.assertFalse(self.dst.exists())

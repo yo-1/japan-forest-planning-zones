@@ -1,5 +1,7 @@
 {
   "scope": "Unrepaired raw municipality unions -> raw districts -> basins, not v0.3 final output",
+  "input_sha256": "cc256f3c4329faccef23e25dea4c55feb62d2569ba699261e518f67bf8b9b3ec",
+  "input_unchanged": true,
   "shapely": "2.1.2",
   "geos": "3.13.1",
   "threshold_degree": 9e-09,
