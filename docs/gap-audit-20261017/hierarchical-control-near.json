@@ -1,0 +1,445 @@
+{
+  "scope": "Unrepaired raw municipality unions -> raw districts -> basins, not v0.3 final output",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "threshold_degree": 9e-09,
+  "basins": [
+    {
+      "basin_code": "06",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "05",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "02",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "01",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "03",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "04",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 57,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "07",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "08",
+      "valid": true,
+      "zero_pairs": 1,
+      "numerical_pairs": 30,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "09",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 124,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "10",
+      "valid": true,
+      "zero_pairs": 2,
+      "numerical_pairs": 1,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "13",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "11",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 35,
+      "positive_pairs": [
+        {
+          "ring_a": 2295,
+          "vertex_a": 8822,
+          "ring_b": 2295,
+          "vertex_b": 8826,
+          "distance_degree": 7.905606953224134e-09,
+          "coordinate_a": [
+            139.967886278,
+            39.879999685
+          ],
+          "coordinate_b": [
+            139.96788627150022,
+            39.87999968950015
+          ]
+        }
+      ]
+    },
+    {
+      "basin_code": "12",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "14",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 30,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "16",
+      "valid": true,
+      "zero_pairs": 2,
+      "numerical_pairs": 192,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "17",
+      "valid": true,
+      "zero_pairs": 1,
+      "numerical_pairs": 98,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "18",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 301,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "15",
+      "valid": true,
+      "zero_pairs": 4,
+      "numerical_pairs": 227,
+      "positive_pairs": [
+        {
+          "ring_a": 102,
+          "vertex_a": 1,
+          "ring_b": 102,
+          "vertex_b": 3,
+          "distance_degree": 1.3176017574229617e-09,
+          "coordinate_a": [
+            138.24482800733352,
+            36.250000001499984
+          ],
+          "coordinate_b": [
+            138.2448280062502,
+            36.250000002249976
+          ]
+        },
+        {
+          "ring_a": 103,
+          "vertex_a": 0,
+          "ring_b": 103,
+          "vertex_b": 2,
+          "distance_degree": 6.7500707245926606e-09,
+          "coordinate_a": [
+            138.371891582,
+            36.33333333524999
+          ],
+          "coordinate_b": [
+            138.371891582,
+            36.33333334200006
+          ]
+        },
+        {
+          "ring_a": 104,
+          "vertex_a": 0,
+          "ring_b": 104,
+          "vertex_b": 2,
+          "distance_degree": 3.96498314427144e-09,
+          "coordinate_a": [
+            139.0775166939287,
+            37.08333333428572
+          ],
+          "coordinate_b": [
+            139.07751669625014,
+            37.08333333750005
+          ]
+        },
+        {
+          "ring_a": 105,
+          "vertex_a": 0,
+          "ring_b": 105,
+          "vertex_b": 2,
+          "distance_degree": 1.9764421821757113e-09,
+          "coordinate_a": [
+            139.12500000487503,
+            37.405479329625024
+          ],
+          "coordinate_b": [
+            139.12500000325002,
+            37.40547933075004
+          ]
+        }
+      ]
+    },
+    {
+      "basin_code": "21",
+      "valid": true,
+      "zero_pairs": 4,
+      "numerical_pairs": 21,
+      "positive_pairs": [
+        {
+          "ring_a": 2,
+          "vertex_a": 0,
+          "ring_b": 2,
+          "vertex_b": 2,
+          "distance_degree": 2.16670059690383e-09,
+          "coordinate_a": [
+            137.11641336983337,
+            36.4166666655
+          ],
+          "coordinate_b": [
+            137.11641336766667,
+            36.41666666550003
+          ]
+        },
+        {
+          "ring_a": 9,
+          "vertex_a": 0,
+          "ring_b": 9,
+          "vertex_b": 2,
+          "distance_degree": 7.759322474108478e-09,
+          "coordinate_a": [
+            137.12040626232127,
+            36.41666666571431
+          ],
+          "coordinate_b": [
+            137.12040626890007,
+            36.41666666160013
+          ]
+        }
+      ]
+    },
+    {
+      "basin_code": "22",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "24",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "19",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "20",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "23",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 200,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "25",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "26",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "27",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "29",
+      "valid": true,
+      "zero_pairs": 2,
+      "numerical_pairs": 64,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "31",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "28",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "32",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 160,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "34",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "30",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "33",
+      "valid": true,
+      "zero_pairs": 4,
+      "numerical_pairs": 194,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "36",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "35",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "37",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "38",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "39",
+      "valid": true,
+      "zero_pairs": 5,
+      "numerical_pairs": 503,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "40",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "41",
+      "valid": true,
+      "zero_pairs": 5,
+      "numerical_pairs": 280,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "42",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    },
+    {
+      "basin_code": "43",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 300,
+      "positive_pairs": [
+        {
+          "ring_a": 5292,
+          "vertex_a": 126716,
+          "ring_b": 5292,
+          "vertex_b": 126718,
+          "distance_degree": 4.500087414175812e-09,
+          "coordinate_a": [
+            130.61137328100006,
+            31.672872049500086
+          ],
+          "coordinate_b": [
+            130.611373281,
+            31.672872045
+          ]
+        }
+      ]
+    },
+    {
+      "basin_code": "44",
+      "valid": true,
+      "zero_pairs": 0,
+      "numerical_pairs": 0,
+      "positive_pairs": []
+    }
+  ],
+  "totals": {
+    "zero_pairs": 30,
+    "numerical_pairs": 2817,
+    "positive_pairs": 8
+  }
+}

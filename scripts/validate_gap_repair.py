@@ -10,7 +10,7 @@ from shapely.ops import unary_union
 from shapely.strtree import STRtree
 
 from build_provisional_aggregates import decode
-from repair_narrow_gaps import metre_frame
+from repair_narrow_gaps import metre_frame, polygons
 
 
 def area_m2(g, reference):
@@ -94,6 +94,8 @@ def validate(source, output):
     tree = STRtree(obstacles)
     additions, codes = [], []
     for code, geom in districts.items():
+        if len(list(polygons(geom))) > len(list(polygons(raw[code]))):
+            errors.append('New disconnected polygon components: ' + code)
         added = geom.difference(raw[code])
         lost = raw[code].difference(geom)
         ledger = unary_union(patches[code])

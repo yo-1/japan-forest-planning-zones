@@ -32,7 +32,8 @@ N03原典は変更しません。市町村の所属を確認できる箇所だ�
 `review_boundary`、`review_broad`、`review_other_area` は要確認として補修しません。
 数値変換で候補が不正形状になった場合は `review_invalid` とし、自動補修しません。
 合成で元形状が減る箇所は `review_result_loss`、合成結果が不正なら
-`review_result_invalid`、既存パーツに接しない候補は `review_detached` として残します。
+`review_result_invalid`、別パーツが増える場合や原形状の面積を含まない追加だけのパーツが残る場合は
+`review_result_fragmented`、既存パーツに接しない候補は `review_detached` として残します。
 隙間に接するパーツだけを合成し、離れた小島等のパーツは元の座標のまま保持します。
 `gap_residual_review` には、補修後に残る閉じた穴を記録します。実在の水域も含むため、
 すべてを不具合とは扱いません。外側へ開いた未検出の隙間は、この穴一覧には含まれません。

@@ -145,8 +145,13 @@ def accept_patches(original, candidates, blockers=(), metric=True):
             loss_area = forward(loss).area
         else:
             loss_area = loss.area
-        if not after.is_valid or loss_area > 1e-4:
-            rejected[root] = 'review_result_invalid' if not after.is_valid else 'review_result_loss'
+        after_parts = list(polygons(after))
+        fragmented = len(after_parts) > len(members[root]) or any(
+            not any(part.intersection(source).area > 0 for source in members[root])
+            for part in after_parts)
+        if not after.is_valid or loss_area > 1e-4 or fragmented:
+            rejected[root] = ('review_result_invalid' if not after.is_valid else
+                              'review_result_loss' if loss_area > 1e-4 else 'review_result_fragmented')
             changed.extend(members[root])
         else:
             changed.extend(polygons(after))
