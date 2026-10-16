@@ -21,7 +21,7 @@ ArcGIS ProのPython Command Promptで、リポジトリのフォルダーから�
 `D:\test`は、実際に展開したファイルの場所へ置き換えます。
 
 ```bat
-python scripts\check_arcgis_gap_review.py --source trial=D:\test\expanded_precision_trial.gpkg --source gap=D:\test\national_gap_review_20261017.gpkg --output D:\test\arcgis_check_run01
+python scripts\check_arcgis_gap_review.py --source trial=D:\test\expanded_precision_trial.gpkg --source gap=D:\test\national_gap_guarded_20261017.gpkg --output D:\test\arcgis_check_run01
 ```
 
 21計画区の未変更候補とClaudeの局所修正候補を比べる場合も、異なるラベルで同じコマンドへ指定します。

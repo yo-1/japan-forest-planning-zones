@@ -102,6 +102,14 @@ class NarrowGapTests(unittest.TestCase):
         self.assertTrue(result.equals_exact(original, 0))
         self.assertEqual(audit[0][2], 'review_result_fragmented')
 
+    def test_merging_two_parts_does_not_hide_a_new_patch_only_part(self):
+        from repair_narrow_gaps import accept_patches
+        original = MultiPolygon([box(0, 0, 1, 1), box(2, 0, 3, 1)])
+        patch = MultiPolygon([box(1, 0, 2, 1), box(3, 1, 4, 2)])
+        result, audit = accept_patches(original, [(patch, {}, 'accepted')], metric=False)
+        self.assertTrue(result.equals_exact(original, 0))
+        self.assertEqual(audit[0][2], 'review_result_fragmented')
+
 
 if __name__ == '__main__':
     unittest.main()

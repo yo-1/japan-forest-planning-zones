@@ -94,7 +94,10 @@ def validate(source, output):
     tree = STRtree(obstacles)
     additions, codes = [], []
     for code, geom in districts.items():
-        if len(list(polygons(geom))) > len(list(polygons(raw[code]))):
+        source_parts, output_parts = list(polygons(raw[code])), list(polygons(geom))
+        source_interiors = STRtree([part.representative_point() for part in source_parts])
+        if len(output_parts) > len(source_parts) or any(
+                not len(source_interiors.query(part, predicate='covers')) for part in output_parts):
             errors.append('New disconnected polygon components: ' + code)
         added = geom.difference(raw[code])
         lost = raw[code].difference(geom)

@@ -146,9 +146,13 @@ def accept_patches(original, candidates, blockers=(), metric=True):
         else:
             loss_area = loss.area
         after_parts = list(polygons(after))
-        fragmented = len(after_parts) > len(members[root]) or any(
-            not any(part.intersection(source).area > 0 for source in members[root])
-            for part in after_parts)
+        fragmented = len(after_parts) > len(members[root])
+        if not fragmented:
+            # Retain the interior of an original part in each output part.
+            # Indexed interior points avoid repeated large coastal overlays.
+            source_interiors = STRtree([part.representative_point() for part in members[root]])
+            fragmented = any(not len(source_interiors.query(part, predicate='covers'))
+                             for part in after_parts)
         if not after.is_valid or loss_area > 1e-4 or fragmented:
             rejected[root] = ('review_result_invalid' if not after.is_valid else
                               'review_result_loss' if loss_area > 1e-4 else 'review_result_fragmented')
