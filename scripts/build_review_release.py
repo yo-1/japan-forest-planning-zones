@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 import shutil
 import sqlite3
 import subprocess
@@ -58,7 +59,12 @@ def inspect_gpkg(path, counts):
         raise ValueError('SQLite integrity check failed')
     info = {}
     for table, expected in counts.items():
-        col, srid = conn.execute('SELECT column_name,srs_id FROM gpkg_geometry_columns WHERE table_name=?', (table,)).fetchone()
+        col, srid, geometry_type = conn.execute('SELECT column_name,srs_id,geometry_type_name FROM gpkg_geometry_columns WHERE table_name=?', (table,)).fetchone()
+        quoted_table = '"' + table.replace('"', '""') + '"'
+        declared_type = {row[1]: row[2].upper() for row in conn.execute('PRAGMA table_info(' + quoted_table + ')')}.get(col)
+        if declared_type != geometry_type.upper():
+            conn.close()
+            raise ValueError(f'Geometry SQL type differs from GeoPackage registration: {table}.{col}: {declared_type} != {geometry_type}')
         h = hashlib.sha256()
         n = 0
         for blob, in conn.execute(f'SELECT "{col}" FROM "{table}" ORDER BY fid'):
@@ -122,10 +128,14 @@ def main():
     p.add_argument('--output', type=Path, default=ROOT / 'release_output')
     p.add_argument('--candidate', type=Path, help='Local already-joined candidate, for independent packaging check')
     p.add_argument('--zones', type=Path, help='Local user-provided plane coordinate zones')
-    p.add_argument('--gap-width-m', type=float, default=0.001,
-                   help='Local metre width limit for narrow-gap candidates (default 0.001m; audit required)')
+    p.add_argument('--gap-width-m', type=float,
+                   help='Opt in to experimental narrow-gap repair with this metre width; no repair by default')
     p.add_argument('--municipality-patches', type=Path, help='Approved EPSG:6668 GeoJSON patches with municipality evidence')
     a = p.parse_args()
+    if a.gap_width_m is not None and (not math.isfinite(a.gap_width_m) or a.gap_width_m <= 0):
+        p.error('--gap-width-m must be finite and positive')
+    if a.municipality_patches and a.gap_width_m is None:
+        p.error('--municipality-patches requires an explicit experimental --gap-width-m')
     a.output.mkdir(parents=True, exist_ok=False)
     work = a.output / 'work'
     work.mkdir()
@@ -149,16 +159,23 @@ def main():
     candidate_info = inspect_gpkg(candidate, {t: 1911})
     aggregate_raw = work / 'forest_planning_zones_2026_provisional_raw.gpkg'
     aggregate = work / 'forest_planning_zones_2026_provisional_labeled.gpkg'
-    subprocess.run([sys.executable, str(ROOT / 'scripts/build_provisional_aggregates.py'), str(candidate), str(aggregate_raw),
-                    '--gap-width-m', str(a.gap_width_m)], check=True)
-    # Area-only deletion after basin aggregation would make district/basin
-    # coverage diverge again. Narrow gaps are now repaired at district stage.
-    shutil.copyfile(aggregate_raw, aggregate)
-    gap_report = json.loads(aggregate_raw.with_suffix('.validation.json').read_text())
-    gap_validation = validate_gap_repair(candidate, aggregate)
-    if not gap_validation['passed']:
-        raise ValueError('Independent gap validation failed: ' + str(gap_validation['errors']))
-    (a.output / 'gap_validation.json').write_text(json.dumps(gap_validation, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    command = [sys.executable, str(ROOT / 'scripts/build_provisional_aggregates.py'),
+               str(candidate), str(aggregate_raw)]
+    if a.gap_width_m is not None:
+        command += ['--gap-width-m', str(a.gap_width_m)]
+    subprocess.run(command, check=True)
+    gap_report, tiny_ring_report = None, None
+    if a.gap_width_m is None:
+        # Keep the published v0.3 path until the experiment is adopted.
+        tiny_ring_report = remove_tiny_interior_rings(aggregate_raw, aggregate, AGGREGATE_COUNTS)
+    else:
+        # Experimental basins are derived from the repaired districts only.
+        shutil.copyfile(aggregate_raw, aggregate)
+        gap_report = json.loads(aggregate_raw.with_suffix('.validation.json').read_text())
+        gap_validation = validate_gap_repair(candidate, aggregate)
+        if not gap_validation['passed']:
+            raise ValueError('Independent gap validation failed: ' + str(gap_validation['errors']))
+        (a.output / 'gap_validation.json').write_text(json.dumps(gap_validation, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     before = inspect_gpkg(aggregate, AGGREGATE_COUNTS)
     add_styles(aggregate, [(table, table + '.qml', '確認用色分け・ラベル', 1) for table in AGGREGATE_COUNTS])
     after = inspect_gpkg(aggregate, AGGREGATE_COUNTS)
@@ -177,18 +194,20 @@ def main():
     add_styles(zones, [('plane_rectangular_zones_2026','plane_rectangular_zones_2026.qml','layer',1),('plane_rectangular_zones_2026','plane_rectangular_zones_2026_default.qml','default',0)])
     if zone_info != inspect_gpkg(zones, {'plane_rectangular_zones_2026': 19}):
         raise ValueError('Styling changed coordinate-zone geometry')
-    readme = ROOT / 'docs/REVIEW_PACKAGE_README.txt'
+    readme = ROOT / ('docs/NARROW_GAP_PACKAGE_README.txt' if gap_report is not None else 'docs/REVIEW_PACKAGE_README.txt')
     files = [(aggregate, aggregate.name),(zones,zones.name),(readme,'README.txt')]
-    files.append((a.output / 'gap_validation.json', 'gap_validation.json'))
+    if gap_report is not None:
+        files.extend([(a.output / 'gap_validation.json', 'gap_validation.json'),
+                      (ROOT / 'docs/NARROW_GAP_REPAIR.md', 'NARROW_GAP_REPAIR.md')])
     for name in ('municipality_forest_districts.csv','forest_plan_districts.csv','forest_wide_basins.csv'):
         files.append((ROOT / 'data/forest' / name,'tables/' + name))
     for qml in sorted((ROOT / 'styles').glob('*.qml')):
         files.append((qml,'styles/' + qml.name))
-    overview_zip = a.output / 'forest_planning_zones_2026_review.zip'
+    overview_zip = a.output / ('forest_planning_zones_2026_gap_trial.zip' if gap_report is not None else 'forest_planning_zones_2026_review.zip')
     zip_files(overview_zip, files)
-    municipality_zip = a.output / 'municipality_forest_zones_2026_candidate.zip'
+    municipality_zip = a.output / ('municipality_forest_zones_2026_gap_trial.zip' if gap_report is not None else 'municipality_forest_zones_2026_candidate.zip')
     zip_files(municipality_zip, [(candidate,candidate.name),(readme,'README.txt')])
-    manifest = {'status':'provisional; official membership and boundaries not certified','source_municipality_zip_sha256':MUNICIPALITY_ZIP_SHA256,'coordinate_zones_source':'japan-plane-rectangular-cs-zones v2026.2','coordinate_zones_zip_sha256':ZONES_ZIP_SHA256,'coordinate_zones_geometry_sha256':ZONE_GEOMETRY_SHA256,'narrow_gap_repair':gap_report,'municipality_reviewed_patches':municipality_patch_report,'candidate':candidate_info,'aggregates':after,'coordinate_zones':zone_info,'qgis_gui_verified':False,'review_files':[{ 'name': f.name,'bytes':f.stat().st_size,'sha256':sha256(f)} for f in (overview_zip,municipality_zip)]}
+    manifest = {'status':'provisional; official membership and boundaries not certified','source_municipality_zip_sha256':MUNICIPALITY_ZIP_SHA256 if a.candidate is None else None,'candidate_input_sha256':sha256(a.candidate) if a.candidate is not None else None,'coordinate_zones_source':'japan-plane-rectangular-cs-zones v2026.2','coordinate_zones_zip_sha256':ZONES_ZIP_SHA256,'coordinate_zones_geometry_sha256':ZONE_GEOMETRY_SHA256,'build_mode':'experimental_narrow_gap' if gap_report is not None else 'v03_compatible','narrow_gap_repair':gap_report,'tiny_interior_rings_removed':{'threshold_m2':TINY_RING_AREA_M2,'layers':tiny_ring_report} if tiny_ring_report is not None else None,'municipality_reviewed_patches':municipality_patch_report,'candidate':candidate_info,'aggregates':after,'coordinate_zones':zone_info,'qgis_gui_verified':False,'review_files':[{ 'name': f.name,'bytes':f.stat().st_size,'sha256':sha256(f)} for f in (overview_zip,municipality_zip)]}
     (a.output/'review_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     (a.output/'SHA256SUMS.txt').write_text(''.join(f"{entry['sha256']}  {entry['name']}\n" for entry in manifest['review_files']),encoding='utf-8')
     print(json.dumps(manifest,ensure_ascii=False),flush=True)

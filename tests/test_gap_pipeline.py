@@ -79,6 +79,36 @@ class GapPipelineTests(unittest.TestCase):
         self.assertFalse(result['passed'])
         self.assertTrue(any('unlogged' in error for error in result['errors']))
 
+    def test_independent_validation_detects_unassigned_geometry_change(self):
+        with sqlite3.connect(self.out) as db:
+            db.execute('UPDATE forest_unassigned_review SET geom=? WHERE source_fid=1892',
+                       (encode(box(139, 34, 139.1, 34.1), 6668),))
+        result = validate(self.src, self.out)
+        self.assertFalse(result['passed'])
+        self.assertTrue(any('Unassigned source feature changed' in e for e in result['errors']))
+
+    def test_independent_validation_detects_membership_and_status_change(self):
+        with sqlite3.connect(self.out) as db:
+            db.execute("UPDATE forest_plan_districts_provisional SET basin_code='02',final_usable='true' WHERE district_code='001'")
+        result = validate(self.src, self.out)
+        self.assertFalse(result['passed'])
+        self.assertIn('District basin membership changed: 001', result['errors'])
+        self.assertTrue(any('final_usable' in e for e in result['errors']))
+
+    def test_unopted_aggregate_has_no_gap_layers_and_uses_source_basins(self):
+        from shapely.ops import unary_union
+        from build_provisional_aggregates import decode
+        destination = self.root / 'unopted.gpkg'
+        with contextlib.redirect_stdout(io.StringIO()):
+            main(self.src, destination)
+        with sqlite3.connect(destination) as db, sqlite3.connect(self.src) as source:
+            self.assertEqual(db.execute('SELECT count(*) FROM gpkg_geometry_columns').fetchone()[0], 3)
+            for code, blob in db.execute('SELECT basin_code,geom FROM forest_wide_basins_provisional'):
+                expected = unary_union([decode(r[0])[1] for r in source.execute(
+                    'SELECT geom FROM municipalities WHERE wide_basin_code=?', (code,))])
+                self.assertTrue(decode(blob)[1].equals_exact(expected, 0, normalize=True))
+        self.assertEqual(self.src.read_bytes(), self.original_bytes)
+
 
 if __name__ == '__main__':
     unittest.main()

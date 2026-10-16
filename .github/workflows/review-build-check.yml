@@ -1,7 +1,7 @@
 name: review build check
 
 # 確認用データの作り方を変える PR で、公開はせずに作り直しだけを試す。
-# マージすると publish-review.yml が公開するので、マージ前にこの確認が成功していることを見る。
+# 補修は未採用の試験です。公開せず、明示した幅だけで補修候補を作ります。
 on:
   pull_request:
     paths:
@@ -11,6 +11,7 @@ on:
       - 'scripts/repair_narrow_gaps.py'
       - 'scripts/repair_municipality_gaps.py'
       - 'scripts/validate_gap_repair.py'
+      - 'scripts/audit_close_vertices.py'
       - 'scripts/finalize_closed_gap_repairs.py'
       - 'scripts/build_forest_layer.py'
       - 'styles/**'
@@ -31,9 +32,17 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install libraries
-        run: python -m pip install shapely==2.1.2 numpy
+        run: python -m pip install shapely==2.1.2 numpy scipy
       - name: Build and validate (no publishing)
-        run: python scripts/build_review_release.py --output "$RUNNER_TEMP/review_check"
+        run: python scripts/build_review_release.py --output "$RUNNER_TEMP/review_check" --gap-width-m 0.001
+      - name: Audit repaired districts, basins and unassigned near vertices
+        run: >-
+          python scripts/audit_close_vertices.py
+          "$RUNNER_TEMP/review_check/work/forest_planning_zones_2026_provisional_labeled.gpkg"
+          --layer forest_plan_districts_provisional
+          --layer forest_wide_basins_provisional
+          --layer forest_unassigned_review
+          --output "$RUNNER_TEMP/review_check/near_vertex_audit.json"
       - name: Show manifest and checksums
         run: |
           cat "$RUNNER_TEMP/review_check/SHA256SUMS.txt"
@@ -45,6 +54,7 @@ jobs:
           path: |
             ${{ runner.temp }}/review_check/*.zip
             ${{ runner.temp }}/review_check/gap_validation.json
+            ${{ runner.temp }}/review_check/near_vertex_audit.json
             ${{ runner.temp }}/review_check/review_manifest.json
             ${{ runner.temp }}/review_check/SHA256SUMS.txt
           retention-days: 14

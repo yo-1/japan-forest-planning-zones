@@ -34,7 +34,7 @@ jobs:
         run: python -m pip install pyproj numpy
       - name: Install geometry library for Python 3.12
         if: matrix.python-version == '3.12'
-        run: python -m pip install shapely==2.1.2
+        run: python -m pip install shapely==2.1.2 scipy
       - name: Compile
         run: python -m compileall -q scripts tests
       - name: Audit forest tables and display styles

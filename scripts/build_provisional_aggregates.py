@@ -12,6 +12,7 @@ import sys
 import argparse
 import tempfile
 import os
+import math
 from pathlib import Path
 
 from shapely import wkb
@@ -41,7 +42,7 @@ def encode(geom, srid):
 
 
 def layer(db, name, fields, srid):
-    db.execute(f'CREATE TABLE "{name}" (fid INTEGER PRIMARY KEY, geom BLOB NOT NULL, {fields})')
+    db.execute(f'CREATE TABLE "{name}" (fid INTEGER PRIMARY KEY, geom MULTIPOLYGON NOT NULL, {fields})')
     db.execute('INSERT INTO gpkg_contents(table_name,data_type,identifier,description,last_change,srs_id) VALUES (?,?,?,?,?,?)',
                (name, 'features', name, '市町村界の集約による確認用。公式境界ではない。',
                 datetime.datetime.now(datetime.timezone.utc).isoformat(), srid))
@@ -50,6 +51,8 @@ def layer(db, name, fields, srid):
 
 def main(src, dst, gap_width_m=None):
     src, dst = Path(src), Path(dst)
+    if gap_width_m is not None and (not math.isfinite(gap_width_m) or gap_width_m <= 0):
+        raise ValueError('Gap width must be finite and positive')
     if dst.exists():
         raise FileExistsError(dst)
     inp = sqlite3.connect(f'file:{src.resolve()}?mode=ro', uri=True)
@@ -148,7 +151,9 @@ def main(src, dst, gap_width_m=None):
                 raise ValueError('Inconsistent names: ' + key)
             # Always derive basins from the exact district output, not independently
             # repaired municipality unions.
-            geom = districts[key] if i == 0 else unary_union(basin_districts[key])
+            geom = (districts[key] if i == 0 else
+                    unary_union(basin_districts[key]) if gap_width_m is not None else
+                    unary_union([r[9] for r in records]))
             bounds.append(geom.bounds)
             attrs = ((key, records[0][6], records[0][7], records[0][8]) if i == 0
                      else (key, records[0][8])) + (len(records), '確認用・区域未確定', 'false')
