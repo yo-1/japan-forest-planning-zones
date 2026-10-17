@@ -675,3 +675,5 @@ data/zones.csv との照合
 
 2026-10-17（実機結果受領）: 利用者提供のArcGIS画面・未変更版の実行ログから、Esri方式Check Geometryでdistrict025_unchangedはself intersections 1行（FEATURE_ID=1、WARNING 000442、PROBLEMS_FOUND）、district025_candidateは結果テーブル0行・処理成功を確認しました。両者のプロパティ画面ではEPSG:6668、XY分解能1e-9度、XY許容値0.00000000898315284119521度で一致し、別々のFile Geodatabaseに保存されています。未変更版は19:12:12〜19:12:14 JST、候補版の履歴開始表示は19:14:51 JSTです。
   詳細と機械可読の転記はdocs/district025-independent-20261017/ARCGIS_RESULT.mdを参照。このセッションで再作成した比較GPKG（SHA-256 b93f906489e5cd670be95f934d8c96fd8e98a7a079a9be666440e13c44efb4cf）を渡した後の結果です。PC上の入力・GDB座標の独立照合、候補版のメッセージ画面も受領し、19:14:51〜19:14:53 JST、経過1.83秒、警告・エラー表示なしで完了したことを確認しました。候補版のログ本文・出力パラメータ全文、問題位置座標は未受領です。許容値による内部クラスタリングの仕組みを直接確認したとは扱いません。原典・既存Release・全国版を変更せず、全国採用は引き続き保留します。
+
+2026-10-17（プロジェクト本体受領）: マイ プロジェクト4.zip（SHA-256 63b42259484b2e3d9e22a99e05416a68f8ec0a766187b274797991c799240f6a）のCRC検査、両GDB・.aprx・GpMessagesの保存を確認しました。OpenFileGDBによる読み取り専用検査でも未変更版の結果1行（self intersections）、候補版0行でした。両実行のメッセージXMLも受領済みです。詳細・ファイル別ハッシュはdocs/district025-independent-20261017/project-archive-receipt.jsonを参照。GDB座標列の照合と問題位置特定は未完了です。全国採用は保留します。
