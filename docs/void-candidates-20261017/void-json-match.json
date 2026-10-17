@@ -1,0 +1,128 @@
+{
+  "json_bytes": 103449,
+  "json_sha256": "37acbb8f0b6602f35f01f9fd0de664b029e41eac1ac959caf17611296ae87dea",
+  "spatial_reference": {
+    "wkid": 104020,
+    "latestWkid": 6668
+  },
+  "gdb_crs": "EPSG:6668",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "pyogrio": "0.13.0",
+  "gdal": [
+    3,
+    12,
+    4
+  ],
+  "features": [
+    {
+      "objectid": 1,
+      "candidate_id": "gap-21f4eea28bd4af31",
+      "ring_count": 1,
+      "coordinate_count": 5,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 2,
+      "candidate_id": "gap-25f67c482ea1c996",
+      "ring_count": 1,
+      "coordinate_count": 5,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 3,
+      "candidate_id": "gap-2cfa5a8f6e759bce",
+      "ring_count": 1,
+      "coordinate_count": 5,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 4,
+      "candidate_id": "gap-5eef01ecfce67d1b",
+      "ring_count": 1,
+      "coordinate_count": 1521,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 5,
+      "candidate_id": "gap-688a5e874ac9ec69",
+      "ring_count": 1,
+      "coordinate_count": 4,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 6,
+      "candidate_id": "gap-8113f3b0bf65eea8",
+      "ring_count": 1,
+      "coordinate_count": 5,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 7,
+      "candidate_id": "gap-88bbd3fb93920ed1",
+      "ring_count": 1,
+      "coordinate_count": 5,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 8,
+      "candidate_id": "gap-8b1735220aa5e6e5",
+      "ring_count": 1,
+      "coordinate_count": 28,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 9,
+      "candidate_id": "gap-9795735d3cabea7c",
+      "ring_count": 1,
+      "coordinate_count": 121,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 10,
+      "candidate_id": "gap-ab65ca6070d02661",
+      "ring_count": 1,
+      "coordinate_count": 214,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 11,
+      "candidate_id": "gap-b7f28ed2a89fa1dd",
+      "ring_count": 1,
+      "coordinate_count": 5,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 12,
+      "candidate_id": "gap-bfb40440ce6f5ac1",
+      "ring_count": 1,
+      "coordinate_count": 30,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    },
+    {
+      "objectid": 13,
+      "candidate_id": "gap-c578d39966036c02",
+      "ring_count": 1,
+      "coordinate_count": 185,
+      "exact_all_ring_ordered_xy_match": true,
+      "attribute_differences": []
+    }
+  ],
+  "all_13_geometry_and_attribute_matches": true,
+  "total_coordinate_count": 2133,
+  "json_unchanged": true,
+  "gdb_files_unchanged": true,
+  "limits": "Confirms Esri JSON vs decoded GDB, not source GPKG equivalence. Geometry-bearing JSON is not a location-bearing Check Geometry report and does not prove error mechanism."
+}
