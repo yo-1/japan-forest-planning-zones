@@ -1,0 +1,220 @@
+{
+  "archive_bytes": 1318469,
+  "archive_sha256": "63b42259484b2e3d9e22a99e05416a68f8ec0a766187b274797991c799240f6a",
+  "python": "3.12.14",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "numpy": "2.5.3",
+  "pyogrio": "0.13.0",
+  "gdal": [
+    3,
+    12,
+    4
+  ],
+  "index_base": 0,
+  "scope": "GDB pair comparison; not comparison to missing distributed GPKG and not an ArcGIS rerun",
+  "zip_crc_ok": true,
+  "file_count": 220,
+  "gpkg_members": [],
+  "void_candidate_members": [],
+  "check_messages": {
+    "118764669915700": [
+      {
+        "code": "0",
+        "type": "2",
+        "text": "開始時間: 2026年10月17日 19:12:12"
+      },
+      {
+        "code": "442",
+        "type": "50",
+        "text": "WARNING 000442: self intersections が district025_unchanged 内の 1 にあります"
+      },
+      {
+        "code": "0",
+        "type": "3",
+        "text": "完了 (2026年10月17日 19:12:14) (経過時間: 1.43 秒)"
+      }
+    ],
+    "118923566476100": [
+      {
+        "code": "0",
+        "type": "2",
+        "text": "開始時間: 2026年10月17日 19:14:51"
+      },
+      {
+        "code": "0",
+        "type": "3",
+        "text": "完了 (2026年10月17日 19:14:53) (経過時間: 1.83 秒)"
+      }
+    ]
+  },
+  "layers": {
+    "unchanged": {
+      "feature_fids": [
+        1
+      ],
+      "crs": "EPSG:6668",
+      "attributes": {
+        "source_district_fid": 25,
+        "district_code": "025",
+        "district_name": "米代川",
+        "basin_code": "11",
+        "basin_name": "米代・雄物川",
+        "source_features": 15,
+        "status": "確認用・区域未確定",
+        "final_usable": "false",
+        "original_esri_problem": "self intersections",
+        "Shape_Length": 7.4091760985707555,
+        "Shape_Area": 0.5532266445089101
+      },
+      "polygon_count": 2384,
+      "stored_coordinate_count": 119257,
+      "interior_ring_count": 0,
+      "valid": true,
+      "validity_reason": "Valid Geometry",
+      "wkb_sha256": "eb1da4dd8d2c4599cdc8bb4b1e55d0578844027c34187ee9ff567239b92b3e22",
+      "decoded_ordered_xy_sha256": "d163390ddfa32abb480957d66f1323b405cdaadd2172e1a8debfa20c88f54427",
+      "check_table_fields": [
+        "CLASS",
+        "FEATURE_ID",
+        "PROBLEM"
+      ],
+      "check_rows": [
+        {
+          "CLASS": "district025_unchanged",
+          "FEATURE_ID": 1,
+          "PROBLEM": "self intersections"
+        }
+      ],
+      "close_vertices": {
+        "threshold_degree": 9e-09,
+        "positive_nonadjacent_pairs": [
+          {
+            "ring_a_0based": 2023,
+            "pos_a_0based": 54178,
+            "ring_b_0based": 2023,
+            "pos_b_0based": 54180,
+            "coordinate_a": [
+              139.96788627800004,
+              39.87999968500003
+            ],
+            "coordinate_b": [
+              139.9678862720001,
+              39.879999690000034
+            ],
+            "distance_degree": 7.810203469779092e-09
+          }
+        ],
+        "zero_distance_nonadjacent_pair_count": 0,
+        "excluded_adjacent_pair_count": 0
+      }
+    },
+    "candidate": {
+      "feature_fids": [
+        1
+      ],
+      "crs": "EPSG:6668",
+      "attributes": {
+        "source_district_fid": 25,
+        "district_code": "025",
+        "district_name": "米代川",
+        "basin_code": "11",
+        "basin_name": "米代・雄物川",
+        "source_features": 15,
+        "status": "確認用・区域未確定",
+        "final_usable": "false",
+        "original_esri_problem": "self intersections",
+        "Shape_Length": 7.408438400448634,
+        "Shape_Area": 0.5532266445103478
+      },
+      "polygon_count": 2384,
+      "stored_coordinate_count": 119255,
+      "interior_ring_count": 0,
+      "valid": true,
+      "validity_reason": "Valid Geometry",
+      "wkb_sha256": "01ea64ee7e89945855bb2ba312ed707727d4040f510fe979c256ed647914dd8a",
+      "decoded_ordered_xy_sha256": "6a9b7bf408a677ce069b4fcb500e06f4de042492fbede79d77184634cc2f0129",
+      "check_table_fields": [
+        "CLASS",
+        "FEATURE_ID",
+        "PROBLEM"
+      ],
+      "check_rows": [],
+      "close_vertices": {
+        "threshold_degree": 9e-09,
+        "positive_nonadjacent_pairs": [],
+        "zero_distance_nonadjacent_pair_count": 0,
+        "excluded_adjacent_pair_count": 0
+      }
+    }
+  },
+  "comparison": {
+    "changed_polygon_indices_0based": [
+      2023
+    ],
+    "changed_ring_0based": 2023,
+    "removed_positions_0based": [
+      54179,
+      54180
+    ],
+    "removed_coordinates": [
+      [
+        139.9681798050001,
+        39.880223054000055
+      ],
+      [
+        139.9678862720001,
+        39.879999690000034
+      ]
+    ],
+    "exact_ordered_xy_match_after_only_two_deletions": true,
+    "unchanged_ring_count": 2383,
+    "changed_attributes": {
+      "Shape_Length": [
+        7.4091760985707555,
+        7.408438400448634
+      ],
+      "Shape_Area": [
+        0.5532266445089101,
+        0.5532266445103478
+      ]
+    },
+    "added_area_degree2": 1.4376017341337037e-12,
+    "lost_area_degree2": 0.0,
+    "added_geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.96784775600008,
+            39.88002055900006
+          ],
+          [
+            139.9678862720001,
+            39.879999690000034
+          ],
+          [
+            139.9681798050001,
+            39.880223054000055
+          ],
+          [
+            139.96788627800004,
+            39.87999968500003
+          ],
+          [
+            139.96784775600008,
+            39.88002055900006
+          ]
+        ]
+      ]
+    }
+  },
+  "extracted_gdb_files_unchanged": true,
+  "archive_unchanged": true,
+  "limits": [
+    "GDAL/OpenFileGDB decoded coordinates; raw FileGDB shape storage not compared to GPKG.",
+    "Check tables contain CLASS, FEATURE_ID, PROBLEM only; no reported problem coordinates.",
+    "Inherited original_esri_problem attribute is not the candidate Check Geometry result.",
+    "No clustering mechanism inference; no national adoption or source/release changes."
+  ]
+}
