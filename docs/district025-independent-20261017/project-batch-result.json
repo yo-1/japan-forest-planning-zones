@@ -1,0 +1,376 @@
+{
+  "python": "3.12.14",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "pyogrio": "0.13.0",
+  "gdal": [
+    3,
+    12,
+    4
+  ],
+  "numpy": "2.5.3",
+  "projects": {
+    "project1": {
+      "bytes": 69197,
+      "sha256": "cb2c4c1016523819939ffc96ed0cbf80688e51317f241a6b874a497a71530f31",
+      "gpkg_members": [],
+      "gdbs": {
+        "マイ プロジェクト1.gdb": {
+          "openfilegdb_readable": false,
+          "note": "No user layer confirmed; inability to open alone does not establish corruption"
+        }
+      },
+      "crc_ok": true
+    },
+    "project3": {
+      "bytes": 11253150,
+      "sha256": "7d61680de36873a1c023c5e2b306ee4c0afef51e9777de68aabcb27bd366e908",
+      "gpkg_members": [],
+      "gdbs": {
+        "マイ プロジェクト3.gdb": {
+          "openfilegdb_readable": true,
+          "layers": {
+            "main_ExportFeatures": {
+              "feature_count": 21,
+              "crs": "EPSG:6668",
+              "geometry_type": "MultiPolygon",
+              "fields": [
+                "source_district_fid",
+                "district_code",
+                "district_name",
+                "basin_code",
+                "basin_name",
+                "source_features",
+                "status",
+                "final_usable",
+                "original_esri_problem",
+                "Shape_Length",
+                "Shape_Area"
+              ],
+              "features": [
+                {
+                  "fid": 1,
+                  "district_code": "020",
+                  "valid": true,
+                  "coordinate_count": 396081,
+                  "polygon_count": 3506,
+                  "interior_ring_count": 1
+                },
+                {
+                  "fid": 2,
+                  "district_code": "023",
+                  "valid": true,
+                  "coordinate_count": 613396,
+                  "polygon_count": 7805,
+                  "interior_ring_count": 1
+                },
+                {
+                  "fid": 3,
+                  "district_code": "024",
+                  "valid": true,
+                  "coordinate_count": 80024,
+                  "polygon_count": 493,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 4,
+                  "district_code": "025",
+                  "valid": true,
+                  "coordinate_count": 119257,
+                  "polygon_count": 2384,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 5,
+                  "district_code": "031",
+                  "valid": true,
+                  "coordinate_count": 54742,
+                  "polygon_count": 163,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 6,
+                  "district_code": "036",
+                  "valid": true,
+                  "coordinate_count": 13260,
+                  "polygon_count": 104,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 7,
+                  "district_code": "037",
+                  "valid": true,
+                  "coordinate_count": 17825,
+                  "polygon_count": 4,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 8,
+                  "district_code": "048",
+                  "valid": true,
+                  "coordinate_count": 21552,
+                  "polygon_count": 92,
+                  "interior_ring_count": 1
+                },
+                {
+                  "fid": 9,
+                  "district_code": "050",
+                  "valid": true,
+                  "coordinate_count": 109054,
+                  "polygon_count": 1182,
+                  "interior_ring_count": 1
+                },
+                {
+                  "fid": 10,
+                  "district_code": "078",
+                  "valid": true,
+                  "coordinate_count": 64926,
+                  "polygon_count": 282,
+                  "interior_ring_count": 2
+                },
+                {
+                  "fid": 11,
+                  "district_code": "079",
+                  "valid": true,
+                  "coordinate_count": 61515,
+                  "polygon_count": 682,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 12,
+                  "district_code": "102",
+                  "valid": true,
+                  "coordinate_count": 69299,
+                  "polygon_count": 892,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 13,
+                  "district_code": "112",
+                  "valid": true,
+                  "coordinate_count": 46453,
+                  "polygon_count": 256,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 14,
+                  "district_code": "118",
+                  "valid": true,
+                  "coordinate_count": 153987,
+                  "polygon_count": 721,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 15,
+                  "district_code": "131",
+                  "valid": true,
+                  "coordinate_count": 10782,
+                  "polygon_count": 12,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 16,
+                  "district_code": "137",
+                  "valid": true,
+                  "coordinate_count": 18956,
+                  "polygon_count": 13,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 17,
+                  "district_code": "138",
+                  "valid": true,
+                  "coordinate_count": 14419,
+                  "polygon_count": 30,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 18,
+                  "district_code": "140",
+                  "valid": true,
+                  "coordinate_count": 181255,
+                  "polygon_count": 1866,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 19,
+                  "district_code": "141",
+                  "valid": true,
+                  "coordinate_count": 26512,
+                  "polygon_count": 112,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 20,
+                  "district_code": "148",
+                  "valid": true,
+                  "coordinate_count": 15577,
+                  "polygon_count": 14,
+                  "interior_ring_count": 0
+                },
+                {
+                  "fid": 21,
+                  "district_code": "153",
+                  "valid": true,
+                  "coordinate_count": 60413,
+                  "polygon_count": 571,
+                  "interior_ring_count": 0
+                }
+              ]
+            },
+            "check_trial21_esri": {
+              "feature_count": 1,
+              "crs": null,
+              "geometry_type": null,
+              "fields": [
+                "CLASS",
+                "FEATURE_ID",
+                "PROBLEM"
+              ],
+              "rows": [
+                {
+                  "CLASS": "districts_trial21",
+                  "FEATURE_ID": 4,
+                  "PROBLEM": "self intersections"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "crc_ok": true
+    },
+    "project4": {
+      "bytes": 1318469,
+      "sha256": "2daa058f8d77f0cc1d665b7fb567d520fa9c0f4a8afb760aebde098e9f08bbb8",
+      "gpkg_members": [],
+      "gdbs": {
+        "マイ プロジェクト4.gdb": {
+          "openfilegdb_readable": false,
+          "note": "No user layer confirmed; inability to open alone does not establish corruption"
+        },
+        "unchanged.gdb": {
+          "openfilegdb_readable": true,
+          "layers": {
+            "district025_unchanged": {
+              "feature_count": 1,
+              "crs": "EPSG:6668",
+              "geometry_type": "MultiPolygon",
+              "fields": [
+                "source_district_fid",
+                "district_code",
+                "district_name",
+                "basin_code",
+                "basin_name",
+                "source_features",
+                "status",
+                "final_usable",
+                "original_esri_problem",
+                "Shape_Length",
+                "Shape_Area"
+              ],
+              "features": [
+                {
+                  "fid": 1,
+                  "district_code": "025",
+                  "valid": true,
+                  "coordinate_count": 119257,
+                  "polygon_count": 2384,
+                  "interior_ring_count": 0
+                }
+              ]
+            },
+            "check_unchanged": {
+              "feature_count": 1,
+              "crs": null,
+              "geometry_type": null,
+              "fields": [
+                "CLASS",
+                "FEATURE_ID",
+                "PROBLEM"
+              ],
+              "rows": [
+                {
+                  "CLASS": "district025_unchanged",
+                  "FEATURE_ID": 1,
+                  "PROBLEM": "self intersections"
+                }
+              ]
+            }
+          }
+        },
+        "candidate.gdb": {
+          "openfilegdb_readable": true,
+          "layers": {
+            "district025_candidate": {
+              "feature_count": 1,
+              "crs": "EPSG:6668",
+              "geometry_type": "MultiPolygon",
+              "fields": [
+                "source_district_fid",
+                "district_code",
+                "district_name",
+                "basin_code",
+                "basin_name",
+                "source_features",
+                "status",
+                "final_usable",
+                "original_esri_problem",
+                "Shape_Length",
+                "Shape_Area"
+              ],
+              "features": [
+                {
+                  "fid": 1,
+                  "district_code": "025",
+                  "valid": true,
+                  "coordinate_count": 119255,
+                  "polygon_count": 2384,
+                  "interior_ring_count": 0
+                }
+              ]
+            },
+            "check_candidate": {
+              "feature_count": 0,
+              "crs": null,
+              "geometry_type": null,
+              "fields": [
+                "CLASS",
+                "FEATURE_ID",
+                "PROBLEM"
+              ],
+              "rows": []
+            }
+          }
+        }
+      },
+      "crc_ok": true
+    }
+  },
+  "project3_025_vs_project4_unchanged": {
+    "exact_ordered_all_ring_xy_match": true,
+    "note": "Check table CLASS is districts_trial21, while stored feature class is main_ExportFeatures. FID4 maps to 025 in the stored class; original validation-input provenance is not established by that mapping alone."
+  },
+  "project4_archive_comparison": {
+    "previous_sha256": "63b42259484b2e3d9e22a99e05416a68f8ec0a766187b274797991c799240f6a",
+    "new_sha256": "2daa058f8d77f0cc1d665b7fb567d520fa9c0f4a8afb760aebde098e9f08bbb8",
+    "member_names_equal": true,
+    "changed_content_members": [],
+    "previous_file_count": 220,
+    "new_file_count": 220,
+    "note": "Archive SHA differs but all member names and decompressed file bytes match; do not label ZIP binaries identical"
+  },
+  "extracted_gdb_files_unchanged": true,
+  "input_archives_unchanged": true,
+  "project2": {
+    "status": "not inspected",
+    "reason": "Sediment transfer exceeds executor limit of 32 MiB",
+    "source": "user uploaded project2 ZIP; no hash or inventory inferred"
+  },
+  "limits": [
+    "No void_candidates_gdb or check_void_candidates layer found in readable GDBs of projects1/3/4.",
+    "No source comparison GPKG present in those three archives.",
+    "No geometry repaired, no ArcGIS rerun, no cause inferred from GEOS validity.",
+    "Project2 and project5 contents are unknown; screenshot showed project5."
+  ]
+}
