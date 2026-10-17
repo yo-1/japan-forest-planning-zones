@@ -1,0 +1,30 @@
+{
+  "observed_date_jst": "2026-10-17",
+  "evidence": "Two user-provided screenshots in this conversation; no raw feature class or check table received",
+  "input_layer": "void_candidates_gdb",
+  "output_check_table": "check_void_candidates",
+  "validation_method": "Esri",
+  "start_time_jst": "2026-10-17 19:54:00",
+  "end_time_jst": "2026-10-17 19:54:02",
+  "message_elapsed_seconds": 1.49,
+  "visible_result_row_count": 4,
+  "visible_selected_rows": 0,
+  "rows": [
+    {"OBJECTID": 1, "CLASS": "void_candidates_gdb", "FEATURE_ID": 3, "PROBLEM": "self intersections"},
+    {"OBJECTID": 2, "CLASS": "void_candidates_gdb", "FEATURE_ID": 6, "PROBLEM": "self intersections"},
+    {"OBJECTID": 3, "CLASS": "void_candidates_gdb", "FEATURE_ID": 7, "PROBLEM": "self intersections"},
+    {"OBJECTID": 4, "CLASS": "void_candidates_gdb", "FEATURE_ID": 11, "PROBLEM": "self intersections"}
+  ],
+  "warning_code": "000442",
+  "limits": [
+    "11 is a FEATURE_ID, not the number of reported rows",
+    "Not the district025 candidate/unchanged comparison; no mapping to their IDs is established",
+    "Screenshots do not establish error coordinates, topology cause or source GPKG/GDB equivalence",
+    "No repair or ArcGIS rerun was performed by AI",
+    "The reattached project4 ZIP has no void_candidates_gdb or check_void_candidates layer"
+  ],
+  "minimum_inputs_for_further_analysis": [
+    "The file geodatabase containing void_candidates_gdb and check_void_candidates, zipped while not being edited",
+    "To compare export changes: the source GPKG containing main.void_candidates, or its recoverable file URL"
+  ]
+}
