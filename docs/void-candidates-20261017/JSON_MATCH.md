@@ -2,7 +2,7 @@
 
 利用者からvoid_candidates_gdb.json（103,449 bytes）を受領しました。SHA-256は `37acbb8f0b6602f35f01f9fd0de664b029e41eac1ac959caf17611296ae87dea` です。geometryTypeはesriGeometryPolygon、空間参照はwkid 104020／latestWkid 6668でした。
 
-OBJECTIDとcandidate_idを照合し、プロジェクト5内のvoid_candidates_gdbと比較しました。13地物・2,133保存座標が、全リング・全順序で完全一致しました。GDBの全32属性もJSONの対応属性と一致し、OBJECTIDはGDB FIDと一致しました。丸め・スナップ・修復はしていません。
+OBJECTIDとcandidate_idを照合し、プロジェクト5内のvoid_candidates_gdbと比較しました。13地物・2,133保存座標が、全リング・全順序で完全一致しました。GDBの全31属性もJSONの対応属性と一致し、OBJECTIDはGDB FIDと一致しました。丸め・スナップ・修復はしていません。
 
 [検査スクリプト](../../scripts/audit_void_json_match.py)と[全件結果](void-json-match.json)を保存しました。実入力で完走し、構文検査とJSON・GDB全ファイルの処理前後ハッシュ不変を確認しました。
 
