@@ -1,0 +1,1085 @@
+{
+  "python": "3.12.14",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "numpy": "2.5.3",
+  "pyogrio": "0.13.0",
+  "gdal": [
+    3,
+    12,
+    4
+  ],
+  "input_sha256": {
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.shp": "6325d7f08c9374198e27b2cffd01bd420411be8b3cf3528da0587c6cea35538d",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.shx": "62e0a234588c44eec98778808602e94af90af2d3f85d18ab8bcabd38c5d36751",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.dbf": "2d2692800f8261243b281708dc99b89e7a7bd9ba8d8674bec14e7dcf47575911",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.prj": "1761bb7f37f73fd0eb043175a78403ba37ff1066299987c116fd43bbd0057eae",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+    "/workspace/japan-forest-planning-zones/data/forest/municipality_forest_districts.csv": "f2f9af3169a03f97db217c7e49e49f8b150cb9db5ab8861206c23c38fc050716"
+  },
+  "crs": "EPSG:6668",
+  "source_features": 125130,
+  "source_codes": 1905,
+  "mapping_codes": 1905,
+  "source_only_codes": [],
+  "mapping_only_codes": [],
+  "mapped_districts": 158,
+  "mapped_basins": 44,
+  "unassigned_codes": [
+    "01699",
+    "03216",
+    "12000",
+    "12239",
+    "13000",
+    "13363",
+    "17212",
+    "17461",
+    "17463",
+    "21221",
+    "23000",
+    "23237",
+    "23238",
+    "28221",
+    "30000",
+    "39212",
+    "40000",
+    "40231",
+    "46000",
+    "47000"
+  ],
+  "local_traces": [
+    {
+      "label": "025 mouth A",
+      "point": [
+        139.96788627800004,
+        39.87999968500003
+      ],
+      "bbox_margin_degree": 0.001,
+      "source_features": [
+        {
+          "ogr_fid_0based": 30167,
+          "attributes": {
+            "N03_001": "秋田県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "男鹿市",
+            "N03_005": null,
+            "N03_007": "05206"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 38939,
+              "previous": [
+                139.96817980499998,
+                39.880223054
+              ],
+              "vertex": [
+                139.96788627150022,
+                39.87999968950015
+              ],
+              "next": [
+                139.96784775600008,
+                39.88002055900006
+              ]
+            }
+          ],
+          "district_code": "025",
+          "basin_code": "11",
+          "valid": true,
+          "nearest_vertex": [
+            139.96788627150022,
+            39.87999968950015
+          ],
+          "nearest_vertex_distance_degree": 7.905614142287097e-09,
+          "boundary_distance_degree": 7.517234062732472e-09,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 30468,
+          "attributes": {
+            "N03_001": "秋田県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "潟上市",
+            "N03_005": null,
+            "N03_007": "05211"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 221,
+              "previous": [
+                139.967900726,
+                39.879991865
+              ],
+              "vertex": [
+                139.967886278,
+                39.879999685
+              ],
+              "next": [
+                139.968179805,
+                39.880223054
+              ]
+            }
+          ],
+          "district_code": "025",
+          "basin_code": "11",
+          "valid": true,
+          "nearest_vertex": [
+            139.967886278,
+            39.879999685
+          ],
+          "nearest_vertex_distance_degree": 4.0194366942304644e-14,
+          "boundary_distance_degree": 5.4059899428535396e-15,
+          "covers_point": false
+        }
+      ],
+      "exact_vertex_source_pair_classification": []
+    },
+    {
+      "label": "025 mouth B",
+      "point": [
+        139.9678862720001,
+        39.879999690000034
+      ],
+      "bbox_margin_degree": 0.001,
+      "source_features": [
+        {
+          "ogr_fid_0based": 30167,
+          "attributes": {
+            "N03_001": "秋田県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "男鹿市",
+            "N03_005": null,
+            "N03_007": "05206"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 38939,
+              "previous": [
+                139.96817980499998,
+                39.880223054
+              ],
+              "vertex": [
+                139.96788627150022,
+                39.87999968950015
+              ],
+              "next": [
+                139.96784775600008,
+                39.88002055900006
+              ]
+            }
+          ],
+          "district_code": "025",
+          "basin_code": "11",
+          "valid": true,
+          "nearest_vertex": [
+            139.96788627150022,
+            39.87999968950015
+          ],
+          "nearest_vertex_distance_degree": 7.069385257812541e-10,
+          "boundary_distance_degree": 9.509482763238166e-11,
+          "covers_point": true
+        },
+        {
+          "ogr_fid_0based": 30468,
+          "attributes": {
+            "N03_001": "秋田県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "潟上市",
+            "N03_005": null,
+            "N03_007": "05211"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 221,
+              "previous": [
+                139.967900726,
+                39.879991865
+              ],
+              "vertex": [
+                139.967886278,
+                39.879999685
+              ],
+              "next": [
+                139.968179805,
+                39.880223054
+              ]
+            }
+          ],
+          "district_code": "025",
+          "basin_code": "11",
+          "valid": true,
+          "nearest_vertex": [
+            139.967886278,
+            39.879999685
+          ],
+          "nearest_vertex_distance_degree": 7.810199831078487e-09,
+          "boundary_distance_degree": 7.810199831078487e-09,
+          "covers_point": false
+        }
+      ],
+      "exact_vertex_source_pair_classification": []
+    },
+    {
+      "label": "025 notch tip",
+      "point": [
+        139.9681798050001,
+        39.880223054000055
+      ],
+      "bbox_margin_degree": 0.001,
+      "source_features": [
+        {
+          "ogr_fid_0based": 30167,
+          "attributes": {
+            "N03_001": "秋田県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "男鹿市",
+            "N03_005": null,
+            "N03_007": "05206"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 38938,
+              "previous": [
+                139.96841258100005,
+                39.88037055900003
+              ],
+              "vertex": [
+                139.96817980499998,
+                39.880223054
+              ],
+              "next": [
+                139.96788627150022,
+                39.87999968950015
+              ]
+            }
+          ],
+          "district_code": "025",
+          "basin_code": "11",
+          "valid": true,
+          "nearest_vertex": [
+            139.96817980499998,
+            39.880223054
+          ],
+          "nearest_vertex_distance_degree": 1.2710574864626038e-13,
+          "boundary_distance_degree": 1.2837066203767436e-14,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 30468,
+          "attributes": {
+            "N03_001": "秋田県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "潟上市",
+            "N03_005": null,
+            "N03_007": "05211"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 222,
+              "previous": [
+                139.967886278,
+                39.879999685
+              ],
+              "vertex": [
+                139.968179805,
+                39.880223054
+              ],
+              "next": [
+                139.968412581,
+                39.880370559
+              ]
+            }
+          ],
+          "district_code": "025",
+          "basin_code": "11",
+          "valid": true,
+          "nearest_vertex": [
+            139.968179805,
+            39.880223054
+          ],
+          "nearest_vertex_distance_degree": 1.0247593068766006e-13,
+          "boundary_distance_degree": 2.3759318705972237e-15,
+          "covers_point": false
+        }
+      ],
+      "exact_vertex_source_pair_classification": []
+    },
+    {
+      "label": "023 contact 1",
+      "point": [
+        141.57436528014892,
+        38.269476273794524
+      ],
+      "bbox_margin_degree": 0.001,
+      "source_features": [
+        {
+          "ogr_fid_0based": 21371,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.573437562,
+            38.269770261
+          ],
+          "nearest_vertex_distance_degree": 0.00097318520375583,
+          "boundary_distance_degree": 0.00097318520375583,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21372,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.573417134,
+            38.269885081
+          ],
+          "nearest_vertex_distance_degree": 0.0010325233416000714,
+          "boundary_distance_degree": 0.0010325233416000714,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21373,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.57350799,
+            38.269897207
+          ],
+          "nearest_vertex_distance_degree": 0.0009550555810644295,
+          "boundary_distance_degree": 0.0009550555810644295,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21374,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.573689883,
+            38.269869757
+          ],
+          "nearest_vertex_distance_degree": 0.0007816587118353295,
+          "boundary_distance_degree": 0.0007816587118353295,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21375,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.574025629,
+            38.269666721
+          ],
+          "nearest_vertex_distance_degree": 0.00038940087446785217,
+          "boundary_distance_degree": 0.00038940087446785217,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21376,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.574310843,
+            38.269471486
+          ],
+          "nearest_vertex_distance_degree": 5.464728866799296e-05,
+          "boundary_distance_degree": 5.464728866799296e-05,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21377,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 1,
+              "previous": [
+                141.574343294,
+                38.269470559
+              ],
+              "vertex": [
+                141.57436528014892,
+                38.269476273794524
+              ],
+              "next": [
+                141.574379831,
+                38.269467712
+              ]
+            }
+          ],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.57436528014892,
+            38.269476273794524
+          ],
+          "nearest_vertex_distance_degree": 0.0,
+          "boundary_distance_degree": 0.0,
+          "covers_point": true
+        },
+        {
+          "ogr_fid_0based": 21378,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.574539209,
+            38.269227865
+          ],
+          "nearest_vertex_distance_degree": 0.00030324606251726005,
+          "boundary_distance_degree": 0.00030324606251726005,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21379,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.574657601,
+            38.269238739
+          ],
+          "nearest_vertex_distance_degree": 0.00037666199514852286,
+          "boundary_distance_degree": 0.00037666199514852286,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21380,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.574445525,
+            38.26938636
+          ],
+          "nearest_vertex_distance_degree": 0.00012051442473005041,
+          "boundary_distance_degree": 0.00012048409279360149,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21558,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 9221,
+              "previous": [
+                141.574368936,
+                38.269475171
+              ],
+              "vertex": [
+                141.57436528014892,
+                38.269476273794524
+              ],
+              "next": [
+                141.574361647,
+                38.269477378
+              ]
+            }
+          ],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.57436528014892,
+            38.269476273794524
+          ],
+          "nearest_vertex_distance_degree": 0.0,
+          "boundary_distance_degree": 0.0,
+          "covers_point": true
+        }
+      ],
+      "exact_vertex_source_pair_classification": [
+        {
+          "source_fids_0based": [
+            21377,
+            21558
+          ],
+          "intersection_type": "Point",
+          "intersection_area_degree2": 0.0,
+          "shared_boundary_length_degree": 0.0
+        }
+      ]
+    },
+    {
+      "label": "023 contact 2",
+      "point": [
+        141.58515358649998,
+        38.2764484635
+      ],
+      "bbox_margin_degree": 0.001,
+      "source_features": [
+        {
+          "ogr_fid_0based": 21523,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.584254527,
+            38.275788946
+          ],
+          "nearest_vertex_distance_degree": 0.0011150207698967746,
+          "boundary_distance_degree": 0.0011150207698967746,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21524,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.584376744,
+            38.275693568
+          ],
+          "nearest_vertex_distance_degree": 0.0010832134995977548,
+          "boundary_distance_degree": 0.0010832134995977548,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21525,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.58446144,
+            38.275949712
+          ],
+          "nearest_vertex_distance_degree": 0.0008531235761480958,
+          "boundary_distance_degree": 0.0008531235761480958,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21526,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.584960091,
+            38.276004811
+          ],
+          "nearest_vertex_distance_degree": 0.0004840124474366341,
+          "boundary_distance_degree": 0.0004840124474366341,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21527,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.585040091,
+            38.275871135
+          ],
+          "nearest_vertex_distance_degree": 0.0005883786412084366,
+          "boundary_distance_degree": 0.0005883786412084366,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21528,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.58518201,
+            38.275911937
+          ],
+          "nearest_vertex_distance_degree": 0.0005372788666633568,
+          "boundary_distance_degree": 0.0005372788666633568,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21529,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.585331829,
+            38.276298108
+          ],
+          "nearest_vertex_distance_degree": 0.00023318911895166004,
+          "boundary_distance_degree": 0.00023318911895166004,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21530,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.585104604,
+            38.276640414
+          ],
+          "nearest_vertex_distance_degree": 0.00019810169043362345,
+          "boundary_distance_degree": 0.00019810169043362345,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 21531,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 12,
+              "previous": [
+                141.58515489,
+                38.276440703
+              ],
+              "vertex": [
+                141.58515358649998,
+                38.2764484635
+              ],
+              "next": [
+                141.58516061,
+                38.276452288
+              ]
+            }
+          ],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.58515358649998,
+            38.2764484635
+          ],
+          "nearest_vertex_distance_degree": 0.0,
+          "boundary_distance_degree": 0.0,
+          "covers_point": true
+        },
+        {
+          "ogr_fid_0based": 21558,
+          "attributes": {
+            "N03_001": "宮城県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "石巻市",
+            "N03_005": null,
+            "N03_007": "04202"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 7907,
+              "previous": [
+                141.585164254,
+                38.276462
+              ],
+              "vertex": [
+                141.58515358649998,
+                38.2764484635
+              ],
+              "next": [
+                141.585139222,
+                38.276440171
+              ]
+            }
+          ],
+          "district_code": "023",
+          "basin_code": "10",
+          "valid": true,
+          "nearest_vertex": [
+            141.58515358649998,
+            38.2764484635
+          ],
+          "nearest_vertex_distance_degree": 0.0,
+          "boundary_distance_degree": 0.0,
+          "covers_point": true
+        }
+      ],
+      "exact_vertex_source_pair_classification": [
+        {
+          "source_fids_0based": [
+            21531,
+            21558
+          ],
+          "intersection_type": "Point",
+          "intersection_area_degree2": 0.0,
+          "shared_boundary_length_degree": 0.0
+        }
+      ]
+    },
+    {
+      "label": "140 contact",
+      "point": [
+        130.4557579575,
+        32.5891687165
+      ],
+      "bbox_margin_degree": 0.001,
+      "source_features": [
+        {
+          "ogr_fid_0based": 103181,
+          "attributes": {
+            "N03_001": "熊本県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "上天草市",
+            "N03_005": null,
+            "N03_007": "43212"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "140",
+          "basin_code": "41",
+          "valid": true,
+          "nearest_vertex": [
+            130.455940195,
+            32.589137847
+          ],
+          "nearest_vertex_distance_degree": 0.00018483352629037887,
+          "boundary_distance_degree": 0.00017125565424038134,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 103182,
+          "attributes": {
+            "N03_001": "熊本県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "上天草市",
+            "N03_005": null,
+            "N03_007": "43212"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 5,
+              "previous": [
+                130.455766796,
+                32.589186243
+              ],
+              "vertex": [
+                130.4557579575,
+                32.5891687165
+              ],
+              "next": [
+                130.45573511,
+                32.58917736
+              ]
+            }
+          ],
+          "district_code": "140",
+          "basin_code": "41",
+          "valid": true,
+          "nearest_vertex": [
+            130.4557579575,
+            32.5891687165
+          ],
+          "nearest_vertex_distance_degree": 0.0,
+          "boundary_distance_degree": 0.0,
+          "covers_point": true
+        },
+        {
+          "ogr_fid_0based": 103186,
+          "attributes": {
+            "N03_001": "熊本県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "上天草市",
+            "N03_005": null,
+            "N03_007": "43212"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "140",
+          "basin_code": "41",
+          "valid": true,
+          "nearest_vertex": [
+            130.455202815,
+            32.589336387
+          ],
+          "nearest_vertex_distance_degree": 0.0005799108482068371,
+          "boundary_distance_degree": 0.0005799108482068371,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 103187,
+          "attributes": {
+            "N03_001": "熊本県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "上天草市",
+            "N03_005": null,
+            "N03_007": "43212"
+          },
+          "nearest_ring_refs": [],
+          "district_code": "140",
+          "basin_code": "41",
+          "valid": true,
+          "nearest_vertex": [
+            130.456427691,
+            32.589005676
+          ],
+          "nearest_vertex_distance_degree": 0.000689293236328705,
+          "boundary_distance_degree": 0.000689293236328705,
+          "covers_point": false
+        },
+        {
+          "ogr_fid_0based": 103274,
+          "attributes": {
+            "N03_001": "熊本県",
+            "N03_002": null,
+            "N03_003": null,
+            "N03_004": "上天草市",
+            "N03_005": null,
+            "N03_007": "43212"
+          },
+          "nearest_ring_refs": [
+            {
+              "polygon_0based": 0,
+              "local_ring_0based": 0,
+              "pos_0based": 12066,
+              "previous": [
+                130.455753217,
+                32.589160207
+              ],
+              "vertex": [
+                130.4557579575,
+                32.5891687165
+              ],
+              "next": [
+                130.45578572,
+                32.589157919
+              ]
+            }
+          ],
+          "district_code": "140",
+          "basin_code": "41",
+          "valid": true,
+          "nearest_vertex": [
+            130.4557579575,
+            32.5891687165
+          ],
+          "nearest_vertex_distance_degree": 0.0,
+          "boundary_distance_degree": 0.0,
+          "covers_point": true
+        }
+      ],
+      "exact_vertex_source_pair_classification": [
+        {
+          "source_fids_0based": [
+            103182,
+            103274
+          ],
+          "intersection_type": "Point",
+          "intersection_area_degree2": 0.0,
+          "shared_boundary_length_degree": 0.0
+        }
+      ]
+    }
+  ],
+  "notch_diagnostic_source_overlay": {
+    "source_fids_0based": [
+      30167,
+      30468
+    ],
+    "diagnostic_added_area_degree2": 1.4376017341337037e-12,
+    "source_covered_area_degree2": 1.4842717359217898e-14,
+    "outside_source_area_degree2": 1.4227590167710123e-12,
+    "outside_representative_point": [
+      139.96804675380986,
+      39.88012180650006
+    ],
+    "outside_point_covered_by_any_local_source": false,
+    "note": "Local bbox covers entire diagnostic polygon. Overlay in double precision can have residuals; no physical/legal gap inference. Missing GDB/GPKG coordinates not independently compared."
+  },
+  "inputs_unchanged": true,
+  "limits": "Local source vertex/boundary trace plus nationwide attribute coverage only. No equivalence to missing v0.3, GDB or trial GPKG is assumed. Coordinates from PR #6 context-result.json/README at 1f84a78. No ArcGIS validation or causal clustering inference. Distances are planar degrees."
+}
