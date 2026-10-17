@@ -1,0 +1,1941 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 183,
+        "polygon_0based": 183,
+        "local_ring_0based": 0,
+        "pos_a_0based": 43258,
+        "pos_b_0based": 43260,
+        "source_distance_degree": 1.797546735911271e-13,
+        "layer": "forest_plan_districts",
+        "code": "020",
+        "gdb_fid": 20,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.91512404700006,
+          39.345700126000054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 183,
+        "polygon_0based": 183,
+        "local_ring_0based": 0,
+        "pos_a_0based": 43257,
+        "pos_b_0based": 43261,
+        "source_distance_degree": 5.123796534383003e-14,
+        "layer": "forest_plan_districts",
+        "code": "020",
+        "gdb_fid": 20,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.91531682200002,
+          39.345621667000046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 253,
+        "polygon_0based": 253,
+        "local_ring_0based": 0,
+        "pos_a_0based": 157691,
+        "pos_b_0based": 157693,
+        "source_distance_degree": 2.929642751054232e-14,
+        "layer": "forest_plan_districts",
+        "code": "023",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.49735114100008,
+          38.47986668500005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 2023,
+        "polygon_0based": 2023,
+        "local_ring_0based": 0,
+        "pos_a_0based": 54180,
+        "pos_b_0based": 54182,
+        "source_distance_degree": 2.842170943040401e-14,
+        "layer": "forest_plan_districts",
+        "code": "025",
+        "gdb_fid": 25,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.9681798050001,
+          39.880223054000055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 20,
+        "polygon_0based": 20,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15369,
+        "pos_b_0based": 15371,
+        "source_distance_degree": 2.929642751054232e-14,
+        "layer": "forest_plan_districts",
+        "code": "031",
+        "gdb_fid": 31,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.9587633980001,
+          37.84133332400006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 20,
+        "polygon_0based": 20,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15368,
+        "pos_b_0based": 15372,
+        "source_distance_degree": 6.355287432313019e-14,
+        "layer": "forest_plan_districts",
+        "code": "031",
+        "gdb_fid": 31,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.95916907900005,
+          37.84148513500003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 6393,
+        "pos_b_0based": 6395,
+        "source_distance_degree": 8.556067554929069e-14,
+        "layer": "forest_plan_districts",
+        "code": "036",
+        "gdb_fid": 36,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59344819700004,
+          36.33620558600006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 6392,
+        "pos_b_0based": 6396,
+        "source_distance_degree": 1.1718571004216928e-13,
+        "layer": "forest_plan_districts",
+        "code": "036",
+        "gdb_fid": 36,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.5940615300001,
+          36.336277532000054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 6391,
+        "pos_b_0based": 6397,
+        "source_distance_degree": 3.552713678800501e-14,
+        "layer": "forest_plan_districts",
+        "code": "036",
+        "gdb_fid": 36,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59413847000008,
+          36.33628613500008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 6390,
+        "pos_b_0based": 6398,
+        "source_distance_degree": 1.0345658394727079e-13,
+        "layer": "forest_plan_districts",
+        "code": "036",
+        "gdb_fid": 36,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59430797700008,
+          36.336306225000044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 6389,
+        "pos_b_0based": 6399,
+        "source_distance_degree": 9.099386826154683e-14,
+        "layer": "forest_plan_districts",
+        "code": "036",
+        "gdb_fid": 36,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59432199700007,
+          36.336307883000075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 12467,
+        "pos_b_0based": 12469,
+        "source_distance_degree": 1.5888218580782548e-13,
+        "layer": "forest_plan_districts",
+        "code": "037",
+        "gdb_fid": 37,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.69405466900002,
+          35.933405495000045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 12350,
+        "pos_b_0based": 12354,
+        "source_distance_degree": 1.6587787186393757e-13,
+        "layer": "forest_plan_districts",
+        "code": "048",
+        "gdb_fid": 48,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.8455429700001,
+          35.65671677500006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 12351,
+        "pos_b_0based": 12353,
+        "source_distance_degree": 1.4836567898030567e-13,
+        "layer": "forest_plan_districts",
+        "code": "048",
+        "gdb_fid": 48,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.84566605700002,
+          35.658057333000045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 36,
+        "polygon_0based": 36,
+        "local_ring_0based": 0,
+        "pos_a_0based": 20487,
+        "pos_b_0based": 20489,
+        "source_distance_degree": 3.1776437161565096e-14,
+        "layer": "forest_plan_districts",
+        "code": "050",
+        "gdb_fid": 50,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.63151383900004,
+          35.32509108100004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 36,
+        "polygon_0based": 36,
+        "local_ring_0based": 0,
+        "pos_a_0based": 20486,
+        "pos_b_0based": 20490,
+        "source_distance_degree": 4.973799150320701e-14,
+        "layer": "forest_plan_districts",
+        "code": "050",
+        "gdb_fid": 50,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.63160272400012,
+          35.325204847000066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 36,
+        "polygon_0based": 36,
+        "local_ring_0based": 0,
+        "pos_a_0based": 20603,
+        "pos_b_0based": 20605,
+        "source_distance_degree": 2.842170943040401e-14,
+        "layer": "forest_plan_districts",
+        "code": "050",
+        "gdb_fid": 50,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.63725268500002,
+          35.32512237800006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 1079,
+        "polygon_0based": 1078,
+        "local_ring_0based": 0,
+        "pos_a_0based": 92,
+        "pos_b_0based": 94,
+        "source_distance_degree": 7.652779469160725e-14,
+        "layer": "forest_plan_districts",
+        "code": "050",
+        "gdb_fid": 50,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.71458843100004,
+          35.486045414000046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 4,
+        "polygon_0based": 4,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15471,
+        "pos_b_0based": 15473,
+        "source_distance_degree": 1.1718571004216928e-13,
+        "layer": "forest_plan_districts",
+        "code": "078",
+        "gdb_fid": 78,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82089033700004,
+          35.08333333300004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 4,
+        "polygon_0based": 4,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15470,
+        "pos_b_0based": 15474,
+        "source_distance_degree": 6.703246762680666e-14,
+        "layer": "forest_plan_districts",
+        "code": "078",
+        "gdb_fid": 78,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82387389100006,
+          35.08090666700008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 4,
+        "polygon_0based": 4,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15469,
+        "pos_b_0based": 15475,
+        "source_distance_degree": 1.718573603063735e-13,
+        "layer": "forest_plan_districts",
+        "code": "078",
+        "gdb_fid": 78,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82392778200006,
+          35.080863054000076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 4,
+        "polygon_0based": 4,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15468,
+        "pos_b_0based": 15476,
+        "source_distance_degree": 8.987733679556355e-14,
+        "layer": "forest_plan_districts",
+        "code": "078",
+        "gdb_fid": 78,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82392861200003,
+          35.08086250500003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 4,
+        "polygon_0based": 4,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15467,
+        "pos_b_0based": 15477,
+        "source_distance_degree": 1.2409095402129096e-13,
+        "layer": "forest_plan_districts",
+        "code": "078",
+        "gdb_fid": 78,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82450250300008,
+          35.080397505000064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 4,
+        "polygon_0based": 4,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15466,
+        "pos_b_0based": 15478,
+        "source_distance_degree": 1.2409095402129096e-13,
+        "layer": "forest_plan_districts",
+        "code": "078",
+        "gdb_fid": 78,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82470765200003,
+          35.08023107200006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 601,
+        "polygon_0based": 601,
+        "local_ring_0based": 0,
+        "pos_a_0based": 8725,
+        "pos_b_0based": 8727,
+        "source_distance_degree": 7.105427357601002e-14,
+        "layer": "forest_plan_districts",
+        "code": "079",
+        "gdb_fid": 79,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.30709348900007,
+          34.679955937000045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 270,
+        "polygon_0based": 270,
+        "local_ring_0based": 0,
+        "pos_a_0based": 23422,
+        "pos_b_0based": 23424,
+        "source_distance_degree": 1.7419169285135556e-13,
+        "layer": "forest_plan_districts",
+        "code": "102",
+        "gdb_fid": 102,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.90316277600004,
+          35.51196583800004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 83,
+        "polygon_0based": 83,
+        "local_ring_0based": 0,
+        "pos_a_0based": 24450,
+        "pos_b_0based": 24456,
+        "source_distance_degree": 1.505613063586757e-13,
+        "layer": "forest_plan_districts",
+        "code": "118",
+        "gdb_fid": 118,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.82093744500003,
+          34.33794497300005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 83,
+        "polygon_0based": 83,
+        "local_ring_0based": 0,
+        "pos_a_0based": 24451,
+        "pos_b_0based": 24455,
+        "source_distance_degree": 1.4281732235759946e-13,
+        "layer": "forest_plan_districts",
+        "code": "118",
+        "gdb_fid": 118,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.82103416300004,
+          34.33793638700007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 83,
+        "polygon_0based": 83,
+        "local_ring_0based": 0,
+        "pos_a_0based": 24452,
+        "pos_b_0based": 24454,
+        "source_distance_degree": 1.7067822212573437e-13,
+        "layer": "forest_plan_districts",
+        "code": "118",
+        "gdb_fid": 118,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.82500000000005,
+          34.33758402700005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 19,
+        "polygon_0based": 19,
+        "local_ring_0based": 0,
+        "pos_a_0based": 6153,
+        "pos_b_0based": 6155,
+        "source_distance_degree": 3.1776437161565096e-14,
+        "layer": "forest_plan_districts",
+        "code": "138",
+        "gdb_fid": 138,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.77677359300003,
+          32.66602342300007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 19,
+        "polygon_0based": 19,
+        "local_ring_0based": 0,
+        "pos_a_0based": 6152,
+        "pos_b_0based": 6156,
+        "source_distance_degree": 3.1776437161565096e-14,
+        "layer": "forest_plan_districts",
+        "code": "138",
+        "gdb_fid": 138,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.77685636800004,
+          32.666135369000074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 1560,
+        "polygon_0based": 1560,
+        "local_ring_0based": 0,
+        "pos_a_0based": 1492,
+        "pos_b_0based": 1498,
+        "source_distance_degree": 1.4210854715202004e-13,
+        "layer": "forest_plan_districts",
+        "code": "140",
+        "gdb_fid": 140,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.3510358110001,
+          32.402542450000055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 1560,
+        "polygon_0based": 1560,
+        "local_ring_0based": 0,
+        "pos_a_0based": 1493,
+        "pos_b_0based": 1497,
+        "source_distance_degree": 1.3349885981068564e-13,
+        "layer": "forest_plan_districts",
+        "code": "140",
+        "gdb_fid": 140,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.35106730200005,
+          32.40247715300006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 1560,
+        "polygon_0based": 1560,
+        "local_ring_0based": 0,
+        "pos_a_0based": 1494,
+        "pos_b_0based": 1496,
+        "source_distance_degree": 2.1316282072803006e-14,
+        "layer": "forest_plan_districts",
+        "code": "140",
+        "gdb_fid": 140,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.3513178600001,
+          32.402017982000075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 2,
+        "polygon_0based": 2,
+        "local_ring_0based": 0,
+        "pos_a_0based": 8181,
+        "pos_b_0based": 8185,
+        "source_distance_degree": 9.664426065637204e-14,
+        "layer": "forest_plan_districts",
+        "code": "141",
+        "gdb_fid": 141,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.42852245100005,
+          33.567936306000036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 2,
+        "polygon_0based": 2,
+        "local_ring_0based": 0,
+        "pos_a_0based": 8182,
+        "pos_b_0based": 8184,
+        "source_distance_degree": 1.464821375527116e-13,
+        "layer": "forest_plan_districts",
+        "code": "141",
+        "gdb_fid": 141,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.42855416300006,
+          33.56773889200008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 237,
+        "polygon_0based": 237,
+        "local_ring_0based": 0,
+        "pos_a_0based": 24445,
+        "pos_b_0based": 24447,
+        "source_distance_degree": 4.832213032818602e-14,
+        "layer": "forest_plan_districts",
+        "code": "153",
+        "gdb_fid": 153,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.06042088200002,
+          31.44615675700004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 253,
+        "polygon_0based": 253,
+        "local_ring_0based": 0,
+        "pos_a_0based": 171413,
+        "pos_b_0based": 171415,
+        "source_distance_degree": 2.929642751054232e-14,
+        "layer": "forest_wide_basins",
+        "code": "10",
+        "gdb_fid": 10,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.49735114100008,
+          38.47986668500005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 2061,
+        "polygon_0based": 2061,
+        "local_ring_0based": 0,
+        "pos_a_0based": 65423,
+        "pos_b_0based": 65425,
+        "source_distance_degree": 2.842170943040401e-14,
+        "layer": "forest_wide_basins",
+        "code": "11",
+        "gdb_fid": 11,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.9681798050001,
+          39.880223054000055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 20,
+        "polygon_0based": 20,
+        "local_ring_0based": 0,
+        "pos_a_0based": 50115,
+        "pos_b_0based": 50117,
+        "source_distance_degree": 2.929642751054232e-14,
+        "layer": "forest_wide_basins",
+        "code": "13",
+        "gdb_fid": 13,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.9587633980001,
+          37.84133332400006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 20,
+        "polygon_0based": 20,
+        "local_ring_0based": 0,
+        "pos_a_0based": 50114,
+        "pos_b_0based": 50118,
+        "source_distance_degree": 6.355287432313019e-14,
+        "layer": "forest_wide_basins",
+        "code": "13",
+        "gdb_fid": 13,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.95916907900005,
+          37.84148513500003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 53300,
+        "pos_b_0based": 53302,
+        "source_distance_degree": 1.9065862296939058e-13,
+        "layer": "forest_wide_basins",
+        "code": "15",
+        "gdb_fid": 15,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.40087181600006,
+          36.43460978400003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 53299,
+        "pos_b_0based": 53303,
+        "source_distance_degree": 1.139086659085919e-13,
+        "layer": "forest_wide_basins",
+        "code": "15",
+        "gdb_fid": 15,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.4009707130001,
+          36.43473534200007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 33309,
+        "pos_b_0based": 33311,
+        "source_distance_degree": 8.556067554929069e-14,
+        "layer": "forest_wide_basins",
+        "code": "16",
+        "gdb_fid": 16,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59344819700004,
+          36.33620558600006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 33308,
+        "pos_b_0based": 33312,
+        "source_distance_degree": 1.1718571004216928e-13,
+        "layer": "forest_wide_basins",
+        "code": "16",
+        "gdb_fid": 16,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.5940615300001,
+          36.336277532000054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 33307,
+        "pos_b_0based": 33313,
+        "source_distance_degree": 3.552713678800501e-14,
+        "layer": "forest_wide_basins",
+        "code": "16",
+        "gdb_fid": 16,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59413847000008,
+          36.33628613500008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 33306,
+        "pos_b_0based": 33314,
+        "source_distance_degree": 1.0345658394727079e-13,
+        "layer": "forest_wide_basins",
+        "code": "16",
+        "gdb_fid": 16,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59430797700008,
+          36.336306225000044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 0,
+        "polygon_0based": 0,
+        "local_ring_0based": 0,
+        "pos_a_0based": 33305,
+        "pos_b_0based": 33315,
+        "source_distance_degree": 9.099386826154683e-14,
+        "layer": "forest_wide_basins",
+        "code": "16",
+        "gdb_fid": 16,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.59432199700007,
+          36.336307883000075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 253,
+        "polygon_0based": 253,
+        "local_ring_0based": 0,
+        "pos_a_0based": 152683,
+        "pos_b_0based": 152687,
+        "source_distance_degree": 1.6587787186393757e-13,
+        "layer": "forest_wide_basins",
+        "code": "17",
+        "gdb_fid": 17,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.8455429700001,
+          35.65671677500006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 253,
+        "polygon_0based": 253,
+        "local_ring_0based": 0,
+        "pos_a_0based": 152684,
+        "pos_b_0based": 152686,
+        "source_distance_degree": 1.4836567898030567e-13,
+        "layer": "forest_wide_basins",
+        "code": "17",
+        "gdb_fid": 17,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.84566605700002,
+          35.658057333000045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 29,
+        "polygon_0based": 29,
+        "local_ring_0based": 0,
+        "pos_a_0based": 26151,
+        "pos_b_0based": 26153,
+        "source_distance_degree": 3.1776437161565096e-14,
+        "layer": "forest_wide_basins",
+        "code": "18",
+        "gdb_fid": 18,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.63151383900004,
+          35.32509108100004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 29,
+        "polygon_0based": 29,
+        "local_ring_0based": 0,
+        "pos_a_0based": 26150,
+        "pos_b_0based": 26154,
+        "source_distance_degree": 4.973799150320701e-14,
+        "layer": "forest_wide_basins",
+        "code": "18",
+        "gdb_fid": 18,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.63160272400012,
+          35.325204847000066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 29,
+        "polygon_0based": 29,
+        "local_ring_0based": 0,
+        "pos_a_0based": 26211,
+        "pos_b_0based": 26213,
+        "source_distance_degree": 6.703246762680666e-14,
+        "layer": "forest_wide_basins",
+        "code": "18",
+        "gdb_fid": 18,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.63580142700005,
+          35.323438847000034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 29,
+        "polygon_0based": 29,
+        "local_ring_0based": 0,
+        "pos_a_0based": 26270,
+        "pos_b_0based": 26272,
+        "source_distance_degree": 2.842170943040401e-14,
+        "layer": "forest_wide_basins",
+        "code": "18",
+        "gdb_fid": 18,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.63725268500002,
+          35.32512237800006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 1082,
+        "polygon_0based": 1081,
+        "local_ring_0based": 0,
+        "pos_a_0based": 92,
+        "pos_b_0based": 94,
+        "source_distance_degree": 7.652779469160725e-14,
+        "layer": "forest_wide_basins",
+        "code": "18",
+        "gdb_fid": 18,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.71458843100004,
+          35.486045414000046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15468,
+        "pos_b_0based": 15470,
+        "source_distance_degree": 1.1718571004216928e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82089033700004,
+          35.08333333300004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15467,
+        "pos_b_0based": 15471,
+        "source_distance_degree": 6.703246762680666e-14,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82387389100006,
+          35.08090666700008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15466,
+        "pos_b_0based": 15472,
+        "source_distance_degree": 1.718573603063735e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82392778200006,
+          35.080863054000076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15465,
+        "pos_b_0based": 15473,
+        "source_distance_degree": 8.987733679556355e-14,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82392861200003,
+          35.08086250500003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15464,
+        "pos_b_0based": 15474,
+        "source_distance_degree": 1.2409095402129096e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82450250300008,
+          35.080397505000064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 15463,
+        "pos_b_0based": 15475,
+        "source_distance_degree": 1.2409095402129096e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.82470765200003,
+          35.08023107200006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 74844,
+        "pos_b_0based": 74846,
+        "source_distance_degree": 1.103058955909832e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.9376847210001,
+          34.86381389200005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 74843,
+        "pos_b_0based": 74847,
+        "source_distance_degree": 1.449228509952941e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.93898722400002,
+          34.86337138700003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 74842,
+        "pos_b_0based": 74848,
+        "source_distance_degree": 1.911874967259125e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.93990360600003,
+          34.86305777500007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 74841,
+        "pos_b_0based": 74849,
+        "source_distance_degree": 1.464821375527116e-13,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.94029250300002,
+          34.862916667000036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 74840,
+        "pos_b_0based": 74850,
+        "source_distance_degree": 9.532931148469529e-14,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.9407346170001,
+          34.86277455000004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 8,
+        "polygon_0based": 8,
+        "local_ring_0based": 0,
+        "pos_a_0based": 60442,
+        "pos_b_0based": 60444,
+        "source_distance_degree": 7.105427357601002e-14,
+        "layer": "forest_wide_basins",
+        "code": "23",
+        "gdb_fid": 23,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.30709348900007,
+          34.679955937000045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 930,
+        "polygon_0based": 930,
+        "local_ring_0based": 0,
+        "pos_a_0based": 120167,
+        "pos_b_0based": 120169,
+        "source_distance_degree": 1.7419169285135556e-13,
+        "layer": "forest_wide_basins",
+        "code": "32",
+        "gdb_fid": 32,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.90316277600004,
+          35.51196583800004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71136,
+        "pos_b_0based": 71174,
+        "source_distance_degree": 1.464821375527116e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11572198400006,
+          33.85921130600008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71137,
+        "pos_b_0based": 71173,
+        "source_distance_degree": 2.929642751054232e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11590166000008,
+          33.859279721000064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71138,
+        "pos_b_0based": 71172,
+        "source_distance_degree": 9.947598300641403e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.116164163,
+          33.859379441000044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71139,
+        "pos_b_0based": 71171,
+        "source_distance_degree": 1.4210854715202004e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11666666700012,
+          33.85959082900007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71140,
+        "pos_b_0based": 71170,
+        "source_distance_degree": 9.871175158657624e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11685944200008,
+          33.85967194600005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71141,
+        "pos_b_0based": 71169,
+        "source_distance_degree": 1.4785436552731435e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11748221800008,
+          33.859954162000065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71142,
+        "pos_b_0based": 71168,
+        "source_distance_degree": 6.703246762680666e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11808666700006,
+          33.86019110800004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71143,
+        "pos_b_0based": 71167,
+        "source_distance_degree": 7.105427357601002e-15,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.1185036060001,
+          33.86027166700006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71144,
+        "pos_b_0based": 71166,
+        "source_distance_degree": 1.9065862296939058e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11881194600005,
+          33.86026166700003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71145,
+        "pos_b_0based": 71165,
+        "source_distance_degree": 9.947598300641403e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.1194166670001,
+          33.860211108000044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71146,
+        "pos_b_0based": 71164,
+        "source_distance_degree": 1.0658141036401503e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.1197491700001,
+          33.860155829000064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71147,
+        "pos_b_0based": 71163,
+        "source_distance_degree": 1.0247593068766006e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.11990639400005,
+          33.86008555900003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71148,
+        "pos_b_0based": 71162,
+        "source_distance_degree": 1.4369837526939964e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.12008778200004,
+          33.85994444100004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71149,
+        "pos_b_0based": 71161,
+        "source_distance_degree": 1.9601194230935054e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.12021472100002,
+          33.85979305400008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71150,
+        "pos_b_0based": 71160,
+        "source_distance_degree": 1.0247593068766006e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.12029333300006,
+          33.85965694600003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71151,
+        "pos_b_0based": 71159,
+        "source_distance_degree": 1.5583418786108402e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.12035972800004,
+          33.85939500000006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71152,
+        "pos_b_0based": 71158,
+        "source_distance_degree": 2.1316282072803006e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.1203777820001,
+          33.85913777500008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71153,
+        "pos_b_0based": 71157,
+        "source_distance_degree": 1.464821375527116e-13,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.12045639400003,
+          33.858931108000036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 134,
+        "polygon_0based": 134,
+        "local_ring_0based": 0,
+        "pos_a_0based": 71154,
+        "pos_b_0based": 71156,
+        "source_distance_degree": 4.263256414560601e-14,
+        "layer": "forest_wide_basins",
+        "code": "33",
+        "gdb_fid": 33,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.12054722400012,
+          33.85888082900004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ring_0based": 4891,
+        "polygon_0based": 4891,
+        "local_ring_0based": 0,
+        "pos_a_0based": 31006,
+        "pos_b_0based": 31008,
+        "source_distance_degree": 4.832213032818602e-14,
+        "layer": "forest_wide_basins",
+        "code": "43",
+        "gdb_fid": 43,
+        "evidence": "Source-reference distinct vertices are equal in uploaded GDB; not an Esri-reported problem point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.06042088200002,
+          31.44615675700004
+        ]
+      }
+    }
+  ]
+}

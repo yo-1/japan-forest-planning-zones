@@ -1,0 +1,202 @@
+{
+  "python": "3.12.14",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "input_sha256": {
+    "forest_planning_zones_2026_provisional_labeled.gpkg": "ed4df025f6b078a7b1378adddee1eac86f277894d9dd755318963ac34acf2da7",
+    "district025_gdb.json": "433432955571410679a9792a0abedbb9fdb1c852636c9eafe1ffefbe594fe94b"
+  },
+  "index_base": 0,
+  "units": "degree; area degree squared",
+  "scope": "GEOS only, not ArcGIS XY tolerance or clustering; no production repair",
+  "contacts": {
+    "023": {
+      "valid": true,
+      "reason": "Valid Geometry",
+      "exact_cross_ring_vertex_pairs": [
+        {
+          "coordinate": [
+            141.57436528014892,
+            38.269476273794524
+          ],
+          "a": {
+            "polygon": 6439,
+            "ring": 6440,
+            "local_ring": 0,
+            "pos": 4
+          },
+          "b": {
+            "polygon": 6545,
+            "ring": 6546,
+            "local_ring": 0,
+            "pos": 9196
+          },
+          "distance_degree": 0.0,
+          "intersection_type": "Point",
+          "intersection_area": 0.0,
+          "shared_boundary_length": 0.0,
+          "polygon_areas": [
+            2.1918403317210727e-09,
+            0.001021952682822513
+          ]
+        },
+        {
+          "coordinate": [
+            141.58515358649998,
+            38.2764484635
+          ],
+          "a": {
+            "polygon": 6504,
+            "ring": 6505,
+            "local_ring": 0,
+            "pos": 4
+          },
+          "b": {
+            "polygon": 6545,
+            "ring": 6546,
+            "local_ring": 0,
+            "pos": 7882
+          },
+          "distance_degree": 0.0,
+          "intersection_type": "Point",
+          "intersection_area": 0.0,
+          "shared_boundary_length": 0.0,
+          "polygon_areas": [
+            5.4451549064129616e-09,
+            0.001021952682822513
+          ]
+        }
+      ]
+    },
+    "140": {
+      "valid": true,
+      "reason": "Valid Geometry",
+      "exact_cross_ring_vertex_pairs": [
+        {
+          "coordinate": [
+            130.4557579575,
+            32.5891687165
+          ],
+          "a": {
+            "polygon": 1729,
+            "ring": 1729,
+            "local_ring": 0,
+            "pos": 12047
+          },
+          "b": {
+            "polygon": 1851,
+            "ring": 1851,
+            "local_ring": 0,
+            "pos": 1
+          },
+          "distance_degree": 0.0,
+          "intersection_type": "Point",
+          "intersection_area": 0.0,
+          "shared_boundary_length": 0.0,
+          "polygon_areas": [
+            0.0028928307583320693,
+            7.761847463645504e-09
+          ]
+        }
+      ]
+    }
+  },
+  "diagnostic": {
+    "input": "attached JSON; not identical to national v0.3 geometry",
+    "ring": 2023,
+    "removed_positions": [
+      54179,
+      54180
+    ],
+    "candidate_valid": true,
+    "added_area": 1.4376017341337037e-12,
+    "lost_area": 0.0,
+    "added_geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            139.96784775600008,
+            39.88002055900006
+          ],
+          [
+            139.9678862720001,
+            39.879999690000034
+          ],
+          [
+            139.9681798050001,
+            39.880223054000055
+          ],
+          [
+            139.96788627800004,
+            39.87999968500003
+          ],
+          [
+            139.96784775600008,
+            39.88002055900006
+          ]
+        ]
+      ]
+    },
+    "layer_checks": {
+      "forest_plan_districts_provisional": {
+        "feature_count": 158,
+        "invalid_features": 0,
+        "intersections": [
+          {
+            "code": "025",
+            "intersects": true,
+            "intersection_area": 1.4842717359217898e-14,
+            "distance_degree": 0.0
+          }
+        ],
+        "nearest_other": {
+          "code": "026",
+          "intersects": false,
+          "intersection_area": 0.0,
+          "distance_degree": 0.08641672783618891
+        },
+        "other_within_1e_7_degree": []
+      },
+      "forest_unassigned_review": {
+        "feature_count": 20,
+        "invalid_features": 0,
+        "intersections": [],
+        "nearest_other": {
+          "code": "03216",
+          "intersects": false,
+          "intersection_area": 0.0,
+          "distance_degree": 1.0328413855638192
+        },
+        "other_within_1e_7_degree": []
+      },
+      "forest_wide_basins_provisional": {
+        "feature_count": 44,
+        "invalid_features": 0,
+        "intersections": [
+          {
+            "code": "11",
+            "intersects": true,
+            "intersection_area": 1.4842717359217898e-14,
+            "distance_degree": 0.0
+          }
+        ],
+        "nearest_other": {
+          "code": "11",
+          "intersects": true,
+          "intersection_area": 1.4842717359217898e-14,
+          "distance_degree": 0.0
+        },
+        "other_within_1e_7_degree": [
+          {
+            "code": "11",
+            "intersects": true,
+            "intersection_area": 1.4842717359217898e-14,
+            "distance_degree": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "inputs_unchanged": true
+}
