@@ -1,0 +1,39 @@
+{
+  "parts": [
+    {
+      "name": "マイ プロジェクト2.7z.001",
+      "bytes": 26214400,
+      "sha256": "cb9700af5c41af134b5de13d171e1e6ae998676d7f4c39d48a8a29c56e704a46"
+    },
+    {
+      "name": "マイ プロジェクト2.7z.002",
+      "bytes": 26214400,
+      "sha256": "1a4676a7527045b2dc4ae1014e7bd86d7fc0221b53f14d4a43f9d44f2f1f1402"
+    },
+    {
+      "name": "マイ プロジェクト2.7z.003",
+      "bytes": 26214400,
+      "sha256": "34c2f3b5da15bbdc1b0eded814308348b29b76eb029bc7554550ee2027107eb5"
+    },
+    {
+      "name": "マイ プロジェクト2.7z.004",
+      "bytes": 21948946,
+      "sha256": "796f33583731e86b44d662520eaeb83245c7c17975aac679eeb553145c935517"
+    }
+  ],
+  "combined_7z": {
+    "bytes": 100592146,
+    "sha256": "95893bdf978dd19f9f3572beab998efea09af17edeb324b666ce648125f6851e"
+  },
+  "restored_zips": [],
+  "seven_zip_testzip_ok": true,
+  "project5_zip": {
+    "bytes": 98355,
+    "sha256": "3244d60e8064ff4be8da09d44cf32ab6f5f2162bbc8ee4fa0d38d4cc84cc9ee4",
+    "crc_ok": true
+  },
+  "notes": [
+    "Project2 reconstructed as a directory tree, not an embedded ZIP. Original oversized ZIP SHA equality is not established.",
+    "Original archives are not committed publicly."
+  ]
+}
