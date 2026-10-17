@@ -1,0 +1,51 @@
+{
+  "date_jst": "2026-10-17",
+  "evidence": "User-provided ArcGIS screenshots and pasted unchanged-run log in this chat; not executed by this script. Original GDB and machine-readable Check Geometry tables not received.",
+  "input_package": {
+    "filename": "district025-arcgis-comparison-20261017.zip",
+    "sha256": "442806d09fe9f2512d33e7e4091983efa146b4913166ee8ad0fbc880aa239a70",
+    "gpkg_sha256": "b93f906489e5cd670be95f934d8c96fd8e98a7a079a9be666440e13c44efb4cf",
+    "reference": "Recreated comparison package supplied in this session; local user copy not independently hashed after download."
+  },
+  "common_settings_observed": {
+    "crs": "JGD2011 / EPSG:6668",
+    "xy_resolution_degrees": "0.000000001",
+    "xy_tolerance_degrees": "0.00000000898315284119521",
+    "storage": "Separate File Geodatabases",
+    "validation_method": "ESRI"
+  },
+  "unchanged": {
+    "feature_class": "district025_unchanged",
+    "output_table": "check_unchanged",
+    "run_start_jst": "2026-10-17T19:12:12+09:00",
+    "run_end_jst": "2026-10-17T19:12:14+09:00",
+    "problems_found": true,
+    "table_row_count_observed": 1,
+    "rows": [
+      {
+        "OBJECTID": 1,
+        "CLASS": "district025_unchanged",
+        "FEATURE_ID": 1,
+        "PROBLEM": "self intersections"
+      }
+    ],
+    "warning": "000442",
+    "pasted_log_received": true
+  },
+  "candidate": {
+    "feature_class": "district025_candidate",
+    "output_table": "check_candidate",
+    "run_start_from_history_jst": "2026-10-17T19:14:51+09:00",
+    "table_row_count_observed": 0,
+    "tool_success_observed": true,
+    "pasted_detailed_log_received": false,
+    "problems_found_output_parameter": "not received"
+  },
+  "limits": [
+    "Check Geometry issue coordinates not supplied; exact reported location not directly confirmed.",
+    "Exported GDB geometry and input hashes on user PC not independently checked.",
+    "ArcGIS clustering mechanism not proven.",
+    "No national repair rule or adoption approval.",
+    "Original source and derived-layer consistency remain unresolved."
+  ]
+}
