@@ -1,0 +1,8 @@
+{
+  "reference_version": "v0.2",
+  "zip_sha256": "61411ba087d26c97aad346d4363e8470e7168b47e4c95e15da66307d61b6b17b",
+  "gpkg_member": "forest_planning_zones_2026_provisional_labeled.gpkg",
+  "gpkg_sha256": "fea638d8882a4c1581bb24d634854065d89b463701a1a74b40ad75c1c27d2bea",
+  "local_extracted_file_matches_zip_member": true,
+  "not_v03_direct_verification": true
+}
