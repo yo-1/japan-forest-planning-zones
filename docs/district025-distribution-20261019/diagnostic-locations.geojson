@@ -1,0 +1,114 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "role": "diagnostic vertex; not an Esri-reported error location",
+        "ring": 2023,
+        "position": 54178,
+        "gdb_json_coordinate": [
+          139.96788627800004,
+          39.87999968500003
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.967886278,
+          39.879999685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "role": "diagnostic vertex; not an Esri-reported error location",
+        "ring": 2023,
+        "position": 54179,
+        "gdb_json_coordinate": [
+          139.9681798050001,
+          39.880223054000055
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.968179805,
+          39.880223054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "role": "diagnostic vertex; not an Esri-reported error location",
+        "ring": 2023,
+        "position": 54180,
+        "gdb_json_coordinate": [
+          139.9678862720001,
+          39.879999690000034
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.967886272,
+          39.87999969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "role": "diagnostic vertex; not an Esri-reported error location",
+        "ring": 2023,
+        "position": 54181,
+        "gdb_json_coordinate": [
+          139.96784775600008,
+          39.88002055900006
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.967847756,
+          39.880020559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "role": "two-vertex-deletion added area; diagnostic only"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              139.967847756,
+              39.880020559
+            ],
+            [
+              139.967886272,
+              39.87999969
+            ],
+            [
+              139.968179805,
+              39.880223054
+            ],
+            [
+              139.967886278,
+              39.879999685
+            ],
+            [
+              139.967847756,
+              39.880020559
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
