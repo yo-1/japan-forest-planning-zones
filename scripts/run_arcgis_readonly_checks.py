@@ -61,7 +61,7 @@ def main():
 
     expected={'void':['void_candidates'],
         'national':['forest_plan_districts_provisional','forest_wide_basins_provisional','forest_unassigned_review'],
-        'comparison':['district025_unchanged','district025_candidate']}
+        'comparison':['trial_025_unchanged','candidate_025']}
     try:
         for kind,gpkg in paths:
             with arcpy.EnvManager(workspace=str(gpkg.resolve())):
@@ -104,3 +104,4 @@ def main():
 
 
 if __name__=='__main__':main()
+
