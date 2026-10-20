@@ -1,0 +1,14 @@
+{
+  "dry_run": true,
+  "geometry_repair": false,
+  "inputs": [
+    {
+      "kind": "comparison",
+      "name": "district025_arcgis_comparison_20261017.gpkg",
+      "sha256": "b93f906489e5cd670be95f934d8c96fd8e98a7a079a9be666440e13c44efb4cf"
+    }
+  ],
+  "jobs": [],
+  "executed": false,
+  "arcpy_available": false
+}

@@ -1,0 +1,981 @@
+{
+  "input_sha256": {
+    "/workspace/work/candidates-restored/restored/candidates-typed.gpkg": "c0b6089486e07f8917ebfe57f2a11881f5cd2a6663328df63ca47fe5071d9091",
+    "/workspace/japan-forest-planning-zones/output/cloud-onboarding-review/work/plane_rectangular_municipalities_2026.gpkg": "1e09e083497bca003121473458321afb353aadaa660885c76b45f761ae72b492",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.shp": "6325d7f08c9374198e27b2cffd01bd420411be8b3cf3528da0587c6cea35538d",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.dbf": "2d2692800f8261243b281708dc99b89e7a7bd9ba8d8674bec14e7dcf47575911",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.shx": "62e0a234588c44eec98778808602e94af90af2d3f85d18ab8bcabd38c5d36751",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.prj": "1761bb7f37f73fd0eb043175a78403ba37ff1066299987c116fd43bbd0057eae",
+    "/workspace/geometry-verification-20261013/source-transfer/restored/shp/shp/N03-20260101.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+  },
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "pyogrio": "0.13.0",
+  "gdal": [
+    3,
+    12,
+    4
+  ],
+  "features": [
+    {
+      "candidate_id": "gap-21f4eea28bd4af31",
+      "original_candidate_fid": 1,
+      "representative_point": [
+        131.737371530399,
+        34.04748692800004
+      ],
+      "original_area_m2": 60150.36094011383,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 60150.36094011383,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 77156,
+              "attributes": {
+                "N03_001": "山口県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "周南市",
+                "N03_005": null,
+                "N03_007": "35215"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 60150.36094011383,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1053,
+              "attributes": {
+                "N03_001": "山口県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "周南市",
+                "N03_005": null,
+                "N03_007": "35215"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-25f67c482ea1c996",
+      "original_candidate_fid": 2,
+      "representative_point": [
+        141.75612312883163,
+        40.3677857795
+      ],
+      "original_area_m2": 3705.6028129476,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 3705.602812947598,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 20080,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": "九戸郡",
+                "N03_004": "洋野町",
+                "N03_005": null,
+                "N03_007": "03507"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 3705.602812947598,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1132,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": "九戸郡",
+                "N03_004": "洋野町",
+                "N03_005": null,
+                "N03_007": "03507"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-2cfa5a8f6e759bce",
+      "original_candidate_fid": 3,
+      "representative_point": [
+        138.6375840249445,
+        36.416714780625114
+      ],
+      "original_area_m2": 0.0008285579927900244,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.0008285579927929687,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 32101,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "長野原町",
+                "N03_005": null,
+                "N03_007": "10424"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 51224,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.0008285579927929687,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1063,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "長野原町",
+                "N03_005": null,
+                "N03_007": "10424"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 1710,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-5eef01ecfce67d1b",
+      "original_candidate_fid": 4,
+      "representative_point": [
+        131.73827777060038,
+        34.050753432500045
+      ],
+      "original_area_m2": 199963.06331029884,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 199963.0633102981,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 77156,
+              "attributes": {
+                "N03_001": "山口県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "周南市",
+                "N03_005": null,
+                "N03_007": "35215"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 199963.0633102981,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1053,
+              "attributes": {
+                "N03_001": "山口県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "周南市",
+                "N03_005": null,
+                "N03_007": "35215"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-688a5e874ac9ec69",
+      "original_candidate_fid": 5,
+      "representative_point": [
+        141.88915954944576,
+        39.27312577500001
+      ],
+      "original_area_m2": 11.06736690881727,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 11.067366908817268,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 17564,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "釜石市",
+                "N03_005": null,
+                "N03_007": "03211"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 11.067366908817268,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 175,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "釜石市",
+                "N03_005": null,
+                "N03_007": "03211"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-8113f3b0bf65eea8",
+      "original_candidate_fid": 6,
+      "representative_point": [
+        138.6209692714192,
+        36.416742294125044
+      ],
+      "original_area_m2": 0.001376081088650949,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.0013760810886523944,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 32101,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "長野原町",
+                "N03_005": null,
+                "N03_007": "10424"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 51224,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.0013760810886523944,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1063,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "長野原町",
+                "N03_005": null,
+                "N03_007": "10424"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 1710,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-88bbd3fb93920ed1",
+      "original_candidate_fid": 7,
+      "representative_point": [
+        138.62982201924947,
+        36.41685075362507
+      ],
+      "original_area_m2": 0.004581387619114086,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.004581387619114172,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 32101,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "長野原町",
+                "N03_005": null,
+                "N03_007": "10424"
+              },
+              "intersection_type": "LineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 51224,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.004581387619114172,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1063,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "長野原町",
+                "N03_005": null,
+                "N03_007": "10424"
+              },
+              "intersection_type": "LineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 1710,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-8b1735220aa5e6e5",
+      "original_candidate_fid": 8,
+      "representative_point": [
+        142.0012719588023,
+        39.447312919
+      ],
+      "original_area_m2": 1808.4451196802402,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 1808.44511968024,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 18323,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": "下閉伊郡",
+                "N03_004": "山田町",
+                "N03_005": null,
+                "N03_007": "03482"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 1808.44511968024,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 378,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": "下閉伊郡",
+                "N03_004": "山田町",
+                "N03_005": null,
+                "N03_007": "03482"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-9795735d3cabea7c",
+      "original_candidate_fid": 9,
+      "representative_point": [
+        141.49947443497302,
+        38.5917244955001
+      ],
+      "original_area_m2": 166.3884604418683,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 166.38846044186838,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 21263,
+              "attributes": {
+                "N03_001": "宮城県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "石巻市",
+                "N03_005": null,
+                "N03_007": "04202"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 166.38846044186838,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1456,
+              "attributes": {
+                "N03_001": "宮城県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "石巻市",
+                "N03_005": null,
+                "N03_007": "04202"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-ab65ca6070d02661",
+      "original_candidate_fid": 10,
+      "representative_point": [
+        124.15134296907772,
+        24.329856374000002
+      ],
+      "original_area_m2": 195225.50422636303,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 195225.50422636323,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 120337,
+              "attributes": {
+                "N03_001": "沖縄県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "石垣市",
+                "N03_005": null,
+                "N03_007": "47207"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 195225.50422636323,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1540,
+              "attributes": {
+                "N03_001": "沖縄県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "石垣市",
+                "N03_005": null,
+                "N03_007": "47207"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-b7f28ed2a89fa1dd",
+      "original_candidate_fid": 11,
+      "representative_point": [
+        138.55342199320262,
+        36.41680312762506
+      ],
+      "original_area_m2": 0.0031419732978102966,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.003141973297810262,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 32102,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "嬬恋村",
+                "N03_005": null,
+                "N03_007": "10425"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 51224,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 2,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 0.003141973297810262,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1064,
+              "attributes": {
+                "N03_001": "群馬県",
+                "N03_002": null,
+                "N03_003": "吾妻郡",
+                "N03_004": "嬬恋村",
+                "N03_005": null,
+                "N03_007": "10425"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            },
+            {
+              "fid": 1710,
+              "attributes": {
+                "N03_001": "長野県",
+                "N03_002": null,
+                "N03_003": "北佐久郡",
+                "N03_004": "軽井沢町",
+                "N03_005": null,
+                "N03_007": "20321"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-bfb40440ce6f5ac1",
+      "original_candidate_fid": 12,
+      "representative_point": [
+        141.80065992308596,
+        40.289235581499995
+      ],
+      "original_area_m2": 64.55677955789493,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 64.55677955789496,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 15559,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "久慈市",
+                "N03_005": null,
+                "N03_007": "03207"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 64.55677955789496,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 252,
+              "attributes": {
+                "N03_001": "岩手県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "久慈市",
+                "N03_005": null,
+                "N03_007": "03207"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    },
+    {
+      "candidate_id": "gap-c578d39966036c02",
+      "original_candidate_fid": 13,
+      "representative_point": [
+        131.73908307488915,
+        34.048788220500086
+      ],
+      "original_area_m2": 38710.234509709975,
+      "contexts": {
+        "N03": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 38710.23450971003,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 77156,
+              "attributes": {
+                "N03_001": "山口県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "周南市",
+                "N03_005": null,
+                "N03_007": "35215"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        },
+        "published_municipalities": {
+          "bbox_feature_count": 1,
+          "covered_area_m2": 0.0,
+          "outside_area_m2": 38710.23450971003,
+          "covers_representative_point": false,
+          "contributors_or_within_1e_9_degree": [
+            {
+              "fid": 1053,
+              "attributes": {
+                "N03_001": "山口県",
+                "N03_002": null,
+                "N03_003": null,
+                "N03_004": "周南市",
+                "N03_005": null,
+                "N03_007": "35215"
+              },
+              "intersection_type": "MultiLineString",
+              "intersection_empty": false,
+              "intersection_area_degree2": 0.0,
+              "distance_degree": 0.0,
+              "covers_representative_point": false
+            }
+          ],
+          "inside_empty": false,
+          "outside_empty": false
+        }
+      }
+    }
+  ],
+  "summary": {
+    "candidate_count": 13,
+    "source_point_covered": [],
+    "municipality_point_covered": []
+  },
+  "inputs_unchanged": true,
+  "limits": [
+    "Source N03 is the user-supplied pinned 2026 dataset; legal meaning and current forestry membership are not established.",
+    "No water classification or authoritative lake boundary is available in N03 attributes.",
+    "Representative-point coverage is local evidence, not whole-polygon equivalence; overlay areas are separately retained.",
+    "Tiny overlays can have floating point residuals; no tolerance suppresses nonempty differences.",
+    "No source geometry modification, filling, deletion or national repair rule."
+  ]
+}

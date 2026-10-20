@@ -1,0 +1,30 @@
+{
+  "parts": [
+    {
+      "name": "candidates-typed.7z.001",
+      "bytes": 26214400,
+      "sha256": "f7c6727200159efde9ebc909e4cd191c22a01a0539bac97c59b634795788e4bb"
+    },
+    {
+      "name": "candidates-typed.7z.002",
+      "bytes": 26214400,
+      "sha256": "dc2ecf7062556aeaaa4c6781ebeafdea03c37cf9627330dafc1a70b433f9e49f"
+    },
+    {
+      "name": "candidates-typed.7z.003",
+      "bytes": 25395273,
+      "sha256": "ecc2e11f51db893a04b66eb717970c92c150261065c6e51ed89d9efb8487d607"
+    }
+  ],
+  "combined_7z": {
+    "bytes": 77824073,
+    "sha256": "b154509e97c9a0f364a30cc7fce7de50e9c1ada47ee94007fcf9eef5172a6b5b"
+  },
+  "restored_zips": [],
+  "seven_zip_testzip_ok": true,
+  "gpkg": {
+    "name": "candidates-typed.gpkg",
+    "bytes": 172011520,
+    "sha256": "c0b6089486e07f8917ebfe57f2a11881f5cd2a6663328df63ca47fe5071d9091"
+  }
+}

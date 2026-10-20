@@ -1,0 +1,14 @@
+{
+  "dry_run": true,
+  "geometry_repair": false,
+  "inputs": [
+    {
+      "kind": "void",
+      "name": "candidates-typed.gpkg",
+      "sha256": "c0b6089486e07f8917ebfe57f2a11881f5cd2a6663328df63ca47fe5071d9091"
+    }
+  ],
+  "jobs": [],
+  "executed": false,
+  "arcpy_available": false
+}

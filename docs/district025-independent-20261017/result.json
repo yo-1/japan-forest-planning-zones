@@ -1,0 +1,43 @@
+{
+  "input_file": "district025_gdb.json",
+  "sha256": "433432955571410679a9792a0abedbb9fdb1c852636c9eafe1ffefbe594fe94b",
+  "python": "3.12.14",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "index_convention": "ring and pos are 0-based indices into original JSON features[0].geometry.rings. For 1-based indexing add 1. Closing coordinate retained for geometry validity; removed from vertex search when identical to first coordinate. First and last distinct vertices are cyclic neighbors and excluded. Adjacent pairs excluded only within the same ring; cross-ring pairs searched as well. Positive planar Euclidean distance in input longitude/latitude degrees, not geodesic distance.",
+  "ring_count": 2384,
+  "stored_coordinate_count": 119257,
+  "closed_ring_count": 2384,
+  "searched_vertex_count": 116873,
+  "threshold_degrees": 9e-09,
+  "positive_nonadjacent_pair_count": 1,
+  "same_ring_positive_pair_count": 1,
+  "cross_ring_positive_pair_count": 0,
+  "excluded_zero_distance_nonadjacent_pairs": 0,
+  "excluded_adjacent_pairs_within_threshold": 0,
+  "pairs": [
+    {
+      "ring_a_0based": 2023,
+      "pos_a_0based": 54178,
+      "ring_b_0based": 2023,
+      "pos_b_0based": 54180,
+      "coordinate_a": [
+        139.96788627800004,
+        39.87999968500003
+      ],
+      "coordinate_b": [
+        139.9678862720001,
+        39.879999690000034
+      ],
+      "delta_longitude_degrees": -5.9999365475960076e-09,
+      "delta_latitude_degrees": 5.000003966415534e-09,
+      "distance_degrees": 7.810203469779092e-09
+    }
+  ],
+  "geometry_type": "MultiPolygon",
+  "geometry_is_valid": true,
+  "geometry_validity_reason": "Valid Geometry",
+  "invalid_individual_rings": 0,
+  "arcgis_limitation": "This is GEOS validity and a degree-distance vertex search. It does not reproduce ArcGIS XY tolerance, resolution, clustering, or ArcGIS geometry validation.",
+  "source_unchanged": true
+}

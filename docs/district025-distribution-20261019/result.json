@@ -1,0 +1,120 @@
+{
+  "zip_sha256": "442806d09fe9f2512d33e7e4091983efa146b4913166ee8ad0fbc880aa239a70",
+  "zip_bytes": 2514167,
+  "esri_json_sha256": "433432955571410679a9792a0abedbb9fdb1c852636c9eafe1ffefbe594fe94b",
+  "prior_gdb_report_sha256": "ceec7bcfcbd6dabdbfc637a5f859632cce396b215624ac9e4415796fa0ee9f9e",
+  "index_base": 0,
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "provenance": "README explicitly identifies a 2026-10-17 reconstruction; not the old Claude binary",
+  "fresh_raw_gdb_read": false,
+  "arcgis_rerun": false,
+  "layers": {
+    "unchanged": {
+      "table": "trial_025_unchanged",
+      "polygons": 2384,
+      "coordinates": 119257,
+      "valid": true,
+      "ordered_gpkg_xy_sha256": "95df9d4b9604974930587ff556a42e1d214b482503fcf8dc6dc262c6120fe17d",
+      "reference_gdb_xy_sha256": "d163390ddfa32abb480957d66f1323b405cdaadd2172e1a8debfa20c88f54427",
+      "reference_matches_saved_gdb_hash": true,
+      "max_abs_coordinate_component_delta_degree": 1.1368683772161603e-13,
+      "unequal_coordinate_pairs": 119257,
+      "max_vertex_distance_degree": 1.3796244387938543e-13,
+      "common_attributes_checked": 9,
+      "common_attributes_different": {},
+      "close_vertices": {
+        "threshold_degree": 9e-09,
+        "positive_nonadjacent_pairs": [
+          {
+            "ring_a_0based": 2023,
+            "pos_a_0based": 54178,
+            "ring_b_0based": 2023,
+            "pos_b_0based": 54180,
+            "coordinate_a": [
+              139.967886278,
+              39.879999685
+            ],
+            "coordinate_b": [
+              139.967886272,
+              39.87999969
+            ],
+            "distance_degree": 7.810264423376394e-09
+          }
+        ],
+        "zero_distance_nonadjacent_pair_count": 0,
+        "excluded_adjacent_pair_count": 0
+      }
+    },
+    "candidate": {
+      "table": "candidate_025",
+      "polygons": 2384,
+      "coordinates": 119255,
+      "valid": true,
+      "ordered_gpkg_xy_sha256": "15f9842a62ac06e1071b95191c98392e118b2cef4a006152a869a1c095e65993",
+      "reference_gdb_xy_sha256": "6a9b7bf408a677ce069b4fcb500e06f4de042492fbede79d77184634cc2f0129",
+      "reference_matches_saved_gdb_hash": true,
+      "max_abs_coordinate_component_delta_degree": 1.1368683772161603e-13,
+      "unequal_coordinate_pairs": 119255,
+      "max_vertex_distance_degree": 1.3796244387938543e-13,
+      "common_attributes_checked": 9,
+      "common_attributes_different": {},
+      "close_vertices": {
+        "threshold_degree": 9e-09,
+        "positive_nonadjacent_pairs": [],
+        "zero_distance_nonadjacent_pair_count": 0,
+        "excluded_adjacent_pair_count": 0
+      }
+    }
+  },
+  "members": [
+    {
+      "name": "README.md",
+      "bytes": 2360,
+      "sha256": "69e5d2c6f0dce77dc7999702f72c5c69dfb257cea9b670f15ef9d82ac3dedb4b"
+    },
+    {
+      "name": "build_comparison.py",
+      "bytes": 3798,
+      "sha256": "c031c315ad94f9257912a6a7ec88f8e90be5dbaf48822a30b5c04e67b7517573"
+    },
+    {
+      "name": "district025_arcgis_comparison_20261017.gpkg",
+      "bytes": 3919872,
+      "sha256": "b93f906489e5cd670be95f934d8c96fd8e98a7a079a9be666440e13c44efb4cf"
+    },
+    {
+      "name": "district025_arcgis_comparison_20261017.json",
+      "bytes": 765,
+      "sha256": "f20cdac1e6c47d8503ba9df21ef00239ea7ea6f9e4ae94bdff8b65e2affee5d7"
+    }
+  ],
+  "gpkg_sha256": "b93f906489e5cd670be95f934d8c96fd8e98a7a079a9be666440e13c44efb4cf",
+  "local_change": {
+    "ring": 2023,
+    "removed_positions": [
+      54179,
+      54180
+    ],
+    "removed_gpkg_coordinates": [
+      [
+        139.968179805,
+        39.880223054
+      ],
+      [
+        139.967886272,
+        39.87999969
+      ]
+    ],
+    "gpkg_entrance_distance_degree": 7.810264423376394e-09,
+    "added_area_degree2": 1.4376091873395612e-12,
+    "lost_area_degree2": 0.0
+  },
+  "limits": [
+    "Fresh GPKG versus recovered GDB-derived JSON comparison; raw GDB unavailable in this run.",
+    "Candidate GDB coordinates independently bridged by saved SHA-256 after the recorded two deletions.",
+    "No Esri error position is present in the saved CLASS/FEATURE_ID/PROBLEM tables.",
+    "Coordinates identify the changed notch, not the Esri internal mechanism or legal ownership."
+  ],
+  "inputs_unchanged": true
+}

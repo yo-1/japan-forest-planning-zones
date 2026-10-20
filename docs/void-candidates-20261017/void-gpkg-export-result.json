@@ -1,0 +1,542 @@
+{
+  "python": "3.12.14",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "pyogrio": "0.13.0",
+  "gdal": [
+    3,
+    12,
+    4
+  ],
+  "input_sha256": {
+    "/workspace/work/candidates-restored/restored/candidates-typed.gpkg": "c0b6089486e07f8917ebfe57f2a11881f5cd2a6663328df63ca47fe5071d9091",
+    "/workspace/attachments/7f034e7c-de0b-42a6-9666-d02a787ed002/void_candidates_gdb.json": "37acbb8f0b6602f35f01f9fd0de664b029e41eac1ac959caf17611296ae87dea"
+  },
+  "source_gpkg_registration": [
+    [
+      "void_candidates",
+      "geom",
+      "POLYGON",
+      6668
+    ],
+    [
+      "enclosing_rings",
+      "geom",
+      "POLYGON",
+      6668
+    ],
+    [
+      "stage_differences",
+      "geom",
+      "POLYGON",
+      6668
+    ],
+    [
+      "zone_reference",
+      "geom",
+      "MULTIPOLYGON",
+      6668
+    ]
+  ],
+  "source_gpkg_integrity": "ok",
+  "features": [
+    {
+      "gdb_fid": 1,
+      "candidate_id": "gap-21f4eea28bd4af31",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 5,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_vertex_displacement_degree": 1.2710574864626038e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 0.0023036646092016396,
+      "gdb_minimum_clearance_degree": 0.0023036646092348106,
+      "source_local_laea_area_m2": 60150.36094011383,
+      "gdb_local_laea_area_m2": 60150.36094128274,
+      "added_area_m2": 1.514516963450632e-06,
+      "lost_area_m2": 6.090443665481051e-07,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 2,
+      "candidate_id": "gap-25f67c482ea1c996",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 5,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_vertex_displacement_degree": 1.3043830727131805e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 0.0003287051201213161,
+      "gdb_minimum_clearance_degree": 0.0003287051201082062,
+      "source_local_laea_area_m2": 3705.6028129476,
+      "gdb_local_laea_area_m2": 3705.6028131137286,
+      "added_area_m2": 1.2132967697198183e-06,
+      "lost_area_m2": 1.02800027994297e-06,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 3,
+      "candidate_id": "gap-2cfa5a8f6e759bce",
+      "reported_by_esri": true,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 5,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 5.000231340090977e-10,
+      "maximum_vertex_displacement_degree": 6.009740377268953e-10,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 1.3176970279406612e-09
+        }
+      ],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 9.999894245993346e-10
+        }
+      ],
+      "source_minimum_clearance_degree": 1.3104952417738407e-09,
+      "gdb_minimum_clearance_degree": 7.588864691354502e-10,
+      "source_local_laea_area_m2": 0.0008285579927900244,
+      "gdb_local_laea_area_m2": 0.0004810243681916404,
+      "added_area_m2": 1.769273588595377e-05,
+      "lost_area_m2": 0.00036522631474729877,
+      "source_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              138.63754303500014,
+              36.41676289200012
+            ],
+            [
+              138.63762501575002,
+              36.416666669250105
+            ],
+            [
+              138.6376253960001,
+              36.41666622500003
+            ],
+            [
+              138.63762501466664,
+              36.41666666850003
+            ],
+            [
+              138.63754303500014,
+              36.41676289200012
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "gdb_fid": 4,
+      "candidate_id": "gap-5eef01ecfce67d1b",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 1521,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 4.999947122996673e-10,
+      "maximum_vertex_displacement_degree": 7.070591100245506e-10,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 2.598551030032279e-08,
+      "gdb_minimum_clearance_degree": 2.555384802386571e-08,
+      "source_local_laea_area_m2": 199963.06331029884,
+      "gdb_local_laea_area_m2": 199963.0634422725,
+      "added_area_m2": 0.00014164222304438272,
+      "lost_area_m2": 1.3011932001767453e-06,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 5,
+      "candidate_id": "gap-688a5e874ac9ec69",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 4,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_vertex_displacement_degree": 1.2710574864626038e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 3.656619920786939e-05,
+      "gdb_minimum_clearance_degree": 3.656619900287876e-05,
+      "source_local_laea_area_m2": 11.06736690881727,
+      "gdb_local_laea_area_m2": 11.067366865620123,
+      "added_area_m2": 1.5524281177945122e-08,
+      "lost_area_m2": 6.013734826645515e-08,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 6,
+      "candidate_id": "gap-8113f3b0bf65eea8",
+      "reported_by_esri": true,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 5,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 5.000231340090977e-10,
+      "maximum_vertex_displacement_degree": 6.009740377268953e-10,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 1.3176970279406612e-09
+        }
+      ],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 9.999894245993346e-10
+        }
+      ],
+      "source_minimum_clearance_degree": 1.2980225017234842e-09,
+      "gdb_minimum_clearance_degree": 7.118932215427457e-10,
+      "source_local_laea_area_m2": 0.001376081088650949,
+      "gdb_local_laea_area_m2": 0.0007547097055038421,
+      "added_area_m2": 2.699118354598795e-06,
+      "lost_area_m2": 0.0006239573519843736,
+      "source_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              138.620894669,
+              36.41681791899998
+            ],
+            [
+              138.62104387475006,
+              36.416666669250105
+            ],
+            [
+              138.62104427999998,
+              36.41666625200014
+            ],
+            [
+              138.62104387366668,
+              36.41666666850003
+            ],
+            [
+              138.620894669,
+              36.41681791899998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "gdb_fid": 7,
+      "candidate_id": "gap-88bbd3fb93920ed1",
+      "reported_by_esri": true,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 5,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 5.000231340090977e-10,
+      "maximum_vertex_displacement_degree": 6.009109780975404e-10,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 1.3176300694186517e-09
+        }
+      ],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 9.999894245993346e-10
+        }
+      ],
+      "source_minimum_clearance_degree": 1.1701763861547252e-09,
+      "gdb_minimum_clearance_degree": 4.685032282187424e-10,
+      "source_local_laea_area_m2": 0.004581387619114086,
+      "gdb_local_laea_area_m2": 0.0018342650842892994,
+      "added_area_m2": 0.0,
+      "lost_area_m2": 0.0027471225348249004,
+      "source_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              138.62947406000012,
+              36.41666622500003
+            ],
+            [
+              138.62947489325,
+              36.41666666925007
+            ],
+            [
+              138.6301691440001,
+              36.41703483800006
+            ],
+            [
+              138.62947489433333,
+              36.41666666850003
+            ],
+            [
+              138.62947406000012,
+              36.41666622500003
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "gdb_fid": 8,
+      "candidate_id": "gap-8b1735220aa5e6e5",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 28,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_vertex_displacement_degree": 1.3043830727131805e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 3.7148153403892626e-06,
+      "gdb_minimum_clearance_degree": 3.7148153867595024e-06,
+      "source_local_laea_area_m2": 1808.4451196802402,
+      "gdb_local_laea_area_m2": 1808.4451195862814,
+      "added_area_m2": 0.0,
+      "lost_area_m2": 0.0,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 9,
+      "candidate_id": "gap-9795735d3cabea7c",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 121,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_vertex_displacement_degree": 1.6077746776921858e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 1.800000291041215e-07,
+      "gdb_minimum_clearance_degree": 1.7999997226070263e-07,
+      "source_local_laea_area_m2": 166.3884604418683,
+      "gdb_local_laea_area_m2": 166.38846035614552,
+      "added_area_m2": 1.7489954252932467e-07,
+      "lost_area_m2": 2.614647783197676e-07,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 10,
+      "candidate_id": "gap-ab65ca6070d02661",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 214,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_vertex_displacement_degree": 1.359812473041063e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 4.6326960911609126e-06,
+      "gdb_minimum_clearance_degree": 4.632696090200781e-06,
+      "source_local_laea_area_m2": 195225.50422636303,
+      "gdb_local_laea_area_m2": 195225.5042262751,
+      "added_area_m2": 4.9710336573775445e-06,
+      "lost_area_m2": 5.028681413606057e-06,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 11,
+      "candidate_id": "gap-b7f28ed2a89fa1dd",
+      "reported_by_esri": true,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 5,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 5.000231340090977e-10,
+      "maximum_vertex_displacement_degree": 6.009740377268953e-10,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 1.3176502930497479e-09
+        }
+      ],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [
+        {
+          "pos_a_0based": 1,
+          "pos_b_0based": 3,
+          "distance_degree": 9.999894245993346e-10
+        }
+      ],
+      "source_minimum_clearance_degree": 1.2050596230094697e-09,
+      "gdb_minimum_clearance_degree": 5.216591846993611e-10,
+      "source_local_laea_area_m2": 0.0031419732978102966,
+      "gdb_local_laea_area_m2": 0.0013601365090892825,
+      "added_area_m2": 5.798987074301724e-11,
+      "lost_area_m2": 0.001781545776286398,
+      "source_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              138.553198145,
+              36.41666625200014
+            ],
+            [
+              138.55319882325017,
+              36.416666669250105
+            ],
+            [
+              138.55364516200007,
+              36.41693958600001
+            ],
+            [
+              138.5531988243335,
+              36.41666666850003
+            ],
+            [
+              138.553198145,
+              36.41666625200014
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "gdb_fid": 12,
+      "candidate_id": "gap-bfb40440ce6f5ac1",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 30,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_vertex_displacement_degree": 1.3406493525361332e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 8.111041853380894e-07,
+      "gdb_minimum_clearance_degree": 8.111041919870745e-07,
+      "source_local_laea_area_m2": 64.55677955789493,
+      "gdb_local_laea_area_m2": 64.55677953501221,
+      "added_area_m2": 1.0753727141363919e-07,
+      "lost_area_m2": 1.311758173433223e-07,
+      "source_geometry": null
+    },
+    {
+      "gdb_fid": 13,
+      "candidate_id": "gap-c578d39966036c02",
+      "reported_by_esri": false,
+      "source_valid": true,
+      "gdb_valid": true,
+      "coordinate_count": 185,
+      "same_coordinate_count_and_order": true,
+      "exact_gpkg_gdb_coordinates": false,
+      "exact_gdb_json_coordinates": true,
+      "source_attribute_differences": [],
+      "source_attribute_count": 29,
+      "maximum_absolute_component_delta_degree": 2.2737367544323206e-13,
+      "maximum_vertex_displacement_degree": 2.5421149729252077e-13,
+      "original_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "exported_nonadjacent_pairs_within_gdb_xy_tolerance": [],
+      "source_minimum_clearance_degree": 6.745023693330119e-06,
+      "gdb_minimum_clearance_degree": 6.745023806915427e-06,
+      "source_local_laea_area_m2": 38710.234509709975,
+      "gdb_local_laea_area_m2": 38710.234509528964,
+      "added_area_m2": 1.4293494528042561e-06,
+      "lost_area_m2": 1.753642099157173e-06,
+      "source_geometry": null
+    }
+  ],
+  "summary": {
+    "matched_candidates": 13,
+    "total_coordinate_count": 2133,
+    "source_valid_count": 13,
+    "gdb_valid_count": 13,
+    "maximum_absolute_component_delta_degree": 5.000231340090977e-10,
+    "source_ids_with_near_nonadjacent_vertices": [
+      3,
+      6,
+      7,
+      11
+    ],
+    "exported_ids_with_near_nonadjacent_vertices": [
+      3,
+      6,
+      7,
+      11
+    ],
+    "esri_reported_ids": [
+      3,
+      6,
+      7,
+      11
+    ]
+  },
+  "inputs_unchanged": true,
+  "limits": [
+    "Ring correspondence is by the supplied order with identical counts; no snapping, rotation, repair or precision grid is used.",
+    "Polygon to single-part MultiPolygon wrapper and automatic GDB fields differ; source 29 attributes match.",
+    "Metric differences are overlay-first then projected to local GRS80 LAEA, sensitive to double precision for very thin shapes.",
+    "No source GPKG ArcGIS run, internal clustering inference or direct error-location evidence.",
+    "Origin means uploaded candidates GPKG, not independent N03 lineage validation.",
+    "This input is void review data, not the missing district025 comparison GPKG or national forest GPKG."
+  ]
+}

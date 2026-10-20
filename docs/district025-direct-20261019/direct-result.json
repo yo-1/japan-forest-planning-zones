@@ -1,0 +1,560 @@
+{
+  "python": "3.12.14",
+  "shapely": "2.1.2",
+  "geos": "3.13.1",
+  "numpy": "2.5.3",
+  "pyogrio": "0.13.0",
+  "gdal": [
+    3,
+    12,
+    4
+  ],
+  "input_sha256": {
+    "/workspace/attachments/6f2c4a35-be3c-4d8a-84d3-68e707a94c33/district025-arcgis-comparison-20261017.zip": "442806d09fe9f2512d33e7e4091983efa146b4913166ee8ad0fbc880aa239a70",
+    "/workspace/attachments/4d88451a-3947-41ad-bfe1-14334885be76/マイ プロジェクト4.zip": "63b42259484b2e3d9e22a99e05416a68f8ec0a766187b274797991c799240f6a"
+  },
+  "index_base": 0,
+  "layers": {
+    "unchanged": {
+      "gpkg_layer": "trial_025_unchanged",
+      "gdb_layer": "district025_unchanged",
+      "gpkg_fid": 4,
+      "gdb_fid": 1,
+      "source_attributes": {
+        "source_district_fid": 25,
+        "district_code": "025",
+        "district_name": "米代川",
+        "basin_code": "11",
+        "basin_name": "米代・雄物川",
+        "source_features": 15,
+        "status": "確認用・区域未確定",
+        "final_usable": "false",
+        "original_esri_problem": "self intersections"
+      },
+      "gdb_only_attributes": {
+        "Shape_Length": 7.4091760985707555,
+        "Shape_Area": 0.5532266445089101
+      },
+      "source_attribute_differences": {},
+      "same_ring_counts_vertex_counts_and_order": true,
+      "maximum_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_displacement_degree": 1.3796244387938543e-13,
+      "compared_ring_count": 2384,
+      "rings_with_nonzero_coordinate_delta": 2384,
+      "largest_ring_deltas": [
+        {
+          "ring_0based": 0,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 1,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 2,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 3,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 4,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        },
+        {
+          "ring_0based": 6,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3043830727131805e-13
+        },
+        {
+          "ring_0based": 7,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        },
+        {
+          "ring_0based": 8,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 9,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        },
+        {
+          "ring_0based": 10,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        }
+      ],
+      "notch_ring_delta": {
+        "ring_0based": 2023,
+        "max_component_delta_degree": 1.1368683772161603e-13,
+        "max_displacement_degree": 1.3796244387938543e-13
+      },
+      "gpkg_ordered_xy_sha256": "95df9d4b9604974930587ff556a42e1d214b482503fcf8dc6dc262c6120fe17d",
+      "gdb_ordered_xy_sha256": "d163390ddfa32abb480957d66f1323b405cdaadd2172e1a8debfa20c88f54427",
+      "gdb_settings": {
+        "XOrigin": "-400",
+        "YOrigin": "-400",
+        "XYScale": "999999999.99999988",
+        "XYTolerance": "8.983152841195215e-09",
+        "WKID": "104020",
+        "LatestWKID": "6668"
+      },
+      "check_fields": [
+        "CLASS",
+        "FEATURE_ID",
+        "PROBLEM"
+      ],
+      "saved_esri_rows": [
+        {
+          "CLASS": "district025_unchanged",
+          "FEATURE_ID": 1,
+          "PROBLEM": "self intersections"
+        }
+      ],
+      "gpkg_inspection": {
+        "valid": true,
+        "validity_reason": "Valid Geometry",
+        "polygon_count": 2384,
+        "stored_coordinate_count": 119257,
+        "holes": 0,
+        "search_threshold_degree": 9e-09,
+        "nonadjacent_vertex_pairs": [
+          {
+            "ring_a_0based": 2023,
+            "pos_a_0based": 54178,
+            "ring_b_0based": 2023,
+            "pos_b_0based": 54180,
+            "coordinate_a": [
+              139.967886278,
+              39.879999685
+            ],
+            "coordinate_b": [
+              139.967886272,
+              39.87999969
+            ],
+            "distance_degree": 7.810264423376394e-09
+          }
+        ],
+        "nonincident_vertex_edge_pairs": [
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54178,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54180,
+            "edge_end_pos_0based": 54181,
+            "vertex": [
+              139.967886278,
+              39.879999685
+            ],
+            "edge_start": [
+              139.967886272,
+              39.87999969
+            ],
+            "edge_end": [
+              139.967847756,
+              39.880020559
+            ],
+            "distance_degree": 7.810264423376394e-09
+          },
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54178,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54179,
+            "edge_end_pos_0based": 54180,
+            "vertex": [
+              139.967886278,
+              39.879999685
+            ],
+            "edge_start": [
+              139.968179805,
+              39.880223054
+            ],
+            "edge_end": [
+              139.967886272,
+              39.87999969
+            ],
+            "distance_degree": 7.612374418595631e-09
+          },
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54180,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54177,
+            "edge_end_pos_0based": 54178,
+            "vertex": [
+              139.967886272,
+              39.87999969
+            ],
+            "edge_start": [
+              139.967900726,
+              39.879991865
+            ],
+            "edge_end": [
+              139.967886278,
+              39.879999685
+            ],
+            "distance_degree": 7.810264423376394e-09
+          },
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54180,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54178,
+            "edge_end_pos_0based": 54179,
+            "vertex": [
+              139.967886272,
+              39.87999969
+            ],
+            "edge_start": [
+              139.967886278,
+              39.879999685
+            ],
+            "edge_end": [
+              139.968179805,
+              39.880223054
+            ],
+            "distance_degree": 7.810264423376394e-09
+          }
+        ],
+        "exact_nonadjacent_segment_intersections": []
+      },
+      "gdb_inspection": {
+        "valid": true,
+        "validity_reason": "Valid Geometry",
+        "polygon_count": 2384,
+        "stored_coordinate_count": 119257,
+        "holes": 0,
+        "search_threshold_degree": 9e-09,
+        "nonadjacent_vertex_pairs": [
+          {
+            "ring_a_0based": 2023,
+            "pos_a_0based": 54178,
+            "ring_b_0based": 2023,
+            "pos_b_0based": 54180,
+            "coordinate_a": [
+              139.96788627800004,
+              39.87999968500003
+            ],
+            "coordinate_b": [
+              139.9678862720001,
+              39.879999690000034
+            ],
+            "distance_degree": 7.810203469779092e-09
+          }
+        ],
+        "nonincident_vertex_edge_pairs": [
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54178,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54180,
+            "edge_end_pos_0based": 54181,
+            "vertex": [
+              139.96788627800004,
+              39.87999968500003
+            ],
+            "edge_start": [
+              139.9678862720001,
+              39.879999690000034
+            ],
+            "edge_end": [
+              139.96784775600008,
+              39.88002055900006
+            ],
+            "distance_degree": 7.810203469779092e-09
+          },
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54178,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54179,
+            "edge_end_pos_0based": 54180,
+            "vertex": [
+              139.96788627800004,
+              39.87999968500003
+            ],
+            "edge_start": [
+              139.9681798050001,
+              39.880223054000055
+            ],
+            "edge_end": [
+              139.9678862720001,
+              39.879999690000034
+            ],
+            "distance_degree": 7.612328439854977e-09
+          },
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54180,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54177,
+            "edge_end_pos_0based": 54178,
+            "vertex": [
+              139.9678862720001,
+              39.879999690000034
+            ],
+            "edge_start": [
+              139.96790072600004,
+              39.87999186500008
+            ],
+            "edge_end": [
+              139.96788627800004,
+              39.87999968500003
+            ],
+            "distance_degree": 7.810203469779092e-09
+          },
+          {
+            "vertex_ring_0based": 2023,
+            "vertex_pos_0based": 54180,
+            "edge_ring_0based": 2023,
+            "edge_start_pos_0based": 54178,
+            "edge_end_pos_0based": 54179,
+            "vertex": [
+              139.9678862720001,
+              39.879999690000034
+            ],
+            "edge_start": [
+              139.96788627800004,
+              39.87999968500003
+            ],
+            "edge_end": [
+              139.9681798050001,
+              39.880223054000055
+            ],
+            "distance_degree": 7.810203469779092e-09
+          }
+        ],
+        "exact_nonadjacent_segment_intersections": []
+      }
+    },
+    "candidate": {
+      "gpkg_layer": "candidate_025",
+      "gdb_layer": "district025_candidate",
+      "gpkg_fid": 4,
+      "gdb_fid": 1,
+      "source_attributes": {
+        "source_district_fid": 25,
+        "district_code": "025",
+        "district_name": "米代川",
+        "basin_code": "11",
+        "basin_name": "米代・雄物川",
+        "source_features": 15,
+        "status": "確認用・区域未確定",
+        "final_usable": "false",
+        "original_esri_problem": "self intersections"
+      },
+      "gdb_only_attributes": {
+        "Shape_Length": 7.408438400448634,
+        "Shape_Area": 0.5532266445103478
+      },
+      "source_attribute_differences": {},
+      "same_ring_counts_vertex_counts_and_order": true,
+      "maximum_component_delta_degree": 1.1368683772161603e-13,
+      "maximum_displacement_degree": 1.3796244387938543e-13,
+      "compared_ring_count": 2384,
+      "rings_with_nonzero_coordinate_delta": 2384,
+      "largest_ring_deltas": [
+        {
+          "ring_0based": 0,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 1,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 2,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 3,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 4,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        },
+        {
+          "ring_0based": 6,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3043830727131805e-13
+        },
+        {
+          "ring_0based": 7,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        },
+        {
+          "ring_0based": 8,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3406493525361332e-13
+        },
+        {
+          "ring_0based": 9,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        },
+        {
+          "ring_0based": 10,
+          "max_component_delta_degree": 1.1368683772161603e-13,
+          "max_displacement_degree": 1.3796244387938543e-13
+        }
+      ],
+      "notch_ring_delta": {
+        "ring_0based": 2023,
+        "max_component_delta_degree": 1.1368683772161603e-13,
+        "max_displacement_degree": 1.3796244387938543e-13
+      },
+      "gpkg_ordered_xy_sha256": "15f9842a62ac06e1071b95191c98392e118b2cef4a006152a869a1c095e65993",
+      "gdb_ordered_xy_sha256": "6a9b7bf408a677ce069b4fcb500e06f4de042492fbede79d77184634cc2f0129",
+      "gdb_settings": {
+        "XOrigin": "-400",
+        "YOrigin": "-400",
+        "XYScale": "999999999.99999988",
+        "XYTolerance": "8.983152841195215e-09",
+        "WKID": "104020",
+        "LatestWKID": "6668"
+      },
+      "check_fields": [
+        "CLASS",
+        "FEATURE_ID",
+        "PROBLEM"
+      ],
+      "saved_esri_rows": [],
+      "gpkg_inspection": {
+        "valid": true,
+        "validity_reason": "Valid Geometry",
+        "polygon_count": 2384,
+        "stored_coordinate_count": 119255,
+        "holes": 0,
+        "search_threshold_degree": 9e-09,
+        "nonadjacent_vertex_pairs": [],
+        "nonincident_vertex_edge_pairs": [],
+        "exact_nonadjacent_segment_intersections": []
+      },
+      "gdb_inspection": {
+        "valid": true,
+        "validity_reason": "Valid Geometry",
+        "polygon_count": 2384,
+        "stored_coordinate_count": 119255,
+        "holes": 0,
+        "search_threshold_degree": 9e-09,
+        "nonadjacent_vertex_pairs": [],
+        "nonincident_vertex_edge_pairs": [],
+        "exact_nonadjacent_segment_intersections": []
+      }
+    }
+  },
+  "comparison_zip_inventory": [
+    {
+      "name": "README.md",
+      "bytes": 2360,
+      "sha256": "69e5d2c6f0dce77dc7999702f72c5c69dfb257cea9b670f15ef9d82ac3dedb4b"
+    },
+    {
+      "name": "build_comparison.py",
+      "bytes": 3798,
+      "sha256": "c031c315ad94f9257912a6a7ec88f8e90be5dbaf48822a30b5c04e67b7517573"
+    },
+    {
+      "name": "district025_arcgis_comparison_20261017.gpkg",
+      "bytes": 3919872,
+      "sha256": "b93f906489e5cd670be95f934d8c96fd8e98a7a079a9be666440e13c44efb4cf"
+    },
+    {
+      "name": "district025_arcgis_comparison_20261017.json",
+      "bytes": 765,
+      "sha256": "f20cdac1e6c47d8503ba9df21ef00239ea7ea6f9e4ae94bdff8b65e2affee5d7"
+    }
+  ],
+  "gpkg_geometry_registration": [
+    [
+      "trial_025_unchanged",
+      "MULTIPOLYGON",
+      6668
+    ],
+    [
+      "candidate_025",
+      "MULTIPOLYGON",
+      6668
+    ]
+  ],
+  "within_gdb_comparison": {
+    "only_two_vertex_deletions": true,
+    "changed_ring_0based": 2023,
+    "removed_positions_0based": [
+      54179,
+      54180
+    ],
+    "unchanged_other_rings": 2383
+  },
+  "within_gpkg_comparison": {
+    "changed_ring_indices_0based": [
+      2023
+    ],
+    "removed_positions_0based": [
+      54179,
+      54180
+    ],
+    "only_two_vertex_deletions": true,
+    "unchanged_other_rings": 2383,
+    "added_area_degree2": 1.4376091873395612e-12,
+    "lost_area_degree2": 0.0
+  },
+  "notch_location": {
+    "crs": "EPSG:6668",
+    "ring_0based": 2023,
+    "mouth_a_pos_0based": 54178,
+    "mouth_b_pos_0based": 54180,
+    "tip_pos_0based": 54179,
+    "source_mouth_a": [
+      139.967886278,
+      39.879999685
+    ],
+    "source_tip": [
+      139.968179805,
+      39.880223054
+    ],
+    "source_mouth_b": [
+      139.967886272,
+      39.87999969
+    ],
+    "gdb_mouth_a": [
+      139.96788627800004,
+      39.87999968500003
+    ],
+    "gdb_tip": [
+      139.9681798050001,
+      39.880223054000055
+    ],
+    "gdb_mouth_b": [
+      139.9678862720001,
+      39.879999690000034
+    ],
+    "evidence": "Independent near-vertex/near-edge locus and exactly localized candidate edit, not an Esri-reported problem coordinate"
+  },
+  "extracted_inputs_unchanged": true,
+  "original_archives_unchanged": true,
+  "limits": [
+    "GPKG/GDB compare native decoded double coordinates; no rounding, snapping, repair or reprojection.",
+    "Degree-distance searches and GEOS validity do not reproduce Esri tolerance/clustering/geometry checks.",
+    "Saved check tables identify FEATURE_ID, not error coordinates; direct Esri-reported point remains unavailable.",
+    "ZIP README/manifest describe the earlier build, not newly executed instructions or a new ArcGIS run.",
+    "No new ArcGIS run, national repair rule, original data change or Release update."
+  ]
+}
