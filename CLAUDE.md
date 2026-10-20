@@ -93,7 +93,7 @@ python -m unittest discover -s tests -v
 Claude Code から claude.ai（Project）へ伝えることがあるときは、連絡用の Drive フォルダに Markdown ファイルを1件追加します。
 Drive に書けないときは、Markdown をユーザーに見せます。
 
-- フォルダ：「林野庁オープン化_Claude連絡」。フォルダ ID は、このリポジトリが公開なので書きません。
+- フォルダ：「Claude連絡」を含む名前の連絡用フォルダ。フォルダ ID は、このリポジトリが公開なので書きません。
   名前で探すか、ユーザーに確認します。
 - ファイル名：`YYYYMMDD-HHMM_<from>-to-<to>_<件名>.md`（時刻は JST。`ai` = claude.ai、`code` = Claude Code）。
   例：`20261003-2319_code-to-ai_japan-plane-rectangular-cs-zones_現在地メモ更新依頼.md`
