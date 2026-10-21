@@ -1,0 +1,19 @@
+{
+  "source_features": 1911,
+  "districts": 158,
+  "basins": 44,
+  "unassigned": 20,
+  "epsg": 6668,
+  "sqlite_integrity": "ok",
+  "gap_width_m": 0.001,
+  "gap_audit_counts": {
+    "review_other_area": 584,
+    "review_boundary": 4670,
+    "accepted": 1589,
+    "review_detached": 1,
+    "review_result_fragmented": 50,
+    "review_invalid": 1
+  },
+  "remaining_closed_holes": 16,
+  "basins_derived_from_repaired_districts": true
+}
