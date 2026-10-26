@@ -1,0 +1,54 @@
+{
+  "definition": "SHA-256 of concatenated raw geometry BLOBs in ORDER BY fid order (scripts/build_review_release.py inspect_gpkg)",
+  "gpkg_files": {
+    "forest_planning_zones_2026_provisional_labeled.gpkg": {
+      "bytes": 371232768,
+      "sha256": "ed4df025f6b078a7b1378adddee1eac86f277894d9dd755318963ac34acf2da7"
+    },
+    "municipality_forest_zones_2026_candidate.gpkg": {
+      "bytes": 259993600,
+      "sha256": "5af6f5981b61e34f1c9e8487dcf78ad44c3013b40582ab339da0439210e28c46"
+    },
+    "plane_rectangular_zones_2026.gpkg": {
+      "bytes": 172060672,
+      "sha256": "7f8b35c97d4796cdcbb7a203e5c07c68cd6595597ee5e1f284f9b809587c00d3"
+    }
+  },
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "source": "forest_planning_zones_2026_provisional_labeled.gpkg",
+      "features": 158,
+      "manifest_geometry_sha256": "67d44f743777d72b1ed9acabc195c1ad184983bee9a2ec870c663b2c1a8cbca0",
+      "measured_geometry_sha256": "67d44f743777d72b1ed9acabc195c1ad184983bee9a2ec870c663b2c1a8cbca0",
+      "match": true
+    },
+    "forest_wide_basins_provisional": {
+      "source": "forest_planning_zones_2026_provisional_labeled.gpkg",
+      "features": 44,
+      "manifest_geometry_sha256": "67388e07d9e486f36634edf700d00137d4b41e0a6571496e8958cad69612e454",
+      "measured_geometry_sha256": "67388e07d9e486f36634edf700d00137d4b41e0a6571496e8958cad69612e454",
+      "match": true
+    },
+    "forest_unassigned_review": {
+      "source": "forest_planning_zones_2026_provisional_labeled.gpkg",
+      "features": 20,
+      "manifest_geometry_sha256": "a3193c944bd3f44f4ad7621a95c1865d930f26da4a379ef00640d2b1e6bf9d6f",
+      "measured_geometry_sha256": "a3193c944bd3f44f4ad7621a95c1865d930f26da4a379ef00640d2b1e6bf9d6f",
+      "match": true
+    },
+    "plane_rectangular_municipalities_2026": {
+      "source": "municipality_forest_zones_2026_candidate.gpkg",
+      "features": 1911,
+      "manifest_geometry_sha256": "7e4c91ec0ffc7a3e69e7b77248d9a65b73080a3353f3a663a84cdeb13144e1aa",
+      "measured_geometry_sha256": "7e4c91ec0ffc7a3e69e7b77248d9a65b73080a3353f3a663a84cdeb13144e1aa",
+      "match": true
+    },
+    "plane_rectangular_zones_2026": {
+      "source": "plane_rectangular_zones_2026.gpkg",
+      "features": 19,
+      "manifest_geometry_sha256": "23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b",
+      "measured_geometry_sha256": "23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b",
+      "match": true
+    }
+  }
+}

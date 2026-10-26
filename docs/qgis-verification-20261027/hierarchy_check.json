@@ -1,0 +1,61 @@
+{
+  "H1_candidate_district_codes_eq_district_layer": {
+    "candidate_unique": 158,
+    "district_layer_unique": 158,
+    "equal": true
+  },
+  "H2_candidate_basin_codes_eq_basin_layer": {
+    "candidate_unique": 44,
+    "basin_layer_unique": 44,
+    "equal": true
+  },
+  "H3_district_basin_mapping": {
+    "districts_with_multiple_basin_codes_in_candidates": 0,
+    "districts_with_multiple_basin_names_in_candidates": 0,
+    "district_layer_basin_codes_unique": 44,
+    "mismatches": []
+  },
+  "H4_unassigned_codes": {
+    "candidate_null_both": 20,
+    "candidate_partial_null": 0,
+    "unassigned_layer_rows": 20,
+    "codes_equal": true,
+    "null_codes_sorted": [
+      "01699",
+      "03216",
+      "12000",
+      "12239",
+      "13000",
+      "13363",
+      "17212",
+      "17461",
+      "17463",
+      "21221",
+      "23000",
+      "23237",
+      "23238",
+      "28221",
+      "30000",
+      "39212",
+      "40000",
+      "40231",
+      "46000",
+      "47000"
+    ]
+  },
+  "H5_source_features": {
+    "district_mismatches": [],
+    "basin_mismatches": [],
+    "sum_districts": 1891,
+    "sum_basins": 1891,
+    "assigned_candidate_rows": 1891
+  },
+  "H6_representative_point_containment": {
+    "assigned_checked": 1891,
+    "outside_own_district": [],
+    "outside_own_basin": [],
+    "unassigned_checked": 20,
+    "unassigned_points_inside_a_district": [],
+    "note": "Point-level sanity check only; full polygon overlap/gap audit is the existing geometry-audit-20261013 result carried over from v0.2."
+  }
+}
