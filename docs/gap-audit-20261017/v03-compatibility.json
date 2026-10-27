@@ -1,0 +1,26 @@
+{
+  "scope": "v0.3-compatible generation: all feature attributes and geometry bytes; not SQLite metadata identity",
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "features": 158,
+      "all_attributes_and_geometry_bytes_equal": true
+    },
+    "forest_wide_basins_provisional": {
+      "features": 44,
+      "all_attributes_and_geometry_bytes_equal": true
+    },
+    "forest_unassigned_review": {
+      "features": 20,
+      "all_attributes_and_geometry_bytes_equal": true
+    }
+  },
+  "files": {
+    "published_v03": {
+      "sha256": "ed4df025f6b078a7b1378adddee1eac86f277894d9dd755318963ac34acf2da7"
+    },
+    "regenerated": {
+      "sha256": "9daf71964889fb5489fc0030ffa5847f9bfd9268614f1aa7c9f68637307591f9"
+    }
+  },
+  "passed": true
+}

@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 import sqlite3
 import struct
 from pathlib import Path
@@ -48,7 +49,9 @@ def decode(blob):
     return shapely.from_wkb(blob[offset:])
 
 
-def audit(path, threshold):
+def audit(path, threshold, layers=None):
+    if not math.isfinite(threshold) or threshold <= 0:
+        raise ValueError("threshold must be finite and positive")
     with path.open('rb') as f:
         before = hashlib.file_digest(f, 'sha256').hexdigest()
     output = dict(input_sha256=before, crs='EPSG:6668', threshold_degree=threshold,
@@ -58,6 +61,12 @@ def audit(path, threshold):
     if db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
         raise ValueError('SQLite integrity failure')
     tables = list(db.execute('SELECT table_name,column_name FROM gpkg_geometry_columns'))
+    if layers is not None:
+        missing = set(layers) - {t for t, _ in tables}
+        if missing:
+            db.close()
+            raise ValueError('Unknown layers: ' + ', '.join(sorted(missing)))
+        tables = [(t, c) for t, c in tables if t in layers]
     for table, geomcol in tables:
         quote = lambda x: '"' + x.replace('"', '""') + '"'
         cur = db.execute('SELECT * FROM ' + quote(table))
@@ -87,12 +96,13 @@ def main():
     parser.add_argument('gpkg', type=Path)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--threshold-degree', type=float, default=9e-9)
+    parser.add_argument('--layer', action='append', help='Audit only these layers (repeatable)')
     args = parser.parse_args()
-    if args.threshold_degree <= 0:
-        parser.error('threshold must be positive')
+    if not math.isfinite(args.threshold_degree) or args.threshold_degree <= 0:
+        parser.error('threshold must be finite and positive')
     if args.output.exists():
         parser.error('output exists; use a new path')
-    result = audit(args.gpkg, args.threshold_degree)
+    result = audit(args.gpkg, args.threshold_degree, args.layer)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 

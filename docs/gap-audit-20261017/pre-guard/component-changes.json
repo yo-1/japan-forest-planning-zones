@@ -1,0 +1,81 @@
+{
+  "scope": "Pre-guard candidate: GEOS-valid point touching additions may create separate parts",
+  "districts_with_increased_parts": 15,
+  "increases": [
+    {
+      "district_code": "012",
+      "before": 2280,
+      "after": 2281
+    },
+    {
+      "district_code": "019",
+      "before": 4685,
+      "after": 4686
+    },
+    {
+      "district_code": "023",
+      "before": 7805,
+      "after": 7808
+    },
+    {
+      "district_code": "025",
+      "before": 2384,
+      "after": 2385
+    },
+    {
+      "district_code": "052",
+      "before": 185,
+      "after": 187
+    },
+    {
+      "district_code": "060",
+      "before": 1745,
+      "after": 1746
+    },
+    {
+      "district_code": "089",
+      "before": 414,
+      "after": 416
+    },
+    {
+      "district_code": "091",
+      "before": 1422,
+      "after": 1424
+    },
+    {
+      "district_code": "093",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "district_code": "096",
+      "before": 468,
+      "after": 469
+    },
+    {
+      "district_code": "123",
+      "before": 3348,
+      "after": 3351
+    },
+    {
+      "district_code": "129",
+      "before": 2072,
+      "after": 2074
+    },
+    {
+      "district_code": "137",
+      "before": 13,
+      "after": 14
+    },
+    {
+      "district_code": "150",
+      "before": 1278,
+      "after": 1279
+    },
+    {
+      "district_code": "155",
+      "before": 1900,
+      "after": 1901
+    }
+  ]
+}
