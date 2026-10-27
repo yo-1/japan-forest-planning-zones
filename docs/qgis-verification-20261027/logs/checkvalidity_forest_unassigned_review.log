@@ -1,0 +1,24 @@
+(PDAL Error) Can't load library /home/hatch/workspace/geo-env-qgis344/lib/libpdal_plugin_reader_hdf.so: Failed to load "/home/hatch/workspace/geo-env-qgis344/lib/libpdal_plugin_reader_hdf.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory(PDAL Error) Can't load library /home/hatch/workspace/geo-env-qgis344/lib/libpdal_plugin_reader_icebridge.so: Failed to load "/home/hatch/workspace/geo-env-qgis344/lib/libpdal_plugin_reader_icebridge.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory
+----------------
+Inputs
+----------------
+
+ERROR_OUTPUT:	/home/hatch/workspace/forest-planning-zones/verification-b/results/validity/forest_unassigned_review_errors.gpkg
+IGNORE_RING_SELF_INTERSECTION:	0
+INPUT_LAYER:	/home/hatch/workspace/forest-planning-zones/work/forest_planning_zones_2026_provisional_labeled.gpkg|layername=forest_unassigned_review
+INVALID_OUTPUT:	/home/hatch/workspace/forest-planning-zones/verification-b/results/validity/forest_unassigned_review_invalid.gpkg
+METHOD:	2
+VALID_OUTPUT:	/home/hatch/workspace/forest-planning-zones/verification-b/results/validity/forest_unassigned_review_valid.gpkg
+
+
+0...10...20...30...40...50...60...70...80...90..
+----------------
+Results
+----------------
+
+ERROR_COUNT:	0
+ERROR_OUTPUT:	/home/hatch/workspace/forest-planning-zones/verification-b/results/validity/forest_unassigned_review_errors.gpkg
+INVALID_COUNT:	0
+INVALID_OUTPUT:	/home/hatch/workspace/forest-planning-zones/verification-b/results/validity/forest_unassigned_review_invalid.gpkg
+VALID_COUNT:	20
+VALID_OUTPUT:	/home/hatch/workspace/forest-planning-zones/verification-b/results/validity/forest_unassigned_review_valid.gpkg

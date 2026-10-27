@@ -1,0 +1,34 @@
+{
+  "algorithm": "native:checkvalidity",
+  "method": 2,
+  "method_name": "GEOS",
+  "ignore_ring_self_intersection": false,
+  "environment": "QGIS 3.44.14, GDAL 3.13.3, GEOS 3.14.1",
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "valid_count": 158,
+      "invalid_count": 0,
+      "error_count": 0
+    },
+    "forest_unassigned_review": {
+      "valid_count": 20,
+      "invalid_count": 0,
+      "error_count": 0
+    },
+    "forest_wide_basins_provisional": {
+      "valid_count": 44,
+      "invalid_count": 0,
+      "error_count": 0
+    },
+    "plane_rectangular_municipalities_2026": {
+      "valid_count": 1911,
+      "invalid_count": 0,
+      "error_count": 0
+    },
+    "plane_rectangular_zones_2026": {
+      "valid_count": 19,
+      "invalid_count": 0,
+      "error_count": 0
+    }
+  }
+}

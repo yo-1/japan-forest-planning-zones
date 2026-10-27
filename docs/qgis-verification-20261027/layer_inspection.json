@@ -1,0 +1,648 @@
+{
+  "qgis_version": "3.44.14-Solothurn",
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "source": "/home/hatch/workspace/forest-planning-zones/work/forest_planning_zones_2026_provisional_labeled.gpkg",
+      "load_valid": true,
+      "provider": "ogr",
+      "feature_count": 158,
+      "expected_count": 158,
+      "count_matches": true,
+      "geometry_type": "2",
+      "wkb_type": "6",
+      "crs_authid": "EPSG:6668",
+      "crs_description": "JGD2024",
+      "extent": [
+        122.932606368,
+        20.422746414,
+        153.986675123,
+        45.557243414
+      ],
+      "fields": [
+        {
+          "name": "fid",
+          "type": "Integer64"
+        },
+        {
+          "name": "district_code",
+          "type": "String"
+        },
+        {
+          "name": "district_name",
+          "type": "String"
+        },
+        {
+          "name": "basin_code",
+          "type": "String"
+        },
+        {
+          "name": "basin_name",
+          "type": "String"
+        },
+        {
+          "name": "source_features",
+          "type": "Integer64"
+        },
+        {
+          "name": "status",
+          "type": "String"
+        },
+        {
+          "name": "final_usable",
+          "type": "String"
+        }
+      ],
+      "code_stats": {
+        "district_code": {
+          "non_empty": 158,
+          "empty": 0,
+          "unique": 158,
+          "all_match_digits": true,
+          "leading_zero_count": 99,
+          "samples": [
+            "001",
+            "002",
+            "003",
+            "004",
+            "005"
+          ]
+        },
+        "basin_code": {
+          "non_empty": 158,
+          "empty": 0,
+          "unique": 44,
+          "all_match_digits": true,
+          "leading_zero_count": 20,
+          "samples": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05"
+          ]
+        }
+      },
+      "name_stats": {
+        "district_name": {
+          "non_empty": 158,
+          "all_contain_japanese": true,
+          "samples": [
+            "渡島檜山",
+            "後志胆振",
+            "胆振東部"
+          ]
+        },
+        "basin_name": {
+          "non_empty": 158,
+          "all_contain_japanese": true,
+          "samples": [
+            "渡島・尻別川",
+            "渡島・尻別川",
+            "沙流川"
+          ]
+        }
+      },
+      "null_geometry": 0,
+      "empty_geometry": 0,
+      "distinct_status": [
+        "確認用・区域未確定"
+      ],
+      "distinct_final_usable": [
+        "false"
+      ],
+      "source_features_sum": 1891,
+      "sample_features": [
+        {
+          "fid": "1",
+          "district_code": "001",
+          "district_name": "渡島檜山",
+          "basin_code": "06",
+          "basin_name": "渡島・尻別川",
+          "source_features": "18",
+          "status": "確認用・区域未確定",
+          "final_usable": "false"
+        },
+        {
+          "fid": "2",
+          "district_code": "002",
+          "district_name": "後志胆振",
+          "basin_code": "06",
+          "basin_name": "渡島・尻別川",
+          "source_features": "20",
+          "status": "確認用・区域未確定",
+          "final_usable": "false"
+        }
+      ]
+    },
+    "forest_wide_basins_provisional": {
+      "source": "/home/hatch/workspace/forest-planning-zones/work/forest_planning_zones_2026_provisional_labeled.gpkg",
+      "load_valid": true,
+      "provider": "ogr",
+      "feature_count": 44,
+      "expected_count": 44,
+      "count_matches": true,
+      "geometry_type": "2",
+      "wkb_type": "6",
+      "crs_authid": "EPSG:6668",
+      "crs_description": "JGD2024",
+      "extent": [
+        122.932606368,
+        20.422746414,
+        153.986675123,
+        45.557243414
+      ],
+      "fields": [
+        {
+          "name": "fid",
+          "type": "Integer64"
+        },
+        {
+          "name": "basin_code",
+          "type": "String"
+        },
+        {
+          "name": "basin_name",
+          "type": "String"
+        },
+        {
+          "name": "source_features",
+          "type": "Integer64"
+        },
+        {
+          "name": "status",
+          "type": "String"
+        },
+        {
+          "name": "final_usable",
+          "type": "String"
+        }
+      ],
+      "code_stats": {
+        "basin_code": {
+          "non_empty": 44,
+          "empty": 0,
+          "unique": 44,
+          "all_match_digits": true,
+          "leading_zero_count": 9,
+          "samples": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05"
+          ]
+        }
+      },
+      "name_stats": {
+        "basin_name": {
+          "non_empty": 44,
+          "all_contain_japanese": true,
+          "samples": [
+            "天塩川",
+            "石狩川",
+            "網走・湧別川"
+          ]
+        }
+      },
+      "null_geometry": 0,
+      "empty_geometry": 0,
+      "distinct_status": [
+        "確認用・区域未確定"
+      ],
+      "distinct_final_usable": [
+        "false"
+      ],
+      "source_features_sum": 1891,
+      "sample_features": [
+        {
+          "fid": "1",
+          "basin_code": "01",
+          "basin_name": "天塩川",
+          "source_features": "26",
+          "status": "確認用・区域未確定",
+          "final_usable": "false"
+        },
+        {
+          "fid": "2",
+          "basin_code": "02",
+          "basin_name": "石狩川",
+          "source_features": "62",
+          "status": "確認用・区域未確定",
+          "final_usable": "false"
+        }
+      ]
+    },
+    "forest_unassigned_review": {
+      "source": "/home/hatch/workspace/forest-planning-zones/work/forest_planning_zones_2026_provisional_labeled.gpkg",
+      "load_valid": true,
+      "provider": "ogr",
+      "feature_count": 20,
+      "expected_count": 20,
+      "count_matches": true,
+      "geometry_type": "2",
+      "wkb_type": "6",
+      "crs_authid": "EPSG:6668",
+      "crs_description": "JGD2024",
+      "extent": [
+        127.840631115,
+        26.43166764,
+        148.365975875,
+        45.438035054
+      ],
+      "fields": [
+        {
+          "name": "fid",
+          "type": "Integer64"
+        },
+        {
+          "name": "source_fid",
+          "type": "Integer64"
+        },
+        {
+          "name": "municipality_code",
+          "type": "String"
+        },
+        {
+          "name": "prefecture",
+          "type": "String"
+        },
+        {
+          "name": "municipality",
+          "type": "String"
+        },
+        {
+          "name": "status",
+          "type": "String"
+        }
+      ],
+      "code_stats": {
+        "municipality_code": {
+          "non_empty": 20,
+          "empty": 0,
+          "unique": 20,
+          "all_match_digits": true,
+          "leading_zero_count": 2,
+          "samples": [
+            "01699",
+            "03216",
+            "12000",
+            "12239",
+            "13000"
+          ]
+        }
+      },
+      "name_stats": {
+        "prefecture": {
+          "non_empty": 20,
+          "all_contain_japanese": true,
+          "samples": [
+            "和歌山県",
+            "岩手県",
+            "北海道"
+          ]
+        },
+        "municipality": {
+          "non_empty": 20,
+          "all_contain_japanese": true,
+          "samples": [
+            "所属未定地",
+            "滝沢市",
+            "紗那村"
+          ]
+        }
+      },
+      "null_geometry": 0,
+      "empty_geometry": 0,
+      "distinct_status": [
+        "未割当・要照会"
+      ],
+      "sample_features": [
+        {
+          "fid": "1",
+          "source_fid": "87",
+          "municipality_code": "30000",
+          "prefecture": "和歌山県",
+          "municipality": "所属未定地",
+          "status": "未割当・要照会"
+        },
+        {
+          "fid": "2",
+          "source_fid": "170",
+          "municipality_code": "03216",
+          "prefecture": "岩手県",
+          "municipality": "滝沢市",
+          "status": "未割当・要照会"
+        }
+      ]
+    },
+    "plane_rectangular_municipalities_2026": {
+      "source": "/home/hatch/workspace/forest-planning-zones/work/municipality_forest_zones_2026_candidate.gpkg",
+      "load_valid": true,
+      "provider": "ogr",
+      "feature_count": 1911,
+      "expected_count": 1911,
+      "count_matches": true,
+      "geometry_type": "2",
+      "wkb_type": "6",
+      "crs_authid": "EPSG:6668",
+      "crs_description": "JGD2024",
+      "extent": [
+        122.932606368,
+        20.422746414,
+        153.986675123,
+        45.557243414
+      ],
+      "fields": [
+        {
+          "name": "fid",
+          "type": "Integer64"
+        },
+        {
+          "name": "N03_001",
+          "type": "String"
+        },
+        {
+          "name": "N03_002",
+          "type": "String"
+        },
+        {
+          "name": "N03_003",
+          "type": "String"
+        },
+        {
+          "name": "N03_004",
+          "type": "String"
+        },
+        {
+          "name": "N03_005",
+          "type": "String"
+        },
+        {
+          "name": "N03_007",
+          "type": "String"
+        },
+        {
+          "name": "ZONE",
+          "type": "Integer"
+        },
+        {
+          "name": "ZONE_ROMAN",
+          "type": "String"
+        },
+        {
+          "name": "EPSG",
+          "type": "Integer"
+        },
+        {
+          "name": "forest_district_code",
+          "type": "String"
+        },
+        {
+          "name": "forest_district_name",
+          "type": "String"
+        },
+        {
+          "name": "wide_basin_code",
+          "type": "String"
+        },
+        {
+          "name": "wide_basin_name",
+          "type": "String"
+        },
+        {
+          "name": "forest_status",
+          "type": "String"
+        },
+        {
+          "name": "forest_coverage",
+          "type": "String"
+        },
+        {
+          "name": "forest_source_date",
+          "type": "String"
+        },
+        {
+          "name": "forest_source_url",
+          "type": "String"
+        },
+        {
+          "name": "basin_source_date",
+          "type": "String"
+        },
+        {
+          "name": "basin_source_url",
+          "type": "String"
+        },
+        {
+          "name": "forest_final_usable",
+          "type": "String"
+        }
+      ],
+      "code_stats": {
+        "N03_007": {
+          "non_empty": 1911,
+          "empty": 0,
+          "unique": 1905,
+          "all_match_digits": true,
+          "leading_zero_count": 494,
+          "samples": [
+            "01101",
+            "01102",
+            "01103",
+            "01104",
+            "01105"
+          ]
+        },
+        "forest_district_code": {
+          "non_empty": 1891,
+          "empty": 20,
+          "unique": 158,
+          "all_match_digits": true,
+          "leading_zero_count": 1401,
+          "samples": [
+            "001",
+            "002",
+            "003",
+            "004",
+            "005"
+          ]
+        },
+        "wide_basin_code": {
+          "non_empty": 1891,
+          "empty": 20,
+          "unique": 44,
+          "all_match_digits": true,
+          "leading_zero_count": 252,
+          "samples": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05"
+          ]
+        }
+      },
+      "name_stats": {
+        "N03_001": {
+          "non_empty": 1911,
+          "all_contain_japanese": true,
+          "samples": [
+            "東京都",
+            "東京都",
+            "高知県"
+          ]
+        },
+        "N03_004": {
+          "non_empty": 1911,
+          "all_contain_japanese": true,
+          "samples": [
+            "福生市",
+            "狛江市",
+            "奈半利町"
+          ]
+        },
+        "N03_005": {
+          "non_empty": 171,
+          "all_contain_japanese": true,
+          "samples": [
+            "緑区",
+            "美浜区",
+            "稲毛区"
+          ]
+        },
+        "forest_district_name": {
+          "non_empty": 1891,
+          "all_contain_japanese": true,
+          "samples": [
+            "多摩",
+            "多摩",
+            "安芸"
+          ]
+        },
+        "wide_basin_name": {
+          "non_empty": 1891,
+          "all_contain_japanese": true,
+          "samples": [
+            "利根川",
+            "利根川",
+            "吉野・仁淀川"
+          ]
+        }
+      },
+      "null_geometry": 0,
+      "empty_geometry": 0,
+      "sample_features": [
+        {
+          "fid": "1",
+          "N03_001": "東京都",
+          "N03_002": null,
+          "N03_003": null,
+          "N03_004": "福生市",
+          "N03_005": null,
+          "N03_007": "13218",
+          "ZONE": "9",
+          "ZONE_ROMAN": "IX",
+          "EPSG": "6677",
+          "forest_district_code": "048",
+          "forest_district_name": "多摩",
+          "wide_basin_code": "17",
+          "wide_basin_name": "利根川",
+          "forest_status": "要現行資料照合",
+          "forest_coverage": "未確認",
+          "forest_source_date": "2010-02-01",
+          "forest_source_url": "https://www.e-stat.go.jp/SG1/estat/Pdfdl.do?sinfid=000012449985",
+          "basin_source_date": "2010-02-01",
+          "basin_source_url": "https://www.e-stat.go.jp/SG1/estat/Pdfdl.do?sinfid=000012449985",
+          "forest_final_usable": "false"
+        },
+        {
+          "fid": "2",
+          "N03_001": "東京都",
+          "N03_002": null,
+          "N03_003": null,
+          "N03_004": "狛江市",
+          "N03_005": null,
+          "N03_007": "13219",
+          "ZONE": "9",
+          "ZONE_ROMAN": "IX",
+          "EPSG": "6677",
+          "forest_district_code": "048",
+          "forest_district_name": "多摩",
+          "wide_basin_code": "17",
+          "wide_basin_name": "利根川",
+          "forest_status": "要現行資料照合",
+          "forest_coverage": "未確認",
+          "forest_source_date": "2010-02-01",
+          "forest_source_url": "https://www.e-stat.go.jp/SG1/estat/Pdfdl.do?sinfid=000012449985",
+          "basin_source_date": "2010-02-01",
+          "basin_source_url": "https://www.e-stat.go.jp/SG1/estat/Pdfdl.do?sinfid=000012449985",
+          "forest_final_usable": "false"
+        }
+      ]
+    },
+    "plane_rectangular_zones_2026": {
+      "source": "/home/hatch/workspace/forest-planning-zones/work/plane_rectangular_zones_2026.gpkg",
+      "load_valid": true,
+      "provider": "ogr",
+      "feature_count": 19,
+      "expected_count": 19,
+      "count_matches": true,
+      "geometry_type": "2",
+      "wkb_type": "6",
+      "crs_authid": "EPSG:6668",
+      "crs_description": "JGD2024",
+      "extent": [
+        122.932606368,
+        20.422746414,
+        153.986675123,
+        45.557243414
+      ],
+      "fields": [
+        {
+          "name": "fid",
+          "type": "Integer64"
+        },
+        {
+          "name": "ZONE",
+          "type": "Integer"
+        },
+        {
+          "name": "ZONE_ROMAN",
+          "type": "String"
+        },
+        {
+          "name": "EPSG",
+          "type": "Integer"
+        }
+      ],
+      "code_stats": {},
+      "name_stats": {
+        "ZONE_ROMAN": {
+          "non_empty": 19,
+          "all_contain_japanese": false,
+          "samples": [
+            "XVIII",
+            "III",
+            "IV"
+          ]
+        }
+      },
+      "null_geometry": 0,
+      "empty_geometry": 0,
+      "sample_features": [
+        {
+          "fid": "1",
+          "ZONE": "18",
+          "ZONE_ROMAN": "XVIII",
+          "EPSG": "6686"
+        },
+        {
+          "fid": "2",
+          "ZONE": "3",
+          "ZONE_ROMAN": "III",
+          "EPSG": "6671"
+        }
+      ]
+    }
+  }
+}
