@@ -1,0 +1,169 @@
+{
+  "source_run": 40543634341,
+  "source_head": "2e88052c0495a96bd88dc73d3d99da3b1633da50",
+  "artifact_sha256": "57097efa4e8eba9bb4d6815e29cfc0792b55bf7adf969ed564cc77fc0c843ed4",
+  "environment": {
+    "shapely": "2.1.2",
+    "geos": "3.13.1"
+  },
+  "packages": [
+    {
+      "name": "forest_planning_zones_2026_gap_trial.zip",
+      "bytes": 358919264,
+      "sha256": "0cdb715bbcfa9104ff5ac36834295faee2acb9b7b0192cf08646f9900e72b8cc",
+      "crc_ok": true
+    },
+    {
+      "name": "municipality_forest_zones_2026_gap_trial.zip",
+      "bytes": 173158617,
+      "sha256": "6330c8e5bb739cf3321e44420241891aa262d828292d08a8b6b20d8024f8f559",
+      "crc_ok": true
+    }
+  ],
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "features": 158,
+      "epsg": 6668,
+      "sql_geometry_type": "MULTIPOLYGON",
+      "invalid": 0,
+      "empty": 0,
+      "geometry_sha256": "02739435dff682a9b8a77085e6e3e89b40103051243ee73467a590d9950e7c67",
+      "manifest_match": true,
+      "status_values": {
+        "status": [
+          [
+            "確認用・区域未確定",
+            158
+          ]
+        ],
+        "final_usable": [
+          [
+            "false",
+            158
+          ]
+        ]
+      }
+    },
+    "forest_wide_basins_provisional": {
+      "features": 44,
+      "epsg": 6668,
+      "sql_geometry_type": "MULTIPOLYGON",
+      "invalid": 0,
+      "empty": 0,
+      "geometry_sha256": "a4a4acf922e4da1daea71b26a4289ad616c412a0b79c0f8d4d33e7aef8ad1db1",
+      "manifest_match": true,
+      "status_values": {
+        "status": [
+          [
+            "確認用・区域未確定",
+            44
+          ]
+        ],
+        "final_usable": [
+          [
+            "false",
+            44
+          ]
+        ]
+      }
+    },
+    "forest_unassigned_review": {
+      "features": 20,
+      "epsg": 6668,
+      "sql_geometry_type": "MULTIPOLYGON",
+      "invalid": 0,
+      "empty": 0,
+      "geometry_sha256": "a3193c944bd3f44f4ad7621a95c1865d930f26da4a379ef00640d2b1e6bf9d6f",
+      "manifest_match": true,
+      "status_values": {
+        "status": [
+          [
+            "未割当・要照会",
+            20
+          ]
+        ]
+      }
+    },
+    "plane_rectangular_zones_2026": {
+      "features": 19,
+      "epsg": 6668,
+      "sql_geometry_type": "MULTIPOLYGON",
+      "invalid": 0,
+      "empty": 0,
+      "geometry_sha256": "23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b",
+      "manifest_match": true,
+      "status_values": {}
+    },
+    "plane_rectangular_municipalities_2026": {
+      "features": 1911,
+      "epsg": 6668,
+      "sql_geometry_type": "MULTIPOLYGON",
+      "invalid": 0,
+      "empty": 0,
+      "geometry_sha256": "7e4c91ec0ffc7a3e69e7b77248d9a65b73080a3353f3a663a84cdeb13144e1aa",
+      "manifest_match": true,
+      "status_values": {
+        "forest_final_usable": [
+          [
+            "false",
+            1911
+          ]
+        ]
+      }
+    }
+  },
+  "gpkg_files": [
+    {
+      "name": "forest_planning_zones_2026_provisional_labeled.gpkg",
+      "bytes": 372887552,
+      "sha256": "60f3ba146d7e1560dafc85ec1511e0118db6f85af873f31087be11d81913c097",
+      "sqlite_integrity": "ok",
+      "unchanged_after_verification": true
+    },
+    {
+      "name": "plane_rectangular_zones_2026.gpkg",
+      "bytes": 172060672,
+      "sha256": "222f03c5971e589c144d3ba36e3ffb5cfae10f8643da01f75ad02b429c24324a",
+      "sqlite_integrity": "ok",
+      "unchanged_after_verification": true
+    },
+    {
+      "name": "municipality_forest_zones_2026_candidate.gpkg",
+      "bytes": 259993600,
+      "sha256": "68d8987c9ffe638308bac09b1f87741c6aa98e707bf35fcf94bae181460b4f46",
+      "sqlite_integrity": "ok",
+      "unchanged_after_verification": true
+    }
+  ],
+  "ci_gap_validation_readback": {
+    "passed": true,
+    "errors": [],
+    "invalid": [],
+    "basin_exact_matches": 44,
+    "unassigned_preserved": true,
+    "added_m2_total": 0.007064381383446811,
+    "lost_m2_total": 4.137155440843973e-08
+  },
+  "repair": {
+    "source_features": 1911,
+    "districts": 158,
+    "basins": 44,
+    "unassigned": 20,
+    "epsg": 6668,
+    "sqlite_integrity": "ok",
+    "gap_width_m": 0.001,
+    "gap_audit_counts": {
+      "review_other_area": 584,
+      "review_boundary": 4670,
+      "accepted": 1589,
+      "review_detached": 1,
+      "review_result_fragmented": 50,
+      "review_invalid": 1
+    },
+    "remaining_closed_holes": 16,
+    "basins_derived_from_repaired_districts": true
+  },
+  "qgis_candidate_verified": false,
+  "qgis_gui_candidate_verified": false,
+  "passed": true
+}

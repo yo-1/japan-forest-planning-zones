@@ -1,0 +1,84 @@
+{
+  "status": "provisional; official membership and boundaries not certified",
+  "source_municipality_zip_sha256": "091606c6a0c84f62ee3611a01e93913c9fb343add9a5201cc5a7dff90da30b20",
+  "candidate_input_sha256": null,
+  "coordinate_zones_source": "japan-plane-rectangular-cs-zones v2026.2",
+  "coordinate_zones_zip_sha256": "c32ac8417ee604436e0a20280a6f2d3a1e73a3247c5a8db10230209daf9e3fbd",
+  "coordinate_zones_geometry_sha256": "23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b",
+  "build_mode": "experimental_narrow_gap",
+  "narrow_gap_repair": {
+    "source_features": 1911,
+    "districts": 158,
+    "basins": 44,
+    "unassigned": 20,
+    "epsg": 6668,
+    "sqlite_integrity": "ok",
+    "gap_width_m": 0.001,
+    "gap_audit_counts": {
+      "review_other_area": 584,
+      "review_boundary": 4670,
+      "accepted": 1589,
+      "review_detached": 1,
+      "review_result_fragmented": 50,
+      "review_invalid": 1
+    },
+    "remaining_closed_holes": 16,
+    "basins_derived_from_repaired_districts": true
+  },
+  "tiny_interior_rings_removed": null,
+  "municipality_reviewed_patches": [],
+  "candidate": {
+    "plane_rectangular_municipalities_2026": {
+      "features": 1911,
+      "geometry_sha256": "7e4c91ec0ffc7a3e69e7b77248d9a65b73080a3353f3a663a84cdeb13144e1aa",
+      "epsg": 6668,
+      "invalid": 0,
+      "empty": 0
+    }
+  },
+  "aggregates": {
+    "forest_plan_districts_provisional": {
+      "features": 158,
+      "geometry_sha256": "02739435dff682a9b8a77085e6e3e89b40103051243ee73467a590d9950e7c67",
+      "epsg": 6668,
+      "invalid": 0,
+      "empty": 0
+    },
+    "forest_wide_basins_provisional": {
+      "features": 44,
+      "geometry_sha256": "a4a4acf922e4da1daea71b26a4289ad616c412a0b79c0f8d4d33e7aef8ad1db1",
+      "epsg": 6668,
+      "invalid": 0,
+      "empty": 0
+    },
+    "forest_unassigned_review": {
+      "features": 20,
+      "geometry_sha256": "a3193c944bd3f44f4ad7621a95c1865d930f26da4a379ef00640d2b1e6bf9d6f",
+      "epsg": 6668,
+      "invalid": 0,
+      "empty": 0
+    }
+  },
+  "coordinate_zones": {
+    "plane_rectangular_zones_2026": {
+      "features": 19,
+      "geometry_sha256": "23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b",
+      "epsg": 6668,
+      "invalid": 0,
+      "empty": 0
+    }
+  },
+  "qgis_gui_verified": false,
+  "review_files": [
+    {
+      "name": "forest_planning_zones_2026_gap_trial.zip",
+      "bytes": 358919264,
+      "sha256": "0cdb715bbcfa9104ff5ac36834295faee2acb9b7b0192cf08646f9900e72b8cc"
+    },
+    {
+      "name": "municipality_forest_zones_2026_gap_trial.zip",
+      "bytes": 173158617,
+      "sha256": "6330c8e5bb739cf3321e44420241891aa262d828292d08a8b6b20d8024f8f559"
+    }
+  ]
+}
