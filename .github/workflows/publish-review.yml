@@ -69,13 +69,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           REVIEW_TAG: ${{ inputs.release_tag }}
+          GAP_WIDTH_M: ${{ inputs.gap_width_m }}
         shell: bash
         run: |
           set -euo pipefail
-          if [[ -n "${{ inputs.gap_width_m }}" ]]; then
-            printf '%s\n' '確認用データです。公式境界・所属は未確定です。' '全国の細い隙間の補修（幅 ${{ inputs.gap_width_m }} m、2026-10-28 採用）を適用した生成処理です。検証記録はリポジトリの docs にあります。' > "$RUNNER_TEMP/release-notes.txt"
+          if [[ -n "$GAP_WIDTH_M" ]]; then
+            printf '%s\n' '確認用データです。公式境界・所属は未確定です。' "全国の細い隙間の補修（幅 $GAP_WIDTH_M m、2026-10-28 採用）を適用した生成処理です。検証記録はリポジトリの docs にあります。" > "$RUNNER_TEMP/release-notes.txt"
           else
-            printf '%s\n' '確認用データです。公式境界・所属は未確定です。' 'v0.3互換の生成処理です。全国の精度処理・隙間補修は未採用です。' > "$RUNNER_TEMP/release-notes.txt"
+            printf '%s\n' '確認用データです。公式境界・所属は未確定です。' 'v0.3互換の生成処理です。このビルドには全国の精度処理・隙間補修を適用していません。' > "$RUNNER_TEMP/release-notes.txt"
           fi
           gh release create "$REVIEW_TAG" \
             release_output/*.zip release_output/review_manifest.json release_output/SHA256SUMS.txt \
