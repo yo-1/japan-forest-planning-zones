@@ -22,7 +22,7 @@
 - [QGISでの重ね合わせ・点検手順](docs/QGIS_REVIEW.md)
 - [公開ZIP・対応表・表示設定の技術点検](docs/TECHNICAL_AUDIT_20261005.md)
 
-平面直角座標系の区域は、[japan-plane-rectangular-cs-zones v2026.2](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.2)のものを使います。公開処理ではZIPのSHA-256と形状ハッシュを照合し、一致した形状だけを使います。赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での最終表示は未確認です。
+平面直角座標系の区域は、[japan-plane-rectangular-cs-zones v2026.2](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.2)のものを使います。公開処理ではZIPのSHA-256と形状ハッシュを照合し、一致した形状だけを使います。赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での表示確認は、確認用v0.3について2026-10-27に実機で実施済みです（docs/qgis-verification-20261027/）。
 
 4都道県の森林計画対象森林との照合結果は[出典・境界資料の調査](docs/BOUNDARY_SOURCE_REVIEW.md)に記録しました。291コードの森林側属性を照合しましたが、市町村全域の所属又は公式境界を確定したものではありません。主対応表の暫定値と最終利用可否falseは維持しています。
 
