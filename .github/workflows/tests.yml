@@ -17,8 +17,10 @@ jobs:
       fail-fast: false
       matrix:
         # ユーザーの実行環境（Windows・QGIS 付属の Python 3.12）と、README に書いた最低版（3.9）を確かめる。
+        # 3.9 のジョブだけ ubuntu-24.04 に固定する: ubuntu-latest が Ubuntu 26.04 になり、
+        # actions/setup-python が 3.9 を提供しなくなったため（2026-10、PR #8 の CI で確認）。
         include:
-          - os: ubuntu-latest
+          - os: ubuntu-24.04
             python-version: "3.9"
           - os: ubuntu-latest
             python-version: "3.12"
