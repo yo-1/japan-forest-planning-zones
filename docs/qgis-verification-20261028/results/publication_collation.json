@@ -1,0 +1,110 @@
+{
+  "all_match": true,
+  "tables": {
+    "forest_plan_districts_provisional": {
+      "candidate": {
+        "rows": 158,
+        "geometry_sha256": "02739435dff682a9b8a77085e6e3e89b40103051243ee73467a590d9950e7c67",
+        "attributes_sha256": "7dba11b522756e969f2a3736d1945e7f2b5813f7fdc5b1391f529e8195ce1a7b",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "published": {
+        "rows": 158,
+        "geometry_sha256": "02739435dff682a9b8a77085e6e3e89b40103051243ee73467a590d9950e7c67",
+        "attributes_sha256": "7dba11b522756e969f2a3736d1945e7f2b5813f7fdc5b1391f529e8195ce1a7b",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "match": true
+    },
+    "forest_wide_basins_provisional": {
+      "candidate": {
+        "rows": 44,
+        "geometry_sha256": "a4a4acf922e4da1daea71b26a4289ad616c412a0b79c0f8d4d33e7aef8ad1db1",
+        "attributes_sha256": "9a99ad2faf66f0948a5e21004cfa03806ecdebe67e2c78de57167d0730bccd9f",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "published": {
+        "rows": 44,
+        "geometry_sha256": "a4a4acf922e4da1daea71b26a4289ad616c412a0b79c0f8d4d33e7aef8ad1db1",
+        "attributes_sha256": "9a99ad2faf66f0948a5e21004cfa03806ecdebe67e2c78de57167d0730bccd9f",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "match": true
+    },
+    "forest_unassigned_review": {
+      "candidate": {
+        "rows": 20,
+        "geometry_sha256": "a3193c944bd3f44f4ad7621a95c1865d930f26da4a379ef00640d2b1e6bf9d6f",
+        "attributes_sha256": "9f13beccc10a12f66f77fef942a1a5dfb1de91654e8180c5139f35712aa17f29",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "published": {
+        "rows": 20,
+        "geometry_sha256": "a3193c944bd3f44f4ad7621a95c1865d930f26da4a379ef00640d2b1e6bf9d6f",
+        "attributes_sha256": "9f13beccc10a12f66f77fef942a1a5dfb1de91654e8180c5139f35712aa17f29",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "match": true
+    },
+    "gap_repair_audit": {
+      "candidate": {
+        "rows": 6895,
+        "geometry_sha256": "6556ce571fbe1998966320d7430b006d7b7d28227e88c702bc1d18ad396e7d4e",
+        "attributes_sha256": "bec34ef876d765a6722f3f99fd64078ff3baefd180e4060a29462698312543d2",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "published": {
+        "rows": 6895,
+        "geometry_sha256": "6556ce571fbe1998966320d7430b006d7b7d28227e88c702bc1d18ad396e7d4e",
+        "attributes_sha256": "bec34ef876d765a6722f3f99fd64078ff3baefd180e4060a29462698312543d2",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "match": true
+    },
+    "gap_residual_review": {
+      "candidate": {
+        "rows": 16,
+        "geometry_sha256": "81a271077d896000493776795718d5f7f1f7a68c03d5d09dfcd12b2709fdb315",
+        "attributes_sha256": "06380bb6f2a541e8f8629d878a0ed7240734bbca3f92ed4a7f6084d8c5d5709c",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "published": {
+        "rows": 16,
+        "geometry_sha256": "81a271077d896000493776795718d5f7f1f7a68c03d5d09dfcd12b2709fdb315",
+        "attributes_sha256": "06380bb6f2a541e8f8629d878a0ed7240734bbca3f92ed4a7f6084d8c5d5709c",
+        "styles_sha256": "87b1fcd411c5935990da84727cd9490e6fc83edf3ed0a7599c59bca67859e5ef"
+      },
+      "match": true
+    },
+    "plane_rectangular_municipalities_2026": {
+      "candidate": {
+        "rows": 1911,
+        "geometry_sha256": "7e4c91ec0ffc7a3e69e7b77248d9a65b73080a3353f3a663a84cdeb13144e1aa",
+        "attributes_sha256": "f5aed982de6219ecc8a07dd3ed024877658aefbf8303517a12e0540793dada74",
+        "styles_sha256": "097c6a3ab37106ac7a6228a003d0f0d627012b8b50a41937e8f2149b32269209"
+      },
+      "published": {
+        "rows": 1911,
+        "geometry_sha256": "7e4c91ec0ffc7a3e69e7b77248d9a65b73080a3353f3a663a84cdeb13144e1aa",
+        "attributes_sha256": "f5aed982de6219ecc8a07dd3ed024877658aefbf8303517a12e0540793dada74",
+        "styles_sha256": "097c6a3ab37106ac7a6228a003d0f0d627012b8b50a41937e8f2149b32269209"
+      },
+      "match": true
+    },
+    "plane_rectangular_zones_2026": {
+      "candidate": {
+        "rows": 19,
+        "geometry_sha256": "23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b",
+        "attributes_sha256": "17163a04d58185a68cc189b70683efc1f75d681155cbb438d41391347bf8a78a",
+        "styles_sha256": "b5a51e24770707a2921cbdb7b5b2c720af5af5c9e746d5e7987151118d461242"
+      },
+      "published": {
+        "rows": 19,
+        "geometry_sha256": "23fa2d62f395ce192857e2a69444e639e24d4f89c30f4da17d0976b0acb3a02b",
+        "attributes_sha256": "17163a04d58185a68cc189b70683efc1f75d681155cbb438d41391347bf8a78a",
+        "styles_sha256": "b5a51e24770707a2921cbdb7b5b2c720af5af5c9e746d5e7987151118d461242"
+      },
+      "match": true
+    }
+  }
+}
