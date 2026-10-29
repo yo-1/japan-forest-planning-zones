@@ -1,0 +1,32 @@
+{
+  "tool": "QGIS 3.44.14 native:checkvalidity",
+  "method": 2,
+  "ignore_ring_self_intersection": false,
+  "layers": {
+    "forest_plan_districts_provisional": {
+      "valid": 158,
+      "invalid": 0,
+      "errors": 0
+    },
+    "forest_wide_basins_provisional": {
+      "valid": 44,
+      "invalid": 0,
+      "errors": 0
+    },
+    "forest_unassigned_review": {
+      "valid": 20,
+      "invalid": 0,
+      "errors": 0
+    },
+    "plane_rectangular_municipalities_2026": {
+      "valid": 1911,
+      "invalid": 0,
+      "errors": 0
+    },
+    "plane_rectangular_zones_2026": {
+      "valid": 19,
+      "invalid": 0,
+      "errors": 0
+    }
+  }
+}
