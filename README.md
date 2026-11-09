@@ -2,7 +2,7 @@
 
 市区町村の座標系ポリゴンに、森林計画区と広域流域の情報を追加する派生プロジェクトです。
 
-**現在は確認用v0.3です。現行の公式境界データとして使うことはできません。**
+**現在は確認用v0.5です。現行の公式境界データとして使うことはできません。**
 
 島しょ部を含め、広域流域名は現行の所属・境界を確定した値ではありません。
 平面直角座標系の系ごとに地物が分かれていても、同じ市町村コードには同じ暫定値を付けています。
@@ -17,12 +17,14 @@
 
 色・番号・名称ラベル付きの候補図と市町村の対応表を公開しています。
 
+最新は[確認用 v0.5（review-v0.5-20261109）](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.5-20261109)です。計画区・流域版（forest_planning_zones_2026_v05.zip）と市町村版（municipality_forest_zones_2026_v05.zip）の2つのZIPがあります。市町村版のデータ本体は v0.4 から変更していません。
+
 - [確認用データのReleases](https://github.com/yo-1/japan-forest-planning-zones/releases)
 - [公開処理の実行状況](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)
 - [QGISでの重ね合わせ・点検手順](docs/QGIS_REVIEW.md)
 - [公開ZIP・対応表・表示設定の技術点検](docs/TECHNICAL_AUDIT_20261005.md)
 
-平面直角座標系の区域は、[japan-plane-rectangular-cs-zones v2026.2](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.2)のものを使います。公開処理ではZIPのSHA-256と形状ハッシュを照合し、一致した形状だけを使います。赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での表示確認は、確認用v0.3について2026-10-27に実機で実施済みです（docs/qgis-verification-20261027/）。
+平面直角座標系の区域は、[japan-plane-rectangular-cs-zones v2026.2](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.2)のものを使います。公開処理ではZIPのSHA-256と形状ハッシュを照合し、一致した形状だけを使います。赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での表示確認は、確認用v0.3について2026-10-27に、v0.4について2026-10-28に実機で実施済みです（docs/qgis-verification-20261027/、docs/qgis-verification-20261028/）。v0.5の実機表示確認は未実施です。
 
 4都道県の森林計画対象森林との照合結果は[出典・境界資料の調査](docs/BOUNDARY_SOURCE_REVIEW.md)に記録しました。291コードの森林側属性を照合しましたが、市町村全域の所属又は公式境界を確定したものではありません。主対応表の暫定値と最終利用可否falseは維持しています。
 
@@ -50,7 +52,7 @@ Python標準ライブラリで動きます。入力ファイルとは別のパ�
 
 コードはMIT、座標系データはCC BY 4.0です。DATA_LICENSE.mdの出典表記を保持します。
 森林対応表の出典と制約はdata/forest/README.mdに記録しています。
-大きなGeoPackageとZIPはGitに入れず、[確認用Release review-v0.3-20261015](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.3-20261015)で配布しています（旧版 review-v0.1-20261005 は、比べるために残しています）。再生成・形状検査・公開処理とWindows/Linux CIは成功しました。QGIS実画面での表示は未確認です。
+大きなGeoPackageとZIPはGitに入れず、確認用Releaseで配布しています。最新は[review-v0.5-20261109](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.5-20261109)で、旧版（review-v0.4-20261028 など）は比べるために残しています。v0.5は全数検証済みの候補から直接パッケージしたもので、生成処理による再生成ではありません。変更点と検証結果は[残る閉じた穴16件の分類と処置](docs/residual-holes-20261106/README.md)に記録しています。
 新規公開手順はdocs/SETUP.md、検証結果はdocs/FEASIBILITY.mdを参照してください。
 
 ## 形状の検証記録
