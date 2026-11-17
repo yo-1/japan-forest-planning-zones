@@ -2,7 +2,7 @@
 
 市区町村の座標系ポリゴンに、森林計画区と広域流域の情報を追加する派生プロジェクトです。
 
-**現在は確認用v0.7です。現行の公式境界データとして使うことはできません。**
+**現在は確認用v0.8です。現行の公式境界データとして使うことはできません。**
 
 島しょ部を含め、広域流域名は現行の所属・境界を確定した値ではありません。
 平面直角座標系の系ごとに地物が分かれていても、同じ市町村コードには同じ暫定値を付けています。
@@ -17,14 +17,14 @@
 
 色・番号・名称ラベル付きの候補図と市町村の対応表を公開しています。
 
-最新は[確認用 v0.7（review-v0.7-20261117）](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.7-20261117)です。計画区・流域版（forest_planning_zones_2026_v07.zip）と市町村版（municipality_forest_zones_2026_v07.zip）の2つのZIPがあります。v0.7は、元データの座標桁の混在を源泉で解消してから全レイヤーを再構築した版で、市町村版も再構築しています。所属・属性はv0.5から変更していません。
+最新は[確認用 v0.8（review-v0.8-20261117）](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.8-20261117)です。計画区・流域版（forest_planning_zones_2026_v08.zip）と市町村版（municipality_forest_zones_2026_v08.zip）の2つのZIPがあります。v0.8は、v0.7で未割当だった13市町村の所属を、県の地域森林計画などの公式資料で照合して割り当てた版です（未割当は20件から7件に、残る閉じた穴は7件から4件になりました）。割当の内容と留保は[未割当13市町村の割当](docs/membership-v08/README.md)に記録しています。土台の再構築（源泉の座標9桁統一）はv0.7のままです。
 
 - [確認用データのReleases](https://github.com/yo-1/japan-forest-planning-zones/releases)
 - [公開処理の実行状況](https://github.com/yo-1/japan-forest-planning-zones/actions/workflows/publish-review.yml)
 - [QGISでの重ね合わせ・点検手順](docs/QGIS_REVIEW.md)
 - [公開ZIP・対応表・表示設定の技術点検](docs/TECHNICAL_AUDIT_20261005.md)
 
-平面直角座標系の区域は、[japan-plane-rectangular-cs-zones v2026.2](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.2)のものを使います。公開処理ではZIPのSHA-256と形状ハッシュを照合し、一致した形状だけを使います。赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での表示確認は、確認用v0.3について2026-10-27に、v0.4について2026-10-28に実機で実施済みです（docs/qgis-verification-20261027/、docs/qgis-verification-20261028/）。v0.5とv0.7の実機表示確認は未実施です。
+平面直角座標系の区域は、[japan-plane-rectangular-cs-zones v2026.2](https://github.com/yo-1/japan-plane-rectangular-cs-zones/releases/tag/v2026.2)のものを使います。公開処理ではZIPのSHA-256と形状ハッシュを照合し、一致した形状だけを使います。赤いローマ数字のスタイルも保持します。森林計画区図と広域流域図を切り替え、その上に座標系境界を重ねます。QGIS実画面での表示確認は、確認用v0.3について2026-10-27に、v0.4について2026-10-28に実機で実施済みです（docs/qgis-verification-20261027/、docs/qgis-verification-20261028/）。v0.5・v0.7・v0.8の実機表示確認は未実施です。
 
 4都道県の森林計画対象森林との照合結果は[出典・境界資料の調査](docs/BOUNDARY_SOURCE_REVIEW.md)に記録しました。291コードの森林側属性を照合しましたが、市町村全域の所属又は公式境界を確定したものではありません。主対応表の暫定値と最終利用可否falseは維持しています。
 
@@ -39,20 +39,20 @@ Python標準ライブラリで動きます。入力ファイルとは別のパ�
 新しいCSVは data/municipality_coordinate_forest_zones.csv です。コードは文字列として読み込みます。
 
 森林計画区コード・名称、広域流域コード・名称、確認状況、出典と日付を追加します。
-1,905コードのうち96件は現行の県資料で所属を照合、1,789件は過去資料との候補一致、20件は未割当です。
+1,905コードのうち109件は現行の県資料等で所属を照合、1,789件は過去資料との候補一致、7件は未割当（都道府県レベルの所属未定地）です。
 全件の区域範囲は未確認で forest_final_usable は false です。
 広域流域との対応は2010年2月1日の資料に基づくため、現行資料との照合が必要です。
 
 市町村の一部が別計画区に属する場合は、市町村単位の結合では表せません。
 その場合は公式の区画を取得し、分割例外データを作ってから処理します。
 政令指定都市の区、所属未定地、市町村合併、区域変更も確認します。
-確認用の集約ポリゴンを作成しました（158計画区・44広域流域・未割当20地物）。公式境界としての確定には現行所属・全域／一部指定の確認が必要です。
+確認用の集約ポリゴンを作成しました（158計画区・44広域流域・未割当7地物）。公式境界としての確定には現行所属・全域／一部指定の確認が必要です。
 
 ## 公開
 
 コードはMIT、座標系データはCC BY 4.0です。DATA_LICENSE.mdの出典表記を保持します。
 森林対応表の出典と制約はdata/forest/README.mdに記録しています。
-大きなGeoPackageとZIPはGitに入れず、確認用Releaseで配布しています。最新は[review-v0.7-20261117](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.7-20261117)で、旧版（review-v0.5-20261109、review-v0.4-20261028 など）は比べるために残しています。v0.7は源泉（国土数値情報 行政区域データ 2026年版）を小数9桁に正規化してから再構築し、v0.5との全数つき合わせで検証したものです。工程はscripts/build-v07/と、ReleaseのZIPに収録したBUILD_NOTES.mdに記録しています。v0.5の変更点と検証結果は[残る閉じた穴16件の分類と処置](docs/residual-holes-20261106/README.md)に記録しています。
+大きなGeoPackageとZIPはGitに入れず、確認用Releaseで配布しています。最新は[review-v0.8-20261117](https://github.com/yo-1/japan-forest-planning-zones/releases/tag/review-v0.8-20261117)で、旧版（review-v0.7-20261117、review-v0.5-20261109、review-v0.4-20261028 など）は比べるために残しています。v0.7は源泉（国土数値情報 行政区域データ 2026年版）を小数9桁に正規化してから再構築し、v0.5との全数つき合わせで検証したものです。工程はscripts/build-v07/と、ReleaseのZIPに収録したBUILD_NOTES.mdに記録しています。v0.8はその検証済みのデータに13市町村の割当だけを反映したもので、工程はscripts/build-v08/に記録しています。v0.5の変更点と検証結果は[残る閉じた穴16件の分類と処置](docs/residual-holes-20261106/README.md)に記録しています。
 新規公開手順はdocs/SETUP.md、検証結果はdocs/FEASIBILITY.mdを参照してください。
 
 ## 形状の検証記録
